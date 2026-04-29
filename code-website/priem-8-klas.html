@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Прием в 1-ви клас | СУ „Йордан Йовков"</title>
+  <title>Прием в 8 клас | СУ „Йордан Йовков“</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/variables.css">
@@ -12,10 +12,9 @@
 <link rel="stylesheet" href="assets/css/layout.css">
 <link rel="stylesheet" href="assets/css/components.css">
     
-<link rel="stylesheet" href="assets/css/pages/priem-1-klas.css">
+<link rel="stylesheet" href="assets/css/pages/priem-8-klas.css">
 </head>
-<body>
- 
+<body data-page-title="Прием в 8 клас">
  <!-- NAV -->
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
@@ -53,7 +52,7 @@
     <div class="nav-item">
       <a href="uchenici.html">Ученици <span class="caret"></span></a>
       <div class="dropdown">
-        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="konsultacii.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
+        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="razrabotva-se.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
       </div>
     </div>
     <div class="nav-item"><a href="razrabotva-se.html">Проекти</a></div>
@@ -94,7 +93,7 @@
       <a href="priem-1-klas.html">Прием в I клас</a>
       <a href="priem-5-klas.html">Прием в V клас</a>
       <a href="priem-8-klas.html">Прием в VIII клас</a>
-      <a href="dokumenti.html">Необходими документи</a>
+      <a href="dokumenti-priem.html">Необходими документи</a>
       <a href="faq.html">Често задавани въпроси</a>
     </div>
   </div>
@@ -120,7 +119,7 @@
       <a href="sedmichno-razpisanie.html">Седмично разписание</a>
       <a href="pochivni-dni.html">Почивни дни и ваканции</a>
       <a href="klasni-kontrolni.html">Графици класни и контролни</a>
-      <a href="konsultacii.html">Консултации</a>
+      <a href="razrabotva-se.html">Консултации</a>
       <a href="uchenicheski-suvet.html">Ученически съвет</a>
       <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
       <a href="nvo.html">НВО</a>
@@ -128,7 +127,7 @@
     </div>
   </div>
   <div class="mobile-menu-item"><a href="#">Проекти</a></div>
-  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
+  <div class="mobile-menu-item"><a href="news.html">Новини</a></div>
   <div class="mobile-menu-item">
     <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
     <div class="mobile-submenu">
@@ -138,117 +137,64 @@
       <a href="razrabotva-se.html">Формуляри</a>
     </div>
   </div>
-  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
+  <div class="mobile-menu-item"><a href="contacts.html">Контакти</a></div>
   <div class="mobile-menu-actions">
     <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
     <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
   </div>
 </div>
  
-  <!-- PAGE WRAPPER -->
 <section class="page-hero">
   <div class="breadcrumb">
     <a href="index.html">НАЧАЛО</a>
     <span>/</span>
     <a href="#">ПРИЕМ</a>
     <span>/</span>
-    <span style="color:var(--gold)">ПРИЕМ В I КЛАС</span>
+    <span style="color:var(--gold)">ПРИЕМ В VIII КЛАС</span>
   </div>
-  <div class="page-hero-label">Прием · I клас</div>
-  <h1>Прием в <em>I клас</em></h1>
-  <p class="page-hero-sub">Информация за кандидатстване, срокове и класиране за учебната година.</p>
+  <div class="page-hero-label">Прием · VIII клас</div>
+  <h1>Прием в <em>VIII клас</em></h1>
+  <p class="page-hero-sub">Информация за специалността, балообразуване и график за кандидатстване.</p>
 </section>
 
   <div class="page-wrapper">
  
-    <!-- HERO -->
-    <!-- CONTENT + SIDEBAR -->
     <div class="content-layout">
- 
-      <!-- MAIN -->
-<!-- MAIN -->
-<main class="priem-main">
-  <section class="section">
-    <div class="table-section">
-      <div class="brochure reveal" onclick="openBrochure()">
-        <div class="brochure-thumb">
-          <img id="brochureImg1" src="images/1-class-img.png" alt="Брошура 1">
-          <img id="brochureImg2" src="images/1-class-img2.png" alt="Брошура 2" class="hidden">
+      <main class="priem-main">
+      <section class="section">
+        <span class="badge reveal">"ОБУЧЕНИЕ С ГАРАНЦИЯ ЗА УСПЕХ"</span>
+        <h2 class="reveal" style="margin-top:1rem">Професия „Интелигентни системи“ с разширено изучаване на английски език</h2>
+        <div class="box reveal" style="margin-top:1rem">
+          <p>За учебната 2026/2027 година училището предлага прием на ученици след завършен VII клас.</p>
+          <p><strong>Форма на обучение:</strong> Дневна<br><strong>Срок на обучение:</strong> 5 години<br><strong>Брой ученици:</strong> 26</p>
         </div>
-      </div>
-    </div>
+      </section>
  
-    <!-- Modal -->
-    <div id="brochureModal" class="brochure-modal" onclick="closeBrochure()">
-      <div class="brochure-modal-content" onclick="event.stopPropagation()">
-        <iframe src="broshure-1-class.pdf" width="100%" height="100%"></iframe>
-        <button class="close-btn" onclick="closeBrochure()">×</button>
-      </div>
-    </div>
-  </section>
- 
-<section class="section">
-  <div class="table-section">
-    <h2 class="reveal">Първо класиране</h2>
-    <table class="reveal">
-      <thead><tr><th>№</th><th>Дата</th><th>Дейност</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>19 май 2025</td><td>Обявяване на свободните места (до 12:00) и отваряне на системата (от 13:00)</td></tr>
-        <tr><td>2</td><td>28 май 2025</td><td>Крайна дата за подаване на заявления (до 23:59)</td></tr>
-        <tr><td>3</td><td>30 май 2025</td><td>Обявяване на резултатите от класирането (до 14:00)</td></tr>
-        <tr><td>4</td><td>2 юни 2025</td><td>Начална дата на записване</td></tr>
-        <tr><td>5</td><td>6 юни 2025</td><td>Крайна дата на записване (до 17:00)</td></tr>
-      </tbody>
-    </table>
- 
-    <h2 class="reveal" style="margin-top:2rem">Второ класиране</h2>
-    <table class="reveal">
-      <thead><tr><th>№</th><th>Дата</th><th>Дейност</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>10 юни 2025</td><td>Обявяване на свободните места (до 12:00) и отваряне на системата (от 13:00)</td></tr>
-        <tr><td>2</td><td>11 юни 2025</td><td>Крайна дата за подаване на заявления (до 23:59)</td></tr>
-        <tr><td>3</td><td>12 юни 2025</td><td>Обявяване на резултатите от класирането (до 14:00)</td></tr>
-        <tr><td>4</td><td>13 юни 2025</td><td>Начална дата на записване</td></tr>
-        <tr><td>5</td><td>16 юни 2025</td><td>Крайна дата на записване (до 17:00)</td></tr>
-      </tbody>
-    </table>
- 
-    <h2 class="reveal" style="margin-top:2rem">Трето класиране</h2>
-    <table class="reveal">
-      <thead><tr><th>№</th><th>Дата</th><th>Дейност</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>18 юни 2025</td><td>Обявяване на свободните места (до 12:00) и отваряне на системата (от 13:00)</td></tr>
-        <tr><td>2</td><td>19 юни 2025</td><td>Крайна дата за подаване на заявления (до 23:59)</td></tr>
-        <tr><td>3</td><td>20 юни 2025</td><td>Обявяване на резултатите от класирането (до 14:00)</td></tr>
-        <tr><td>4</td><td>23 юни 2025</td><td>Начална дата на записване</td></tr>
-        <tr><td>5</td><td>24 юни 2025</td><td>Крайна дата на записване (до 17:00)</td></tr>
-      </tbody>
-    </table>
- 
-    <p class="reveal" style="margin-top:1.5rem; font-size:.85rem; color:var(--gray); line-height:1.7">
-      <strong>Забележка:</strong> След третото класиране родителите на незаписаните деца подават заявления за записване в училищата, в които има свободни места.
-    </p>
-  </div>
-</section>
+      <section class="section" style="background:var(--light); border-radius:14px; padding:2rem;">
+        <h2 class="reveal">Таблица за класирането (балообразуващи предмети)</h2>
+        <table class="reveal">
+          <thead><tr><th>Компонент</th><th>Тежест в бала</th></tr></thead>
+          <tbody>
+            <tr><td>Удвоена оценка по Български език и литература от НВО</td><td>x2</td></tr>
+            <tr><td>Удвоена оценка по Математика от НВО</td><td>x2</td></tr>
+            <tr><td>Оценка по Чужд език от свидетелството за основно образование</td><td>x1</td></tr>
+            <tr><td>Оценка по Информационни технологии от свидетелството за основно образование</td><td>x1</td></tr>
+          </tbody>
+        </table>
+      </section>
       </main>
- 
-      <!-- SIDEBAR -->
       <aside class="priem-side-nav" aria-label="Навигация прием">
-        <p class="priem-side-title">Прием</p>
-        <ul class="priem-side-list">
-          <li><a href="priem-1-klas.html" class="is-active">Прием в I клас</a></li>
-          <li><a href="priem-5-klas.html">Прием в V клас</a></li>
-          <li><a href="priem-8-klas.html">Прием в VIII клас</a></li>
-          <li><a href="dokumenti.html">Необходими документи</a></li>
-          <li><a href="faq.html">Често задавани въпроси</a></li>
-        </ul>
-      </aside>
- 
-    </div><!-- /content-layout -->
- 
-  </div><!-- /page-wrapper -->
- 
-  <!-- FOOTER — outside page-wrapper so it goes full-width -->
+      <p class="priem-side-title">Прием</p>
+      <ul class="priem-side-list">
+        <li><a href="priem-1-klas.html">Прием в I клас</a></li>
+        <li><a href="priem-5-klas.html">Прием в V клас</a></li>
+        <li><a href="priem-8-klas.html" class="is-active">Прием в VIII клас</a></li>
+        <li><a href="dokumenti-priem.html">Необходими документи</a></li>
+        <li><a href="faq.html">Често задавани въпроси</a></li>
+      </ul>
+    </aside>
+    </div>
+  </div>
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -262,7 +208,7 @@
     </div>
     <div class="footer-col">
       <h5>Полезни връзки</h5>
-      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
+      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/">РУО Сливен</a></li></ul>
     </div>
     <div class="footer-col footer-contact">
       <h5>Контакти</h5>
@@ -282,7 +228,7 @@
 </footer>
 
 
-  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/main.js" defer></script>
   <script type="module" src="assets/js/pages/priem-8-klas.js" defer></script>
 </body>
 </html>
