@@ -39,13 +39,6 @@ a { text-decoration: none; color: inherit; }
 .hero-title       { animation: fadeUp   0.65s cubic-bezier(.22,.68,0,1.2) 0.45s both; }
 .hero-desc        { animation: fadeUp   0.55s cubic-bezier(.22,.68,0,1.2) 0.62s both; }
 
-.page-hero::after {
-  content: '';
-  position: absolute; inset: 0; z-index: 0;
-  background: linear-gradient(rgba(0,0,0,0.473), rgba(0,0,0,0.733));
-  animation: fadeIn 0.9s ease 0s both;
-}
-
 /* ═══════════════════════════════════════
    PAGE HERO
 ═══════════════════════════════════════ */
@@ -81,6 +74,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--white);
   line-height: 1.1;
   text-align: left;
+  margin-bottom: 1.2rem;
 }
 
 .page-hero h1 em {
