@@ -1,347 +1,192 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Виртуална разходка – СУ „Йордан Йовков" Сливен</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/variables.css">
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="assets/css/pages/virtualna-razhodka.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Виртуална разходка – СУ „Йордан Йовков“ Сливен</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/pages/virtualna-razhodka.css">
 </head>
 <body>
 
-<!-- NAV — от style.css -->
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <img src="images/logo.png" alt="Лого СУ Йордан Йовков">
-    <div class="nav-logo-text">
-      <strong>СУ „Йордан Йовков"</strong>
-      <span>Сливен</span>
-    </div>
-  </a>
-  <div class="nav-links">
-    <div class="nav-item">
-      <a href="za-nas.html">За нас <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="patron.html">Патрон</a><a href="himn.html">Химн</a><a href="istoriq.html">История</a><a href="misiq-viziq.html">Мисия и визия</a><a href="virtualna-razhodka.html">Виртуална разходка</a><a href="ekip.html">Училищен екип</a><a href="paralelki.html">Паралелки</a><a href="materialna-baza.html">Материална база</a><a href="uniformi.html">Униформи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="priem.html">Прием <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="priem-1-klas.html">Прием в I клас</a><a href="priem-5-klas.html">Прием в V клас</a><a href="priem-8-klas.html">Прием в VIII клас</a><a href="dokumenti-priem.html">Необходими документи</a><a href="faq.html">Често задавани въпроси</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="obuchenie.html">Обучение <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="https://app.shkolo.bg/">Електронен дневник</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="roditeli.html">Родители <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="razrabotva-se.html">Наредби</a><a href="razrabotva-se.html">Родителски срещи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="uchenici.html">Ученици <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="konsultacii.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="razrabotva-se.html">Проекти</a></div>
-    <div class="nav-item"><a href="novini.html">Новини</a></div>
-    <div class="nav-item">
-      <a href="dokumenti.html">Документи <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="pravilnici.html">Правилници</a><a href="stipendii.html">Стипендии</a><a href="razrabotva-se.html">Училищни документи</a><a href="razrabotva-se.html">Формуляри</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="kontakti.html">Контакти</a></div>
-  </div>
-  <button class="nav-search" aria-label="Търсене">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-  </button>
-  <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <div id="navbar-container"></div>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="istoriq.html">История</a>
-      <a href="patron.html">Патрон</a>
-      <a href="himn.html">Химн</a>
-      <a href="misiq-viziq.html">Мисия и визия</a>
-      <a href="ekip.html">Училищен екип</a>
-      <a href="paralelki.html">Паралелки</a>
-      <a href="materialna-baza.html">Материална база</a>
-      <a href="uniformi.html">Униформи</a>
+  <!-- HERO — breadcrumb горе, като НВО страницата -->
+  <div class="tour-hero">
+    <div class="tour-hero-deco"></div>
+    <div class="tour-hero-deco2"></div>
+    <div class="tour-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">НАЧАЛО</a>
+        <span>/</span>
+        <a href="#">ЗА НАС</a>
+        <span>/</span>
+        <span style="color:var(--gold)">ВИРТУАЛНА РАЗХОДКА</span>
+      </div>
+      <div class="tour-hero-label">Виртуална разходка · СУ „Йордан Йовков“</div>
+      <h1>Виртуална <em>разходка</em></h1>
+      <p class="tour-hero-sub">Разгледайте нашето училище от всяко кътче. Кликнете на стая и се потопете в атмосферата на СУ „Йордан Йовков“.</p>
     </div>
   </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="priem-1-klas.html">Прием в I клас</a>
-      <a href="priem-5-klas.html">Прием в V клас</a>
-      <a href="priem-8-klas.html">Прием в VIII клас</a>
-      <a href="dokumenti.html">Необходими документи</a>
-      <a href="faq.html">Често задавани въпроси</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="uchebnici.html">Учебници</a>
-      <a href="uchebni-planove.html">Учебни планове</a>
-      <a href="https://app.shkolo.bg">Електронен дневник</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="razrabotva-se.html">Наредби</a>
-      <a href="razrabotva-se.html">Родителски среща</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="dnevno-razpisanie.html">Дневно разписание</a>
-      <a href="sedmichno-razpisanie.html">Седмично разписание</a>
-      <a href="pochivni-dni.html">Почивни дни и ваканции</a>
-      <a href="klasni-kontrolni.html">Графици класни и контролни</a>
-      <a href="konsultacii.html">Консултации</a>
-      <a href="uchenicheski-suvet.html">Ученически съвет</a>
-      <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
-      <a href="nvo.html">НВО</a>
-      <a href="dzi.html">ДЗИ</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="#">Проекти</a></div>
-  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="pravilnici.html">Правилници</a>
-      <a href="stipendii.html">Стипендии</a>
-      <a href="razrabotva-se.html">Училищни документи</a>
-      <a href="razrabotva-se.html">Формуляри</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
-  <div class="mobile-menu-actions">
-    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
-    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
-  </div>
-</div>
 
-<!-- HERO — breadcrumb горе, като НВО страницата -->
-<div class="tour-hero">
-  <div class="tour-hero-deco"></div>
-  <div class="tour-hero-deco2"></div>
-  <div class="tour-hero-content">
-    <div class="breadcrumb">
-      <a href="index.html">НАЧАЛО</a>
-      <span>/</span>
-      <a href="#">ЗА НАС</a>
-      <span>/</span>
-      <span style="color:var(--gold)">ВИРТУАЛНА РАЗХОДКА</span>
-    </div>
-    <div class="tour-hero-label">Виртуална разходка · СУ „Йордан Йовков"</div>
-    <h1>Виртуална <em>разходка</em></h1>
-    <p class="tour-hero-sub">Разгледайте нашето училище от всяко кътче. Кликнете на стая и се потопете в атмосферата на СУ „Йордан Йовков".</p>
-  </div>
-</div>
+  <!-- MAIN LAYOUT -->
+  <div class="tour-layout">
 
-<!-- MAIN LAYOUT -->
-<div class="tour-layout">
+    <!-- SIDEBAR -->
+    <aside class="tour-sidebar">
+      <div class="sidebar-label">Помещения</div>
+      <div class="sidebar-rooms" id="sidebarRooms">
 
-  <!-- SIDEBAR -->
-  <aside class="tour-sidebar">
-    <div class="sidebar-label">Помещения</div>
-    <div class="sidebar-rooms" id="sidebarRooms">
-
-      <div class="sidebar-group">
-        <div class="sidebar-group-title">Поглед отвън</div>
-        <button class="room-btn active" onclick="selectRoom(0)" id="btn-0">
-          Фасада и двор
-          <span class="room-count">3</span>
-        </button>
-      </div>
-
-      <div class="sidebar-group">
-        <div class="sidebar-group-title">Учебна дейност</div>
-        <button class="room-btn" onclick="selectRoom(1)" id="btn-1">
-          Класна стая
-          <span class="room-count">4</span>
-        </button>
-        <button class="room-btn" onclick="selectRoom(2)" id="btn-2">
-          Компютърен кабинет
-          <span class="room-count">2</span>
-        </button>
-        <button class="room-btn" onclick="selectRoom(3)" id="btn-3">
-          Кабинети по науки
-          <span class="room-count">3</span>
-        </button>
-      </div>
-
-      <div class="sidebar-group">
-        <div class="sidebar-group-title">Спорт и изкуство</div>
-        <button class="room-btn" onclick="selectRoom(4)" id="btn-4">
-          Физкултурен салон
-          <span class="room-count">2</span>
-        </button>
-        <button class="room-btn" onclick="selectRoom(5)" id="btn-5">
-          Актова зала
-          <span class="room-count">2</span>
-        </button>
-        <button class="room-btn" onclick="selectRoom(6)" id="btn-6">
-          Творческо ателие
-          <span class="room-count">2</span>
-        </button>
-      </div>
-
-      <div class="sidebar-group">
-        <div class="sidebar-group-title">Общи пространства</div>
-        <button class="room-btn" onclick="selectRoom(7)" id="btn-7">
-          Библиотека
-          <span class="room-count">2</span>
-        </button>
-        <button class="room-btn" onclick="selectRoom(8)" id="btn-8">
-          Стол / Бюфет
-          <span class="room-count">1</span>
-        </button>
-        <button class="room-btn" onclick="selectRoom(9)" id="btn-9">
-          Канцелария
-          <span  class="room-count">1</span>
-        </button>
-      </div>
-
-    </div>
-  </aside>
-
-  <!-- MAIN CONTENT -->
-  <main class="tour-main">
-
-    <!-- AUTO TOUR BAR -->
-    <div class="auto-tour-bar">
-      <div class="auto-tour-text">
-        <strong>Автоматична обиколка</strong> — нека ви преведем из цялото училище
-      </div>
-      <div class="auto-tour-actions">
-        <button class="btn-tour" id="autoTourBtn" onclick="toggleAutoTour()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          Обиколи с нас
-        </button>
-        <button class="btn-tour-outline" onclick="selectRoom(0)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.25"/></svg>
-          Начало
-        </button>
-      </div>
-    </div>
-
-    <!-- IFRAME VIEWER -->
-    <div class="tour-viewer" id="tourViewer">
-      <!--
-        ИНСТРУКЦИИ ЗА ИНТЕГРАЦИЯ:
-        Заменете съдържанието по-долу с вашия TourMKR iframe:
-
-        <iframe
-          src="https://tourmkr.com/ВАШИЯТ_ТУР_ИД"
-          allowfullscreen
-          allow="fullscreen; gyroscope; accelerometer"
-          loading="lazy"
-        ></iframe>
-      -->
-      <div class="viewer-placeholder" id="viewerPlaceholder">
-        <div class="viewer-placeholder-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 8v4l3 3"/>
-            <path d="M3.05 11a9 9 0 1 0 .5-3"/>
-          </svg>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Поглед отвън</div>
+          <button class="room-btn active" onclick="selectRoom(0)" id="btn-0">
+            Фасада и двор
+            <span class="room-count">3</span>
+          </button>
         </div>
-        <h3 id="placeholderTitle">Фасада и двор</h3>
-        <p id="placeholderDesc">Тук ще се зареди 360° панорамният изглед от TourMKR.</p>
-        <a href="https://tourmkr.com" target="_blank" class="btn-gold-sm">
-          Създайте тур в TourMKR
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-        </a>
-      </div>
-      <div class="viewer-controls">
-        <button class="ctrl-btn" title="Цял екран" onclick="requestFullscreen()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
-        </button>
-        <button class="ctrl-btn" title="Споделяне" onclick="shareRoom()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-        </button>
-      </div>
-    </div>
 
-    <!-- CTA -->
-    <div class="tour-cta reveal">
-      <div>
-        <h3>Хареса ви нашето училище?</h3>
-        <p>Запишете детето си при нас и му дайте най-доброто начало. Приемаме ученици в I и VIII клас.</p>
-      </div>
-      <div class="cta-actions">
-        <a href="priem-1-klas.html" class="btn-green">
-          Прием I клас
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="priem-8-klas.html" class="btn-outline">
-          Прием VIII клас
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Учебна дейност</div>
+          <button class="room-btn" onclick="selectRoom(1)" id="btn-1">
+            Класна стая
+            <span class="room-count">4</span>
+          </button>
+          <button class="room-btn" onclick="selectRoom(2)" id="btn-2">
+            Компютърен кабинет
+            <span class="room-count">2</span>
+          </button>
+          <button class="room-btn" onclick="selectRoom(3)" id="btn-3">
+            Кабинети по науки
+            <span class="room-count">3</span>
+          </button>
+        </div>
 
-  </main>
-</div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Спорт и изкуство</div>
+          <button class="room-btn" onclick="selectRoom(4)" id="btn-4">
+            Физкултурен салон
+            <span class="room-count">2</span>
+          </button>
+          <button class="room-btn" onclick="selectRoom(5)" id="btn-5">
+            Актова зала
+            <span class="room-count">2</span>
+          </button>
+          <button class="room-btn" onclick="selectRoom(6)" id="btn-6">
+            Творческо ателие
+            <span class="room-count">2</span>
+          </button>
+        </div>
 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="images/logo.png" alt="Лого">
-      <p>СУ „Йордан Йовков" — Сливен е средно училище с богата история и традиции, изграждащо знаещи и уверени личности от 1980 година.</p>
-      <div class="footer-motto">„Ако успееш тук, ще успееш навсякъде!"</div>
-    </div>
-    <div class="footer-col">
-      <h5>Навигация</h5>
-      <ul><li><a href="za-nas.html">За нас</a></li><li><a href="priem.html">Прием</a></li><li><a href="obuchenie.html">Обучение</a></li><li><a href="novini.html">Новини</a></li><li><a href="razrabotva-se.html">Проекти</a></li><li><a href="dokumenti.html">Документи</a></li></ul>
-    </div>
-    <div class="footer-col">
-      <h5>Полезни връзки</h5>
-      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
-    </div>
-    <div class="footer-col footer-contact">
-      <h5>Контакти</h5>
-      <p><strong>Адрес:</strong><br>гр. Сливен</p>
-      <p><strong>Телефони:</strong><br>
-        Директор: 044/ 66 72 44<br>
-        Зам. директор: 044/ 66 76 84
-      </p>
-      <p><strong>Имейл:</strong><br><a href="mailto:info-2000114@edu.mon.bg">info-2000114@edu.mon.bg</a></p>
-      <p><strong>Работно време:</strong><br>Пон–Пет: 07:30 – 19:00</p>
-    </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Общи пространства</div>
+          <button class="room-btn" onclick="selectRoom(7)" id="btn-7">
+            Библиотека
+            <span class="room-count">2</span>
+          </button>
+          <button class="room-btn" onclick="selectRoom(8)" id="btn-8">
+            Стол / Бюфет
+            <span class="room-count">1</span>
+          </button>
+          <button class="room-btn" onclick="selectRoom(9)" id="btn-9">
+            Канцелария
+            <span  class="room-count">1</span>
+          </button>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="tour-main">
+
+      <!-- AUTO TOUR BAR -->
+      <div class="auto-tour-bar">
+        <div class="auto-tour-text">
+          <strong>Автоматична обиколка</strong> — нека ви преведем из цялото училище
+        </div>
+        <div class="auto-tour-actions">
+          <button class="btn-tour" id="autoTourBtn" onclick="toggleAutoTour()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Обиколи с нас
+          </button>
+          <button class="btn-tour-outline" onclick="selectRoom(0)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.25"/></svg>
+            Начало
+          </button>
+        </div>
+      </div>
+
+      <!-- IFRAME VIEWER -->
+      <div class="tour-viewer" id="tourViewer">
+        <!--
+          ИНСТРУКЦИИ ЗА ИНТЕГРАЦИЯ:
+          Заменете съдържанието по-долу с вашия TourMKR iframe:
+
+          <iframe
+            src="https://tourmkr.com/ВАШИЯТ_ТУР_ИД"
+            allowfullscreen
+            allow="fullscreen; gyroscope; accelerometer"
+            loading="lazy"
+          ></iframe>
+        -->
+        <div class="viewer-placeholder" id="viewerPlaceholder">
+          <div class="viewer-placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4l3 3"/>
+              <path d="M3.05 11a9 9 0 1 0 .5-3"/>
+            </svg>
+          </div>
+          <h3 id="placeholderTitle">Фасада и двор</h3>
+          <p id="placeholderDesc">Тук ще се зареди 360° панорамният изглед от TourMKR.</p>
+          <a href="https://tourmkr.com" target="_blank" class="btn-gold-sm">
+            Създайте тур в TourMKR
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <div class="viewer-controls">
+          <button class="ctrl-btn" title="Цял екран" onclick="requestFullscreen()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
+          </button>
+          <button class="ctrl-btn" title="Споделяне" onclick="shareRoom()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="tour-cta reveal">
+        <div>
+          <h3>Хареса ви нашето училище?</h3>
+          <p>Запишете детето си при нас и му дайте най-доброто начало. Приемаме ученици в I и VIII клас.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="priem-1-klas.html" class="btn-green">
+            Прием I клас
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="priem-8-klas.html" class="btn-outline">
+            Прием VIII клас
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </main>
   </div>
-  <div class="footer-bottom">
-    <span>© 2026 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
-    <span><a href="razrabotva-se.html">Поверителност</a> · <a href="razrabotva-se.html">Достъпност</a></span>
-  </div>
-</footer>
+
+  <div id="footer-container"></div>
+
   <script type="module" src="assets/js/main.js"></script>
+  <script src="assets/js/components-init.js"></script>
   <script src="assets/js/pages/virtualna-razhodka.js" defer></script>
+
 </body>
 </html>

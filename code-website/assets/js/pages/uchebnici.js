@@ -9,7 +9,7 @@
     const rooms = [
       {
         id: 0, label: 'Поглед отвън', title: 'Фасада и двор', badge: 'Начална точка',
-        desc: 'Добре дошли в СУ „Йордан Йовков"! Разгледайте фасадата на нашето училище и просторния двор, където учениците прекарват почивките си. Сградата предлага отлични условия за образование.',
+        desc: 'Добре дошли в СУ „Йордан Йовков“! Разгледайте фасадата на нашето училище и просторния двор, където учениците прекарват почивките си. Сградата предлага отлични условия за образование.',
         features: ['Просторен двор', 'Спортна площадка', 'Зелени площи', 'Паркинг'],
         emoji: ['🏫', '🌳', '⚽'], tourUrl: null
       },
@@ -182,7 +182,7 @@
     window.shareRoom = function () {
       const room = rooms[currentRoom];
       if (navigator.share) {
-        navigator.share({ title: `СУ „Йордан Йовков" – ${room.title}`, url: window.location.href });
+        navigator.share({ title: `СУ „Йордан Йовков“ – ${room.title}`, url: window.location.href });
       } else {
         navigator.clipboard.writeText(window.location.href).then(() => alert('Линкът е копиран!'));
       }

@@ -1,423 +1,281 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>СУ „Йордан Йовков" – Сливен</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/variables.css">
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css">
-<link rel="stylesheet" href="assets/css/pages/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СУ „Йордан Йовков“ – Сливен</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/index.css">
 </head>
 <body>
  
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <img src="images/logo.png" alt="Лого СУ Йордан Йовков">
-    <div class="nav-logo-text">
-      <strong>СУ „Йордан Йовков"</strong>
-      <span>Сливен</span>
-    </div>
-  </a>
-  <div class="nav-links">
-    <div class="nav-item">
-      <a href="za-nas.html">За нас <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="patron.html">Патрон</a><a href="himn.html">Химн</a><a href="istoriq.html">История</a><a href="misiq-viziq.html">Мисия и визия</a><a href="virtualna-razhodka.html">Виртуална разходка</a><a href="ekip.html">Училищен екип</a><a href="paralelki.html">Паралелки</a><a href="materialna-baza.html">Материална база</a><a href="uniformi.html">Униформи</a>
+  <div id="navbar-container"></div>
+  
+  <section class="hero" id="hero">
+    <div class="hero-slide active">
+      <div class="hero-bg" style="background-image:url('images/su.png')"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">Основано 1980 · Сливен</div>
+        <h1 class="hero-title">СУ<em>"Йордан Йовков"</em></h1>
+        <p class="hero-subtitle">Място, където знанието среща характера. Изграждаме личности, готови да успеят навсякъде.</p>
+        <a href="#about" class="hero-btn">Научи повече <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
-    <div class="nav-item">
-      <a href="priem.html">Прием <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="priem-1-klas.html">Прием в I клас</a><a href="priem-5-klas.html">Прием в V клас</a><a href="priem-8-klas.html">Прием в VIII клас</a><a href="dokumenti-priem.html">Необходими документи</a><a href="faq.html">Често задавани въпроси</a>
+    <div class="hero-slide">
+      <div class="hero-bg" style="background-image:url('images/1-klas.jpg');filter:sepia(.2) brightness(.7)"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">Прием · 2024/2025</div>
+        <h1 class="hero-title">Запишете<br><em>детето си</em></h1>
+        <p class="hero-subtitle">Приемаме ученици в I и VIII клас. Качествено образование за всяко дете.</p>
+        <a href="#priem1" class="hero-btn">Към приема <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
-    <div class="nav-item">
-      <a href="obuchenie.html">Обучение <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="razrabotva-se.html">Електронен дневник</a>
+    <div class="hero-slide">
+      <div class="hero-bg" style="background-image:url('images/inovations.jpg');filter:hue-rotate(80deg) brightness(.65)"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">Национални програми · Проекти</div>
+        <h1 class="hero-title">Иновации<br>в&nbsp;<em>образованието</em></h1>
+        <p class="hero-subtitle">Участваме в национални и европейски програми за модерно образование.</p>
+        <a href="#programs" class="hero-btn">Програмите <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
-    <div class="nav-item">
-      <a href="roditeli.html">Родители <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="razrabotva-se.html">Наредби</a><a href="razrabotva-se.html">Родителски срещи</a>
+    <div class="hero-indicators">
+      <button class="hero-dot active" data-idx="0"></button>
+      <button class="hero-dot" data-idx="1"></button>
+      <button class="hero-dot" data-idx="2"></button>
+    </div>
+    <div class="hero-scroll"><div class="scroll-line"></div><span>Скрол</span></div>
+  </section>
+  
+  <section class="quick-section">
+    <a href="novini.html" class="quick-card reveal">
+      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l4 4v10a2 2 0 01-2 2z"/><path d="M17 20v-8H7v8M7 4v4h8"/></svg></div>
+      <div class="quick-label">Новини</div>
+      <div class="quick-desc">Последни съобщения от живота на училището</div>
+      <div class="quick-arrow">Виж всички <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+    <a href="priem-1-klas.html" class="quick-card reveal" style="transition-delay:.1s">
+      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+      <div class="quick-label">Прием</div>
+      <div class="quick-desc">Записване в I и VIII клас — условия и документи</div>
+      <div class="quick-arrow">Условия <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+    <a href="pochivni-dni.html" class="quick-card reveal" style="transition-delay:.2s">
+      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <div class="quick-label">Календар</div>
+      <div class="quick-desc">Учебни срокове, ваканции и важни дати</div>
+      <div class="quick-arrow">Виж <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+    <a href="uchebni-planove.html" class="quick-card reveal" style="transition-delay:.3s">
+      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2zM22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+      <div class="quick-label">Учебен план</div>
+      <div class="quick-desc">Програми и разпределение по предмети</div>
+      <div class="quick-arrow">Изтегли <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+  </section>
+  
+  <section class="section about-section" id="about">
+    <div class="section-label reveal">За нас</div>
+    <h2 class="section-title reveal">45 години<br>качествено образование</h2>
+    <div class="about-grid">
+      <div class="about-text reveal-left">
+        <p>СУ „Йордан Йовков“ е едно от утвърдените средни учебни заведения в Сливен, с богата история и традиции. От своето основаване през 1980 г., училището неизменно се придържа към мисията си — да изгражда свободни, мислещи и отговорни личности.</p>
+        <p>Нашите педагози работят с отдаденост и любов, за да осигурят среда, в която всяко дете може да разгърне пълния си потенциал — в науките, изкуствата и спорта.</p>
+        <div class="motto">„Ако успееш тук, ще успееш навсякъде!"</div>
+      </div>
+      <div class="about-stats reveal-right">
+        <div class="stat-card"><div class="stat-number"><span class="count-up" data-target="45">0</span><span class="stat-unit">+</span></div><div class="stat-text">Години традиция и качествено образование</div></div>
+        <div class="stat-card"><div class="stat-number"><span class="count-up" data-target="500">0</span><span class="stat-unit">+</span></div><div class="stat-text">Ученици, учещи при нас в момента</div></div>
+        <div class="stat-card"><div class="stat-number"><span class="count-up" data-target="37">0</span><span class="stat-unit">+</span></div><div class="stat-text">Опитни педагози и специалисти</div></div>
+        <div class="stat-card"><div class="stat-number"><span class="count-up" data-target="12">0</span></div><div class="stat-text">Паралелки от I до XII клас</div></div>
       </div>
     </div>
-    <div class="nav-item">
-      <a href="uchenici.html">Ученици <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="konsultacii.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
+  </section>
+ 
+  <section class="section priem1-section" id="priem1">
+    <div class="section-label reveal">Прием 2026/2027</div>
+    <div class="priem1-grid">
+      <div class="priem1-visual reveal-left">
+        <div class="priem1-visual-placeholder"><img src="images/priem.jpg" alt=""></div>
+      </div>
+      <div class="priem1-content reveal-right">
+        <h3>Запишете детето си при нас</h3>
+        <p>Предлагаме топла, сигурна и стимулираща среда за най-малките ни ученици. Записването в I клас се извършва по електронен път или в канцеларията на училището.</p>
+        <ul class="priem1-list">
+          <li>Подаване на документи в периода май – юни</li>
+          <li>Необходими: акт за раждане, здравна карта, декларация</li>
+          <li>Записване на всички деца, навършили 7 години</li>
+          <li>Информационна среща за родители — всеки четвъртък от 17:00 ч.</li>
+        </ul>
+        <a href="dokumenti-priem.html" class="btn-red">Документи за прием <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
-    <div class="nav-item"><a href="razrabotva-se.html">Проекти</a></div>
-    <div class="nav-item"><a href="novini.html">Новини</a></div>
-    <div class="nav-item">
-      <a href="dokumenti.html">Документи <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="pravilnici.html">Правилници</a><a href="stipendii.html">Стипендии</a><a href="razrabotva-se.html">Училищни документи</a><a href="razrabotva-se.html">Формуляри</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="kontakti.html">Контакти</a></div>
-  </div>
-  <button class="nav-search" aria-label="Търсене">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-  </button>
-  <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  </section>
  
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="istoriq.html">История</a>
-      <a href="misiq-viziq.html">Мисия и визия</a>
-      <a href="ekip.html">Педагогически екип</a>
-      <a href="kontakti.html">Контакти</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="priem-1-klas.html">Прием в I клас</a>
-      <a href="priem-5-klas.html">Прием в V клас</a>
-      <a href="priem-8-klas.html">Прием в VIII клас</a>
-      <a href="dokumenti.html">Необходими документи</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="#">Учебни планове</a>
-      <a href="#">Разписание</a>
-      <a href="https://app.shkolo.bg/" target="_blank">Електронен дневник</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="#">Наредби</a><a href="#">Родителска среща</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="uchenicheski-suvet.html">Ученически съвет</a>
-      <a href="#">Извънкласни дейности</a>
-      <a href="#">Спорт</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="#">Проекти</a></div>
-  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="dokumenti.html">Необходими документи</a>
-      <a href="faq.html">ЧЗВ</a>
-      <a href="#">Формуляри</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
-  <div class="mobile-menu-actions">
-    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
-    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
-  </div>
-</div>
- 
-<section class="hero" id="hero">
-  <div class="hero-slide active">
-    <div class="hero-bg" style="background-image:url('images/su.png')"></div>
-    <div class="hero-content">
-      <div class="hero-eyebrow">Основано 1980 · Сливен</div>
-      <h1 class="hero-title">СУ<em>"Йордан Йовков"</em></h1>
-      <p class="hero-subtitle">Място, където знанието среща характера. Изграждаме личности, готови да успеят навсякъде.</p>
-      <a href="#about" class="hero-btn">Научи повече <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-  </div>
-  <div class="hero-slide">
-    <div class="hero-bg" style="background-image:url('images/1-klas.jpg');filter:sepia(.2) brightness(.7)"></div>
-    <div class="hero-content">
-      <div class="hero-eyebrow">Прием · 2024/2025</div>
-      <h1 class="hero-title">Запишете<br><em>детето си</em></h1>
-      <p class="hero-subtitle">Приемаме ученици в I и VIII клас. Качествено образование за всяко дете.</p>
-      <a href="#priem1" class="hero-btn">Към приема <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-  </div>
-  <div class="hero-slide">
-    <div class="hero-bg" style="background-image:url('images/inovations.jpg');filter:hue-rotate(80deg) brightness(.65)"></div>
-    <div class="hero-content">
-      <div class="hero-eyebrow">Национални програми · Проекти</div>
-      <h1 class="hero-title">Иновации<br>в&nbsp;<em>образованието</em></h1>
-      <p class="hero-subtitle">Участваме в национални и европейски програми за модерно образование.</p>
-      <a href="#programs" class="hero-btn">Програмите <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-  </div>
-  <div class="hero-indicators">
-    <button class="hero-dot active" data-idx="0"></button>
-    <button class="hero-dot" data-idx="1"></button>
-    <button class="hero-dot" data-idx="2"></button>
-  </div>
-  <div class="hero-scroll"><div class="scroll-line"></div><span>Скрол</span></div>
-</section>
- 
-<section class="quick-section">
-  <a href="novini.html" class="quick-card reveal">
-    <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l4 4v10a2 2 0 01-2 2z"/><path d="M17 20v-8H7v8M7 4v4h8"/></svg></div>
-    <div class="quick-label">Новини</div>
-    <div class="quick-desc">Последни съобщения от живота на училището</div>
-    <div class="quick-arrow">Виж всички <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-  </a>
-  <a href="priem-1-klas.html" class="quick-card reveal" style="transition-delay:.1s">
-    <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-    <div class="quick-label">Прием</div>
-    <div class="quick-desc">Записване в I и VIII клас — условия и документи</div>
-    <div class="quick-arrow">Условия <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-  </a>
-  <a href="pochivni-dni.html" class="quick-card reveal" style="transition-delay:.2s">
-    <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-    <div class="quick-label">Календар</div>
-    <div class="quick-desc">Учебни срокове, ваканции и важни дати</div>
-    <div class="quick-arrow">Виж <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-  </a>
-  <a href="uchebni-planove.html" class="quick-card reveal" style="transition-delay:.3s">
-    <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2zM22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
-    <div class="quick-label">Учебен план</div>
-    <div class="quick-desc">Програми и разпределение по предмети</div>
-    <div class="quick-arrow">Изтегли <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-  </a>
-</section>
- 
-<section class="section about-section" id="about">
-  <div class="section-label reveal">За нас</div>
-  <h2 class="section-title reveal">45 години<br>качествено образование</h2>
-  <div class="about-grid">
-    <div class="about-text reveal-left">
-      <p>СУ „Йордан Йовков" е едно от утвърдените средни учебни заведения в Сливен, с богата история и традиции. От своето основаване през 1980 г., училището неизменно се придържа към мисията си — да изгражда свободни, мислещи и отговорни личности.</p>
-      <p>Нашите педагози работят с отдаденост и любов, за да осигурят среда, в която всяко дете може да разгърне пълния си потенциал — в науките, изкуствата и спорта.</p>
-      <div class="motto">„Ако успееш тук, ще успееш навсякъде!"</div>
-    </div>
-    <div class="about-stats reveal-right">
-      <div class="stat-card"><div class="stat-number"><span class="count-up" data-target="45">0</span><span class="stat-unit">+</span></div><div class="stat-text">Години традиция и качествено образование</div></div>
-      <div class="stat-card"><div class="stat-number"><span class="count-up" data-target="500">0</span><span class="stat-unit">+</span></div><div class="stat-text">Ученици, учещи при нас в момента</div></div>
-      <div class="stat-card"><div class="stat-number"><span class="count-up" data-target="37">0</span><span class="stat-unit">+</span></div><div class="stat-text">Опитни педагози и специалисти</div></div>
-      <div class="stat-card"><div class="stat-number"><span class="count-up" data-target="12">0</span></div><div class="stat-text">Паралелки от I до XII клас</div></div>
-    </div>
-  </div>
-</section>
- 
-<section class="section priem1-section" id="priem1">
-  <div class="section-label reveal">Прием 2026/2027</div>
-  <div class="priem1-grid">
-    <div class="priem1-visual reveal-left">
-      <div class="priem1-visual-placeholder"><img src="images/priem.jpg" alt=""></div>
-    </div>
-    <div class="priem1-content reveal-right">
-      <h3>Запишете детето си при нас</h3>
-      <p>Предлагаме топла, сигурна и стимулираща среда за най-малките ни ученици. Записването в I клас се извършва по електронен път или в канцеларията на училището.</p>
-      <ul class="priem1-list">
-        <li>Подаване на документи в периода май – юни</li>
-        <li>Необходими: акт за раждане, здравна карта, декларация</li>
-        <li>Записване на всички деца, навършили 7 години</li>
-        <li>Информационна среща за родители — всеки четвъртък от 17:00 ч.</li>
-      </ul>
-      <a href="dokumenti-priem.html" class="btn-red">Документи за прием <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-  </div>
-</section>
- 
-<section class="priem8-section" id="priem8">
-  <div class="section-label reveal">Прием</div>
-  <h2 class="section-title reveal">Прием след седми клас</h2>
-  <p class="section-subtitle reveal">Избери своя профил и стъпи уверено към бъдещето.</p>
- 
-  <div class="priem8-layout">
-    <div class="priem8-profile reveal">
-      <div class="priem8-profile-num">Паралелка</div>
-      <h4>Интелигентни системи</h4>
-      <p>Задълбочена подготовка по математика, информационни технологии и програмиране с фокус върху изкуствен интелект и съвременни дигитални решения.</p>
-      <div class="priem8-features">
-        <div class="priem8-feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Математика и ИТ — разширено ниво
+  <section class="priem8-section" id="priem8">
+    <div class="section-label reveal">Прием</div>
+    <h2 class="section-title reveal">Прием след седми клас</h2>
+    <p class="section-subtitle reveal">Избери своя профил и стъпи уверено към бъдещето.</p>
+  
+    <div class="priem8-layout">
+      <div class="priem8-profile reveal">
+        <div class="priem8-profile-num">Паралелка</div>
+        <h4>Интелигентни системи</h4>
+        <p>Задълбочена подготовка по математика, информационни технологии и програмиране с фокус върху изкуствен интелект и съвременни дигитални решения.</p>
+        <div class="priem8-features">
+          <div class="priem8-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Математика и ИТ — разширено ниво
+          </div>
+          <div class="priem8-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Програмиране и изкуствен интелект
+          </div>
+          <div class="priem8-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Партньорство с programisti.com
+          </div>
+          <div class="priem8-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Подготовка за НВО и олимпиади
+          </div>
         </div>
-        <div class="priem8-feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Програмиране и изкуствен интелект
+      </div>
+  
+      <div class="priem8-info reveal" style="transition-delay:.15s">
+        <div class="priem8-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Учебна 2025/2026
         </div>
-        <div class="priem8-feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Партньорство с programisti.com
+        <div class="priem8-stat-row">
+          <div class="priem8-stat">
+            <div class="priem8-stat-num">26</div>
+            <div class="priem8-stat-label">Места</div>
+          </div>
+          <div class="priem8-stat">
+            <div class="priem8-stat-num">VIII</div>
+            <div class="priem8-stat-label">Клас</div>
+          </div>
+          <div class="priem8-stat">
+            <div class="priem8-stat-num">4</div>
+            <div class="priem8-stat-label">Профилни предмета</div>
+          </div>
+          <div class="priem8-stat">
+            <div class="priem8-stat-num">НВО</div>
+            <div class="priem8-stat-label">Изпит за прием</div>
+          </div>
         </div>
-        <div class="priem8-feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Подготовка за НВО и олимпиади
+        <div class="priem8-cta">
+          <a href="priem-8-klas.html" class="btn-gold">Условия за прием <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="https://programisti.com" target="_blank" class="btn-outline-white">programisti.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></a>
         </div>
       </div>
     </div>
+  </section>
  
-    <div class="priem8-info reveal" style="transition-delay:.15s">
-      <div class="priem8-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        Учебна 2025/2026
-      </div>
-      <div class="priem8-stat-row">
-        <div class="priem8-stat">
-          <div class="priem8-stat-num">26</div>
-          <div class="priem8-stat-label">Места</div>
-        </div>
-        <div class="priem8-stat">
-          <div class="priem8-stat-num">VIII</div>
-          <div class="priem8-stat-label">Клас</div>
-        </div>
-        <div class="priem8-stat">
-          <div class="priem8-stat-num">4</div>
-          <div class="priem8-stat-label">Профилни предмета</div>
-        </div>
-        <div class="priem8-stat">
-          <div class="priem8-stat-num">НВО</div>
-          <div class="priem8-stat-label">Изпит за прием</div>
+  <section class="section news-section" id="news">
+    <div class="section-label reveal">Актуално</div>
+    <h2 class="section-title reveal">Новини от<br>училищния живот</h2>
+    <div class="news-grid">
+      <div class="news-card reveal">
+        <div class="news-img"><div class="news-img-inner" style="background-image:url('images/concurs.jpg')"></div><span class="news-cat">Постижение</span></div>
+        <div class="news-body">
+          <div class="news-date">27 февруари 2026</div>
+          <h3>НАЦИОНАЛНО ОТЛИЧИЕ ЗА УЧЕНИЦИ ОТ СУ „Йордан Йовков“</h3>
+          <p>Даниел Константинов и Венцислав Колев завоюваха второ място в националния конкурс „Аз и изкуственият интелект след 10 години".</p>
+          <a href="statiq.html" class="news-link">Прочети повече <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
-      <div class="priem8-cta">
-        <a href="priem-8-klas.html" class="btn-gold">Условия за прием <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="https://programisti.com" target="_blank" class="btn-outline-white">programisti.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+      <div class="news-card reveal" style="transition-delay:.12s">
+        <div class="news-img"><div class="news-img-inner" style="background-image:url('images/3-mart.jpg');background-position:top"></div><span class="news-cat">Събитие</span></div>
+        <div class="news-body">
+          <div class="news-date">28 Март 2025</div>
+          <h3>ТРЕТИ МАРТ – ПАМЕТ И ГОРДОСТ ЗА БЪЛГАРИЯ</h3>
+          <p>Участниците в клуб „Млади възрожденци" достойно се включиха в проявите за националния празник.</p>
+          <a href="#" class="news-link">Прочети повече <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="news-card reveal" style="transition-delay:.24s">
+        <div class="news-img"><div class="news-img-inner" style="background-image:url('images/levski.jpg');background-position:bottom"></div><span class="news-cat">Събитие</span></div>
+        <div class="news-body">
+          <div class="news-date">15 Март 2025</div>
+          <h3>„ВРЕМЕТО Е В НАС И НИЕ СМЕ ВЪВ ВРЕМЕТО"</h3>
+          <p>Тържествено отбелязахме 153-тата годишнина от гибелта на Васил Левски.</p>
+          <a href="#" class="news-link">Прочети повече <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+    <div class="news-more reveal"><a href="novini.html" class="btn-outline">Виж повече новини <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+  </section>
  
-<section class="section news-section" id="news">
-  <div class="section-label reveal">Актуално</div>
-  <h2 class="section-title reveal">Новини от<br>училищния живот</h2>
-  <div class="news-grid">
-    <div class="news-card reveal">
-      <div class="news-img"><div class="news-img-inner" style="background-image:url('images/concurs.jpg')"></div><span class="news-cat">Постижение</span></div>
-      <div class="news-body">
-        <div class="news-date">27 февруари 2026</div>
-        <h3>НАЦИОНАЛНО ОТЛИЧИЕ ЗА УЧЕНИЦИ ОТ СУ „ЙОРДАН ЙОВКОВ"</h3>
-        <p>Даниел Константинов и Венцислав Колев завоюваха второ място в националния конкурс „Аз и изкуственият интелект след 10 години".</p>
-        <a href="statiq.html" class="news-link">Прочети повече <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <section class="community-section" id="community">
+    <div class="section-label reveal">Заедно</div>
+    <h2 class="section-title reveal">Училищна общност</h2>
+    <div class="community-grid">
+      <div class="community-img-wrap reveal-left">
+        <div class="community-img"></div>
+        <div class="community-img-deco"></div>
+      </div>
+      <div class="reveal-right">
+        <div class="community-badges">
+          <span class="badge">Ученически съвет</span><span class="badge">Родителски клуб</span>
+          <span class="badge">Педагогически екип</span><span class="badge">Спортни клубове</span>
+          <span class="badge">Творчески ателиета</span>
+        </div>
+        <div class="community-text">
+          <p>Нашата общност е повече от просто училище — тя е семейство. Ученически съвет, родителски клубове, спортни и творчески групи работят заедно.</p>
+          <p>Вярваме, че образованието се случва и извън класната стая — в спортни зали, на сцената, в природата.</p>
+        </div>
+        <div class="community-btns">
+          <a href="uchenicheski-suvet.html" class="btn-red">Ученически съвет</a>
+          <a href="izvunklasni-deinosti.html" class="btn-outline">Извънкласни дейности</a>
+        </div>
       </div>
     </div>
-    <div class="news-card reveal" style="transition-delay:.12s">
-      <div class="news-img"><div class="news-img-inner" style="background-image:url('images/3-mart.jpg');background-position:top"></div><span class="news-cat">Събитие</span></div>
-      <div class="news-body">
-        <div class="news-date">28 Март 2025</div>
-        <h3>ТРЕТИ МАРТ – ПАМЕТ И ГОРДОСТ ЗА БЪЛГАРИЯ</h3>
-        <p>Участниците в клуб „Млади възрожденци" достойно се включиха в проявите за националния празник.</p>
-        <a href="#" class="news-link">Прочети повече <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </div>
-    </div>
-    <div class="news-card reveal" style="transition-delay:.24s">
-      <div class="news-img"><div class="news-img-inner" style="background-image:url('images/levski.jpg');background-position:bottom"></div><span class="news-cat">Събитие</span></div>
-      <div class="news-body">
-        <div class="news-date">15 Март 2025</div>
-        <h3>„ВРЕМЕТО Е В НАС И НИЕ СМЕ ВЪВ ВРЕМЕТО"</h3>
-        <p>Тържествено отбелязахме 153-тата годишнина от гибелта на Васил Левски.</p>
-        <a href="#" class="news-link">Прочети повече <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </div>
-    </div>
-  </div>
-  <div class="news-more reveal"><a href="novini.html" class="btn-outline">Виж повече новини <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-</section>
+  </section>
  
-<section class="community-section" id="community">
-  <div class="section-label reveal">Заедно</div>
-  <h2 class="section-title reveal">Училищна общност</h2>
-  <div class="community-grid">
-    <div class="community-img-wrap reveal-left">
-      <div class="community-img"></div>
-      <div class="community-img-deco"></div>
-    </div>
-    <div class="reveal-right">
-      <div class="community-badges">
-        <span class="badge">Ученически съвет</span><span class="badge">Родителски клуб</span>
-        <span class="badge">Педагогически екип</span><span class="badge">Спортни клубове</span>
-        <span class="badge">Творчески ателиета</span>
+  <section class="programs-section" id="programs">
+    <div class="section-label reveal">Национални инициативи</div>
+    <h2 class="section-title reveal">Участие в национални програми</h2>
+    <div class="programs-grid">
+      <div class="program-card reveal">
+        <div class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>НП „Информационни и комуникационни технологии"</h4>
+        <p>Модернизация на материалната база и ИКТ обучение на учители.</p>
+        <span class="program-tag">МОН</span>
       </div>
-      <div class="community-text">
-        <p>Нашата общност е повече от просто училище — тя е семейство. Ученически съвет, родителски клубове, спортни и творчески групи работят заедно.</p>
-        <p>Вярваме, че образованието се случва и извън класната стая — в спортни зали, на сцената, в природата.</p>
+      <div class="program-card reveal" style="transition-delay:.1s">
+        <div class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+        <h4>Програма „Еразъм+" — Мобилност</h4>
+        <p>Международен обмен и партньорства с европейски училища.</p>
+        <span class="program-tag">ЕС</span>
       </div>
-      <div class="community-btns">
-        <a href="uchenicheski-suvet.html" class="btn-red">Ученически съвет</a>
-        <a href="izvunklasni-deinosti.html" class="btn-outline">Извънкласни дейности</a>
+      <div class="program-card reveal" style="transition-delay:.2s">
+        <div class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h4>НП „Без свободен час"</h4>
+        <p>Квалификация и продължаващо развитие на педагогическите специалисти.</p>
+        <span class="program-tag">МОН</span>
+      </div>
+      <div class="program-card reveal" style="transition-delay:.3s">
+        <div class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h4>НП „Заедно в изкуството и спорта"</h4>
+        <p>Насърчаване на творческите и спортни дейности за всички ученици.</p>
+        <span class="program-tag">МОН</span>
       </div>
     </div>
-  </div>
-</section>
- 
-<section class="programs-section" id="programs">
-  <div class="section-label reveal">Национални инициативи</div>
-  <h2 class="section-title reveal">Участие в национални програми</h2>
-  <div class="programs-grid">
-    <div class="program-card reveal">
-      <div class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <h4>НП „Информационни и комуникационни технологии"</h4>
-      <p>Модернизация на материалната база и ИКТ обучение на учители.</p>
-      <span class="program-tag">МОН</span>
-    </div>
-    <div class="program-card reveal" style="transition-delay:.1s">
-      <div class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
-      <h4>Програма „Еразъм+" — Мобилност</h4>
-      <p>Международен обмен и партньорства с европейски училища.</p>
-      <span class="program-tag">ЕС</span>
-    </div>
-    <div class="program-card reveal" style="transition-delay:.2s">
-      <div class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-      <h4>НП „Без свободен час"</h4>
-      <p>Квалификация и продължаващо развитие на педагогическите специалисти.</p>
-      <span class="program-tag">МОН</span>
-    </div>
-    <div class="program-card reveal" style="transition-delay:.3s">
-      <div class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <h4>НП „Заедно в изкуството и спорта"</h4>
-      <p>Насърчаване на творческите и спортни дейности за всички ученици.</p>
-      <span class="program-tag">МОН</span>
-    </div>
-  </div>
-</section>
- 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="images/logo.png" alt="Лого">
-      <p>СУ „Йордан Йовков" — Сливен е средно училище с богата история и традиции, изграждащо знаещи и уверени личности от 1980 година.</p>
-      <div class="footer-motto">„Ако успееш тук, ще успееш навсякъде!"</div>
-    </div>
-    <div class="footer-col">
-      <h5>Навигация</h5>
-      <ul><li><a href="za-nas.html">За нас</a></li><li><a href="priem.html">Прием</a></li><li><a href="obuchenie.html">Обучение</a></li><li><a href="novini.html">Новини</a></li><li><a href="razrabotva-se.html">Проекти</a></li><li><a href="dokumenti.html">Документи</a></li></ul>
-    </div>
-    <div class="footer-col">
-      <h5>Полезни връзки</h5>
-      <ul><li><a href="https://app.shkolo.bg/" target="_blank">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
-    </div>
-    <div class="footer-col footer-contact">
-      <h5>Контакти</h5>
-      <p><strong>Адрес:</strong><br>гр. Сливен</p>
-      <p><strong>Телефони:</strong><br>
-        Директор: 044/ 66 72 44<br>
-        Зам. директор: 044/ 66 76 84
-      </p>
-      <p><strong>Имейл:</strong><br><a href="mailto:info-2000114@edu.mon.bg">info-2000114@edu.mon.bg</a></p>
-      <p><strong>Работно време:</strong><br>Пон–Пет: 07:30 – 19:00</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
-    <span><a href="#">Поверителност</a> · <a href="#">Достъпност</a></span>
-  </div>
-</footer>
+  </section>
 
-<script type="module" src="assets/js/main.js"></script>
-<script type="module" src="assets/js/pages/index.js" defer></script>
+  <div id="footer-container"></div>
+
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/pages/index.js" defer></script>
+  <script src="assets/js/components-init.js"></script>
 
 </body>
 </html>

@@ -1,353 +1,196 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Патрон – Йордан Йовков | СУ „Йордан Йовков" – Сливен</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/variables.css">
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css">
-
-<link rel="stylesheet" href="assets/css/pages/patron.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Патрон – Йордан Йовков | СУ „Йордан Йовков“ – Сливен</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/patron.css">
 </head>
 <body>
 
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <img src="images/logo.png" alt="Лого СУ Йордан Йовков">
-    <div class="nav-logo-text">
-      <strong>СУ „Йордан Йовков"</strong>
-      <span>Сливен</span>
-    </div>
-  </a>
-  <div class="nav-links">
-    <div class="nav-item">
-      <a href="za-nas.html">За нас <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="patron.html">Патрон</a><a href="himn.html">Химн</a><a href="istoriq.html">История</a><a href="misiq-viziq.html">Мисия и визия</a><a href="virtualna-razhodka.html">Виртуална разходка</a><a href="ekip.html">Училищен екип</a><a href="paralelki.html">Паралелки</a><a href="materialna-baza.html">Материална база</a><a href="uniformi.html">Униформи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="priem.html">Прием <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="priem-1-klas.html">Прием в I клас</a><a href="priem-5-klas.html">Прием в V клас</a><a href="priem-8-klas.html">Прием в VIII клас</a><a href="dokumenti-priem.html">Необходими документи</a><a href="faq.html">Често задавани въпроси</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="obuchenie.html">Обучение <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="https://app.shkolo.bg/">Електронен дневник</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="roditeli.html">Родители <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="razrabotva-se.html">Наредби</a><a href="razrabotva-se.html">Родителски срещи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="uchenici.html">Ученици <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="konsultacii.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="razrabotva-se.html">Проекти</a></div>
-    <div class="nav-item"><a href="novini.html">Новини</a></div>
-    <div class="nav-item">
-      <a href="dokumenti.html">Документи <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="pravilnici.html">Правилници</a><a href="stipendii.html">Стипендии</a><a href="razrabotva-se.html">Училищни документи</a><a href="razrabotva-se.html">Формуляри</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="kontakti.html">Контакти</a></div>
-  </div>
-  <button class="nav-search" aria-label="Търсене">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-  </button>
-  <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <div id="navbar-container"></div>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="istoriq.html">История</a>
-      <a href="patron.html">Патрон</a>
-      <a href="himn.html">Химн</a>
-      <a href="misiq-viziq.html">Мисия и визия</a>
-      <a href="ekip.html">Училищен екип</a>
-      <a href="paralelki.html">Паралелки</a>
-      <a href="materialna-baza.html">Материална база</a>
-      <a href="uniformi.html">Униформи</a>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="breadcrumb">
+      <a href="index.html">НАЧАЛО</a>
+      <span>/</span>
+      <a href="#">ЗА НАС</a>
+      <span>/</span>
+      <span style="color:var(--gold)">ПАТРОН</span>
     </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="priem-1-klas.html">Прием в I клас</a>
-      <a href="priem-5-klas.html">Прием в V клас</a>
-      <a href="priem-8-klas.html">Прием в VIII клас</a>
-      <a href="dokumenti.html">Необходими документи</a>
-      <a href="faq.html">Често задавани въпроси</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="uchebnici.html">Учебници</a>
-      <a href="uchebni-planove.html">Учебни планове</a>
-      <a href="https://app.shkolo.bg">Електронен дневник</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="razrabotva-se.html">Наредби</a>
-      <a href="razrabotva-se.html">Родителски среща</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="dnevno-razpisanie.html">Дневно разписание</a>
-      <a href="sedmichno-razpisanie.html">Седмично разписание</a>
-      <a href="pochivni-dni.html">Почивни дни и ваканции</a>
-      <a href="klasni-kontrolni.html">Графици класни и контролни</a>
-      <a href="konsultacii.html">Консултации</a>
-      <a href="uchenicheski-suvet.html">Ученически съвет</a>
-      <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
-      <a href="nvo.html">НВО</a>
-      <a href="dzi.html">ДЗИ</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="#">Проекти</a></div>
-  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="pravilnici.html">Правилници</a>
-      <a href="stipendii.html">Стипендии</a>
-      <a href="razrabotva-se.html">Училищни документи</a>
-      <a href="razrabotva-se.html">Формуляри</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
-  <div class="mobile-menu-actions">
-    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
-    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
-  </div>
-</div>
+    <div class="page-hero-label">За нас · Патрон</div>
+    <h1>Йордан Йовков</h1>
+    <p class="page-hero-sub">Майстор на късия разказ, певец на красотата и хуманизма, класик на българската литература — нашият вдъхновяващ патрон.</p>
+  </section>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="breadcrumb">
-    <a href="index.html">НАЧАЛО</a>
-    <span>/</span>
-    <a href="#">ЗА НАС</a>
-    <span>/</span>
-    <span style="color:var(--gold)">ПАТРОН</span>
-  </div>
-  <div class="page-hero-label">За нас · Патрон</div>
-  <h1>Йордан Йовков</h1>
-  <p class="page-hero-sub">Майстор на късия разказ, певец на красотата и хуманизма, класик на българската литература — нашият вдъхновяващ патрон.</p>
-</section>
+  <!-- MAIN CONTENT -->
+  <div class="content-wrap">
+    <div class="content-grid">
 
-<!-- MAIN CONTENT -->
-<div class="content-wrap">
-  <div class="content-grid">
+      <!-- LEFT: MAIN -->
+      <main>
 
-    <!-- LEFT: MAIN -->
-    <main>
+        <div class="article-section reveal">
+          <div class="article-section-label">Животът му</div>
+          <h2>Биография</h2>
+          <p>Йордан Стефанов Йовков е роден на <strong>9 ноември 1880 г.</strong> в старопланинското село Жеравна, Сливенско — земя, изпълнена с романтични предания и народни легенди, които завинаги ще оцветят неговото творчество. Петото дете в семейството на Стефан Йовков и Пена Бойчова, той прекарва детството и юношеството си в родното место, впивайки красотата на планинската природа и звука на народните песни.</p>
+          <p>Основното си образование получава в Жеравна и Котел. През <strong>1900 г.</strong> завършва гимназия в София. Учителят му по литература — поетът Иван Грозев — прочита домашна работа на младия Йордан и пред целия клас предсказва: <em>„Вие имате в класа си бъдещ писател, надарен с тънка и дълбока наблюдателност."</em></p>
 
-      <div class="article-section reveal">
-        <div class="article-section-label">Животът му</div>
-        <h2>Биография</h2>
-        <p>Йордан Стефанов Йовков е роден на <strong>9 ноември 1880 г.</strong> в старопланинското село Жеравна, Сливенско — земя, изпълнена с романтични предания и народни легенди, които завинаги ще оцветят неговото творчество. Петото дете в семейството на Стефан Йовков и Пена Бойчова, той прекарва детството и юношеството си в родното место, впивайки красотата на планинската природа и звука на народните песни.</p>
-        <p>Основното си образование получава в Жеравна и Котел. През <strong>1900 г.</strong> завършва гимназия в София. Учителят му по литература — поетът Иван Грозев — прочита домашна работа на младия Йордан и пред целия клас предсказва: <em>„Вие имате в класа си бъдещ писател, надарен с тънка и дълбока наблюдателност."</em></p>
+          <div class="pull-quote">
+            <p>„Във всяка моя работа мисълта ми е там — там е моят пейзаж, там са героите ми — битът, работата и съдбата им."</p>
+            <cite>— Йордан Йовков, за Добруджа</cite>
+          </div>
 
-        <div class="pull-quote">
-          <p>„Във всяка моя работа мисълта ми е там — там е моят пейзаж, там са героите ми — битът, работата и съдбата им."</p>
-          <cite>— Йордан Йовков, за Добруджа</cite>
+          <p>След дипломирането си семейството му се премества в Добруджа, където Йовков учителства в различни села. Тази земя и нейните хора стават неизчерпаем извор на творческо вдъхновение. Записва се в Юридическия факултет на Софийския университет, но смъртта на баща му прекъсва следването.</p>
+          <p>През <strong>1912 г.</strong> е мобилизиран и участва като командир на рота в Балканската война. Сражава се при Одрин и Чаталджа. На следващата година е ранен при Дойран — собствените му войници го носят четири километра на ръце, за да го спасят от плен. Награден е с орден за храброст. Участва и в Първата световна война. Военното преживяване ражда <em>йовковския хуманизъм</em> — болката по човека, унищожаван безмилостно, и копнежът по красотата дори сред ужаса.</p>
         </div>
 
-        <p>След дипломирането си семейството му се премества в Добруджа, където Йовков учителства в различни села. Тази земя и нейните хора стават неизчерпаем извор на творческо вдъхновение. Записва се в Юридическия факултет на Софийския университет, но смъртта на баща му прекъсва следването.</p>
-        <p>През <strong>1912 г.</strong> е мобилизиран и участва като командир на рота в Балканската война. Сражава се при Одрин и Чаталджа. На следващата година е ранен при Дойран — собствените му войници го носят четири километра на ръце, за да го спасят от плен. Награден е с орден за храброст. Участва и в Първата световна война. Военното преживяване ражда <em>йовковския хуманизъм</em> — болката по човека, унищожаван безмилостно, и копнежът по красотата дори сред ужаса.</p>
-      </div>
+      </main>
 
-    </main>
+      <!-- RIGHT: SIDEBAR — static -->
+      <aside class="sidebar">
 
-    <!-- RIGHT: SIDEBAR — static -->
-    <aside class="sidebar">
-
-      <div class="portrait-card">
-        <div class="portrait-img">
-          <img src="images/yordan-yovkov-portret.jpg" alt="Йордан Йовков — портрет">
-        </div>
-        <div class="portrait-meta">
-          <div class="portrait-name">Йордан Йовков</div>
-          <div class="portrait-dates">9 ноември 1880 — 15 октомври 1937</div>
-          <div class="portrait-tags">
-            <span class="portrait-tag">Писател</span>
-            <span class="portrait-tag">Хуманист</span>
-            <span class="portrait-tag">Класик</span>
-            <span class="portrait-tag">Воин</span>
+        <div class="portrait-card">
+          <div class="portrait-img">
+            <img src="images/yordan-yovkov-portret.jpg" alt="Йордан Йовков — портрет">
+          </div>
+          <div class="portrait-meta">
+            <div class="portrait-name">Йордан Йовков</div>
+            <div class="portrait-dates">9 ноември 1880 — 15 октомври 1937</div>
+            <div class="portrait-tags">
+              <span class="portrait-tag">Писател</span>
+              <span class="portrait-tag">Хуманист</span>
+              <span class="portrait-tag">Класик</span>
+              <span class="portrait-tag">Воин</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="quick-facts">
-        <h4>Бързи факти</h4>
-        <div class="fact-row">
-          <span class="fact-label">Роден</span>
-          <span class="fact-value">9 ноем. 1880, Жеравна</span>
+        <div class="quick-facts">
+          <h4>Бързи факти</h4>
+          <div class="fact-row">
+            <span class="fact-label">Роден</span>
+            <span class="fact-value">9 ноем. 1880, Жеравна</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Починал</span>
+            <span class="fact-value">15 окт. 1937, Пловдив</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Жанр</span>
+            <span class="fact-value">Разкази, повести, драми</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Езици</span>
+            <span class="fact-value">~40 езика</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Книги</span>
+            <span class="fact-value">70+ превода</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Известен с</span>
+            <span class="fact-value">Антимовски хан, Стар. легенди</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Военно звание</span>
+            <span class="fact-value">Поручик, орден за храброст</span>
+          </div>
         </div>
-        <div class="fact-row">
-          <span class="fact-label">Починал</span>
-          <span class="fact-value">15 окт. 1937, Пловдив</span>
-        </div>
-        <div class="fact-row">
-          <span class="fact-label">Жанр</span>
-          <span class="fact-value">Разкази, повести, драми</span>
-        </div>
-        <div class="fact-row">
-          <span class="fact-label">Езици</span>
-          <span class="fact-value">~40 езика</span>
-        </div>
-        <div class="fact-row">
-          <span class="fact-label">Книги</span>
-          <span class="fact-value">70+ превода</span>
-        </div>
-        <div class="fact-row">
-          <span class="fact-label">Известен с</span>
-          <span class="fact-value">Антимовски хан, Стар. легенди</span>
-        </div>
-        <div class="fact-row">
-          <span class="fact-label">Военно звание</span>
-          <span class="fact-value">Поручик, орден за храброст</span>
-        </div>
-      </div>
 
-      <div class="quote-card">
-        <div class="quote-card-label">Цитат</div>
-        <p>„Винаги съм наклонен да вярвам на хората, да виждам и да търся у тях преди всичко доброто."</p>
-        <cite>— Йордан Йовков</cite>
-      </div>
-
-      <a href="himn.html" class="hymn-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        <div>
-          <div class="hymn-link-label">Вижте също</div>
-          <div class="hymn-link-title">Химн на училището</div>
+        <div class="quote-card">
+          <div class="quote-card-label">Цитат</div>
+          <p>„Винаги съм наклонен да вярвам на хората, да виждам и да търся у тях преди всичко доброто."</p>
+          <cite>— Йордан Йовков</cite>
         </div>
-      </a>
 
-    </aside>
-  </div>
+        <a href="himn.html" class="hymn-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          <div>
+            <div class="hymn-link-label">Вижте също</div>
+            <div class="hymn-link-title">Химн на училището</div>
+          </div>
+        </a>
 
-  <!-- ЛИТЕРАТУРНО НАСЛЕДСТВО — пълна ширина -->
-  <div class="full-width-section reveal" style="margin-top:3rem">
-    <div class="article-section-label">Творчеството му</div>
-    <h2>Литературно наследство</h2>
-    <p>Йордан Йовков е класик на <strong>краткия разказ</strong> — автор на осем цикъла разкази, повести, романи и три драми. В разказите си той тръгва от сивата действителност и постепенно я превръща в легендарна реалност, пренасяйки читателя в един по-красив и хармоничен свят. Устоите на доброто, красотата и човешката достойнство са централни за неговото изкуство.</p>
-    <p>Войните преобразяват неговия мироглед: от елегичния лирик израства мащабният хуманист, чиято болка за унищожавания човек прониква всичко написано от него след 1912 г. Неговият разказ <em>„Грехът на Иван Белин"</em> е включен в Световната антология на краткия разказ, съставена от Томас Ман.</p>
-    <p>Творбите му са преведени на <strong>близо 40 езика</strong>, сред които арабски, виетнамски, китайски, персийски, японски, хинди и шведски — свидетелство за универсалността на неговите послания.</p>
+      </aside>
+    </div>
 
-    <div class="works-grid" style="grid-template-columns:repeat(4,1fr)">
-      <div class="work-card">
-        <div class="work-year">1917 – 1918</div>
-        <div class="work-title">Разкази (I и II том)</div>
-      </div>
-      <div class="work-card">
-        <div class="work-year">1920</div>
-        <div class="work-title">Жетварят</div>
-      </div>
-      <div class="work-card">
-        <div class="work-year">1926</div>
-        <div class="work-title">Последна радост</div>
-      </div>
-      <div class="work-card">
-        <div class="work-year">1927</div>
-        <div class="work-title">Старопланински легенди</div>
-      </div>
-      <div class="work-card">
-        <div class="work-year">1928</div>
-        <div class="work-title">Вечери в Антимовския хан</div>
-      </div>
-      <div class="work-card">
-        <div class="work-year">1935</div>
-        <div class="work-title">Женско сърце</div>
-      </div>
-      <div class="work-card">
-        <div class="work-year">1936</div>
-        <div class="work-title">Ако можеха да говорят</div>
-      </div>
-      <div class="work-card">
-        <div class="work-year">Драми</div>
-        <div class="work-title">Албена · Боряна · Обикновен човек</div>
+    <!-- ЛИТЕРАТУРНО НАСЛЕДСТВО — пълна ширина -->
+    <div class="full-width-section reveal" style="margin-top:3rem">
+      <div class="article-section-label">Творчеството му</div>
+      <h2>Литературно наследство</h2>
+      <p>Йордан Йовков е класик на <strong>краткия разказ</strong> — автор на осем цикъла разкази, повести, романи и три драми. В разказите си той тръгва от сивата действителност и постепенно я превръща в легендарна реалност, пренасяйки читателя в един по-красив и хармоничен свят. Устоите на доброто, красотата и човешката достойнство са централни за неговото изкуство.</p>
+      <p>Войните преобразяват неговия мироглед: от елегичния лирик израства мащабният хуманист, чиято болка за унищожавания човек прониква всичко написано от него след 1912 г. Неговият разказ <em>„Грехът на Иван Белин"</em> е включен в Световната антология на краткия разказ, съставена от Томас Ман.</p>
+      <p>Творбите му са преведени на <strong>близо 40 езика</strong>, сред които арабски, виетнамски, китайски, персийски, японски, хинди и шведски — свидетелство за универсалността на неговите послания.</p>
+
+      <div class="works-grid" style="grid-template-columns:repeat(4,1fr)">
+        <div class="work-card">
+          <div class="work-year">1917 – 1918</div>
+          <div class="work-title">Разкази (I и II том)</div>
+        </div>
+        <div class="work-card">
+          <div class="work-year">1920</div>
+          <div class="work-title">Жетварят</div>
+        </div>
+        <div class="work-card">
+          <div class="work-year">1926</div>
+          <div class="work-title">Последна радост</div>
+        </div>
+        <div class="work-card">
+          <div class="work-year">1927</div>
+          <div class="work-title">Старопланински легенди</div>
+        </div>
+        <div class="work-card">
+          <div class="work-year">1928</div>
+          <div class="work-title">Вечери в Антимовския хан</div>
+        </div>
+        <div class="work-card">
+          <div class="work-year">1935</div>
+          <div class="work-title">Женско сърце</div>
+        </div>
+        <div class="work-card">
+          <div class="work-year">1936</div>
+          <div class="work-title">Ако можеха да говорят</div>
+        </div>
+        <div class="work-card">
+          <div class="work-year">Драми</div>
+          <div class="work-title">Албена · Боряна · Обикновен човек</div>
+        </div>
       </div>
     </div>
+
+    <!-- LEGACY BANNER — пълна ширина под грида -->
+    <div class="legacy-banner reveal full-width-section">
+      <div class="legacy-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Защо той е наш патрон
+      </div>
+      <h3>„Йовков ни учи да търсим красотата навсякъде"</h3>
+      <p>Йордан Йовков е роден в Жеравна — на крачка от Сливен. Неговите ценности — хуманизъм, красота, отговорност и любов към родното — са в основата на мисията на нашето училище. Изграждаме ученици, вдъхновени от същата вяра: че добротата и знанието могат да преобразят света.</p>
+    </div>
+
+    <!-- ПАМЕТ — пълна ширина -->
+    <div class="full-width-section reveal" style="margin-top:3rem">
+      <div class="article-section-label">Паметта</div>
+      <h2>Памет и признание</h2>
+      <p>Дом-паметникът на Йордан Йовков в Добрич е открит през <strong>1980 г.</strong> по повод стогодишнината от рождението му и е включен в <em>Стоте национални туристически обекта</em> под номер 23. Той е единственият по рода си музей в България, посветен изцяло на живота и творчеството му.</p>
+      <p>Образът на бялата лястовица — символ на надеждата, прелитащ в разказите му — се е превърнал в емблема на цялото му творческо наследство.</p>
+    </div>
+
   </div>
 
-  <!-- LEGACY BANNER — пълна ширина под грида -->
-  <div class="legacy-banner reveal full-width-section">
-    <div class="legacy-badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      Защо той е наш патрон
-    </div>
-    <h3>„Йовков ни учи да търсим красотата навсякъде"</h3>
-    <p>Йордан Йовков е роден в Жеравна — на крачка от Сливен. Неговите ценности — хуманизъм, красота, отговорност и любов към родното — са в основата на мисията на нашето училище. Изграждаме ученици, вдъхновени от същата вяра: че добротата и знанието могат да преобразят света.</p>
-  </div>
+  <div id="footer-container"></div>
 
-  <!-- ПАМЕТ — пълна ширина -->
-  <div class="full-width-section reveal" style="margin-top:3rem">
-    <div class="article-section-label">Паметта</div>
-    <h2>Памет и признание</h2>
-    <p>Дом-паметникът на Йордан Йовков в Добрич е открит през <strong>1980 г.</strong> по повод стогодишнината от рождението му и е включен в <em>Стоте национални туристически обекта</em> под номер 23. Той е единственият по рода си музей в България, посветен изцяло на живота и творчеството му.</p>
-    <p>Образът на бялата лястовица — символ на надеждата, прелитащ в разказите му — се е превърнал в емблема на цялото му творческо наследство.</p>
-  </div>
-
-</div>
-
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="images/logo.png" alt="Лого">
-      <p>СУ „Йордан Йовков" — Сливен е средно училище с богата история и традиции, изграждащо знаещи и уверени личности от 1980 година.</p>
-      <div class="footer-motto">„Ако успееш тук, ще успееш навсякъде!"</div>
-    </div>
-    <div class="footer-col">
-      <h5>Навигация</h5>
-      <ul><li><a href="za-nas.html">За нас</a></li><li><a href="priem.html">Прием</a></li><li><a href="obuchenie.html">Обучение</a></li><li><a href="novini.html">Новини</a></li><li><a href="razrabotva-se.html">Проекти</a></li><li><a href="dokumenti.html">Документи</a></li></ul>
-    </div>
-    <div class="footer-col">
-      <h5>Полезни връзки</h5>
-      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
-    </div>
-    <div class="footer-col footer-contact">
-      <h5>Контакти</h5>
-      <p><strong>Адрес:</strong><br>гр. Сливен</p>
-      <p><strong>Телефони:</strong><br>
-        Директор: 044/ 66 72 44<br>
-        Зам. директор: 044/ 66 76 84
-      </p>
-      <p><strong>Имейл:</strong><br><a href="mailto:info-2000114@edu.mon.bg">info-2000114@edu.mon.bg</a></p>
-      <p><strong>Работно време:</strong><br>Пон–Пет: 07:30 – 19:00</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
-    <span><a href="razrabotva-se.html">Поверителност</a> · <a href="razrabotva-se.html">Достъпност</a></span>
-  </div>
-</footer>
-
-
-<script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script src="assets/js/components-init.js"></script>
 
 </body>
 </html>

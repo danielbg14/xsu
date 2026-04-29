@@ -1,385 +1,229 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Химн | СУ „Йордан Йовков" – Сливен</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/variables.css">
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css">
-
-<link rel="stylesheet" href="assets/css/pages/himn.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Химн | СУ „Йордан Йовков“ – Сливен</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/himn.css">
 </head>
 <body>
 
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <img src="images/logo.png" alt="Лого СУ Йордан Йовков">
-    <div class="nav-logo-text">
-      <strong>СУ „Йордан Йовков"</strong>
-      <span>Сливен</span>
-    </div>
-  </a>
-  <div class="nav-links">
-    <div class="nav-item">
-      <a href="za-nas.html">За нас <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="patron.html">Патрон</a><a href="himn.html">Химн</a><a href="istoriq.html">История</a><a href="misiq-viziq.html">Мисия и визия</a><a href="virtualna-razhodka.html">Виртуална разходка</a><a href="ekip.html">Училищен екип</a><a href="paralelki.html">Паралелки</a><a href="materialna-baza.html">Материална база</a><a href="uniformi.html">Униформи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="priem.html">Прием <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="priem-1-klas.html">Прием в I клас</a><a href="priem-5-klas.html">Прием в V клас</a><a href="priem-8-klas.html">Прием в VIII клас</a><a href="dokumenti-priem.html">Необходими документи</a><a href="faq.html">Често задавани въпроси</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="obuchenie.html">Обучение <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="https://app.shkolo.bg/">Електронен дневник</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="roditeli.html">Родители <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="razrabotva-se.html">Наредби</a><a href="razrabotva-se.html">Родителски срещи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="uchenici.html">Ученици <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="konsultacii.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="razrabotva-se.html">Проекти</a></div>
-    <div class="nav-item"><a href="novini.html">Новини</a></div>
-    <div class="nav-item">
-      <a href="dokumenti.html">Документи <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="pravilnici.html">Правилници</a><a href="stipendii.html">Стипендии</a><a href="razrabotva-se.html">Училищни документи</a><a href="razrabotva-se.html">Формуляри</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="kontakti.html">Контакти</a></div>
-  </div>
-  <button class="nav-search" aria-label="Търсене">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-  </button>
-  <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <div id="navbar-container"></div>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="istoriq.html">История</a>
-      <a href="patron.html">Патрон</a>
-      <a href="himn.html">Химн</a>
-      <a href="misiq-viziq.html">Мисия и визия</a>
-      <a href="ekip.html">Училищен екип</a>
-      <a href="paralelki.html">Паралелки</a>
-      <a href="materialna-baza.html">Материална база</a>
-      <a href="uniformi.html">Униформи</a>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-deco"></div>
+    <div class="breadcrumb">
+      <a href="index.html">НАЧАЛО</a><span>/</span>
+      <a href="#">ЗА НАС</a><span>/</span>
+      <span style="color:var(--gold)">ХИМН</span>
     </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="priem-1-klas.html">Прием в I клас</a>
-      <a href="priem-5-klas.html">Прием в V клас</a>
-      <a href="priem-8-klas.html">Прием в VIII клас</a>
-      <a href="dokumenti.html">Необходими документи</a>
-      <a href="faq.html">Често задавани въпроси</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="uchebnici.html">Учебници</a>
-      <a href="uchebni-planove.html">Учебни планове</a>
-      <a href="https://app.shkolo.bg">Електронен дневник</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="razrabotva-se.html">Наредби</a>
-      <a href="razrabotva-se.html">Родителски среща</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="dnevno-razpisanie.html">Дневно разписание</a>
-      <a href="sedmichno-razpisanie.html">Седмично разписание</a>
-      <a href="pochivni-dni.html">Почивни дни и ваканции</a>
-      <a href="klasni-kontrolni.html">Графици класни и контролни</a>
-      <a href="konsultacii.html">Консултации</a>
-      <a href="uchenicheski-suvet.html">Ученически съвет</a>
-      <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
-      <a href="nvo.html">НВО</a>
-      <a href="dzi.html">ДЗИ</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="#">Проекти</a></div>
-  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="pravilnici.html">Правилници</a>
-      <a href="stipendii.html">Стипендии</a>
-      <a href="razrabotva-se.html">Училищни документи</a>
-      <a href="razrabotva-se.html">Формуляри</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
-  <div class="mobile-menu-actions">
-    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
-    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
-  </div>
-</div>
+    <div class="page-hero-label">За нас · Официален химн</div>
+    <h1>Химнът на нашето училище</h1>
+    <p class="page-hero-sub">Думи и мелодия, родени от обичта към тези стени — посветени на всеки ученик, минал оттук.</p>
+  </section>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-deco"></div>
-  <div class="breadcrumb">
-    <a href="index.html">НАЧАЛО</a><span>/</span>
-    <a href="#">ЗА НАС</a><span>/</span>
-    <span style="color:var(--gold)">ХИМН</span>
-  </div>
-  <div class="page-hero-label">За нас · Официален химн</div>
-  <h1>Химнът на нашето училище</h1>
-  <p class="page-hero-sub">Думи и мелодия, родени от обичта към тези стени — посветени на всеки ученик, минал оттук.</p>
-</section>
+  <!-- CONTENT -->
+  <div class="hymn-wrap">
+    <div class="hymn-grid">
 
-<!-- CONTENT -->
-<div class="hymn-wrap">
-  <div class="hymn-grid">
-
-    <!-- LEFT: LYRICS -->
-    <div>
-      <div class="lyrics-header reveal">
-        <div class="lyrics-header-label">Текст и ред на изпълнение</div>
-        <h2>Химн</h2>
-        <p>Официалният химн на СУ „Йордан Йовков" — Сливен, изпълняван на тържествени събития.</p>
-      </div>
-
-      <!-- ПРИПЕВ -->
-      <div class="stanza refren-stanza reveal" style="transition-delay:.05s">
-        <div class="stanza-type refren">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-          Припев
+      <!-- LEFT: LYRICS -->
+      <div>
+        <div class="lyrics-header reveal">
+          <div class="lyrics-header-label">Текст и ред на изпълнение</div>
+          <h2>Химн</h2>
+          <p>Официалният химн на СУ „Йордан Йовков“ — Сливен, изпълняван на тържествени събития.</p>
         </div>
-        <div class="stanza-lines">
-          <div class="line">Над нас сияят камъните сини</div>
-          <div class="line">и Българка е нашият квартал.</div>
-          <div class="line">Тук раснем в най-щастливите години</div>
-          <div class="line">и се стремим към своя идеал.</div>
-          <div class="repeat-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
-            × 2
+
+        <!-- ПРИПЕВ -->
+        <div class="stanza refren-stanza reveal" style="transition-delay:.05s">
+          <div class="stanza-type refren">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            Припев
           </div>
-        </div>
-      </div>
-
-      <!-- → Куплет 1 -->
-      <div class="order-divider reveal" style="transition-delay:.08s">
-        <div class="order-divider-line"></div>
-        <div class="order-divider-badge goto-kuplet">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          Куплет 1
-        </div>
-        <div class="order-divider-line"></div>
-      </div>
-
-      <!-- КУПЛЕТ 1 -->
-      <div class="stanza kuplet-stanza reveal" style="transition-delay:.1s">
-        <div class="stanza-type kuplet">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-          Куплет 1
-        </div>
-        <div class="stanza-lines">
-          <div class="line">И древна кръв пулсира в нашите вени,</div>
-          <div class="line">над нас е тя опора и пътека.</div>
-          <div class="line">От красотата йовкова пленени,</div>
-          <div class="line">политаме в небето на успеха.</div>
-          <div class="repeat-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
-            × 2
-          </div>
-        </div>
-      </div>
-
-      <!-- → Припев -->
-      <div class="order-divider reveal" style="transition-delay:.13s">
-        <div class="order-divider-line"></div>
-        <div class="order-divider-badge goto-refren">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
-          Припев × 2
-        </div>
-        <div class="order-divider-line"></div>
-      </div>
-
-      <!-- КУПЛЕТ 2 -->
-      <div class="stanza kuplet-stanza reveal" style="transition-delay:.15s">
-        <div class="stanza-type kuplet">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-          Куплет 2
-        </div>
-        <div class="stanza-lines">
-          <div class="line">И тихи в час, и шумни в коридори,</div>
-          <div class="line">училище, ти бащино огнище.</div>
-          <div class="line">Тук днес на ти с науката говорим</div>
-          <div class="line">и следваме желаното равнище.</div>
-          <div class="repeat-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
-            × 2
-          </div>
-        </div>
-      </div>
-
-      <!-- → Финален припев -->
-      <div class="order-divider reveal" style="transition-delay:.18s">
-        <div class="order-divider-line"></div>
-        <div class="order-divider-badge goto-refren">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
-          Припев × 2 — Финал
-        </div>
-        <div class="order-divider-line"></div>
-      </div>
-
-      <div class="download-row reveal" style="transition-delay:.2s">
-        <button class="btn-green" onclick="window.print()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>
-          Отпечатай текста
-        </button>
-      </div>
-    </div>
-
-    <!-- RIGHT: SIDEBAR -->
-    <aside class="hymn-sidebar">
-
-      <div class="creators-card reveal-right">
-        <div class="creators-card-header">
-          <div class="creators-card-header-label">Авторски права</div>
-          <h3>Създатели на химна</h3>
-        </div>
-        <div class="creator-entry">
-          <div class="creator-icon text-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,.9)" stroke-width="1.8"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </div>
-          <div>
-            <div class="creator-role">Текст</div>
-            <div class="creator-name">— въведете автора —</div>
-            <div class="creator-note">Автор на думите на химна</div>
-          </div>
-        </div>
-        <div class="creator-entry">
-          <div class="creator-icon music-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,220,160,.9)" stroke-width="1.8"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-          </div>
-          <div>
-            <div class="creator-role">Музика</div>
-            <div class="creator-name">— въведете автора —</div>
-            <div class="creator-note">Композитор на мелодията</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="audio-player reveal-right" style="transition-delay:.1s">
-        <div class="audio-label">Слушайте</div>
-        <div class="audio-title">Химн на СУ „Йордан Йовков"</div>
-        <div class="audio-subtitle">Официална версия · Сливен</div>
-        <div class="audio-controls">
-          <div class="audio-top-row">
-            <button class="audio-main-btn" id="playBtn" aria-label="Пусни/Паузирай" onclick="togglePlay()">
-              <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <svg class="pause-icon" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-            </button>
-            <div class="audio-progress-wrap" id="progressWrap" onclick="seekAudio(event)">
-              <div class="audio-progress-track">
-                <div class="audio-progress-fill" id="progressFill"></div>
-              </div>
+          <div class="stanza-lines">
+            <div class="line">Над нас сияят камъните сини</div>
+            <div class="line">и Българка е нашият квартал.</div>
+            <div class="line">Тук раснем в най-щастливите години</div>
+            <div class="line">и се стремим към своя идеал.</div>
+            <div class="repeat-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+              × 2
             </div>
-            <div class="audio-time-info" id="timeDisplay">0:00 / 0:00</div>
-          </div>
-          <div class="audio-volume-row">
-            <button class="audio-volume-btn" onclick="toggleMute()" id="volBtn" aria-label="Звук">
-              <svg id="volIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
-            </button>
-            <input type="range" class="audio-volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.8" oninput="setVolume(this.value)">
           </div>
         </div>
-        <div class="audio-no-file" id="noFileMsg">
-          <p><strong>Аудио файлът не е качен.</strong><br>Добавете MP3 файл с химна и задайте пътя.</p>
-          <label class="audio-upload-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
-            Качи аудио файл
-            <input type="file" accept="audio/*" style="display:none" onchange="loadAudioFile(event)">
-          </label>
+
+        <!-- → Куплет 1 -->
+        <div class="order-divider reveal" style="transition-delay:.08s">
+          <div class="order-divider-line"></div>
+          <div class="order-divider-badge goto-kuplet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Куплет 1
+          </div>
+          <div class="order-divider-line"></div>
+        </div>
+
+        <!-- КУПЛЕТ 1 -->
+        <div class="stanza kuplet-stanza reveal" style="transition-delay:.1s">
+          <div class="stanza-type kuplet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+            Куплет 1
+          </div>
+          <div class="stanza-lines">
+            <div class="line">И древна кръв пулсира в нашите вени,</div>
+            <div class="line">над нас е тя опора и пътека.</div>
+            <div class="line">От красотата йовкова пленени,</div>
+            <div class="line">политаме в небето на успеха.</div>
+            <div class="repeat-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+              × 2
+            </div>
+          </div>
+        </div>
+
+        <!-- → Припев -->
+        <div class="order-divider reveal" style="transition-delay:.13s">
+          <div class="order-divider-line"></div>
+          <div class="order-divider-badge goto-refren">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+            Припев × 2
+          </div>
+          <div class="order-divider-line"></div>
+        </div>
+
+        <!-- КУПЛЕТ 2 -->
+        <div class="stanza kuplet-stanza reveal" style="transition-delay:.15s">
+          <div class="stanza-type kuplet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+            Куплет 2
+          </div>
+          <div class="stanza-lines">
+            <div class="line">И тихи в час, и шумни в коридори,</div>
+            <div class="line">училище, ти бащино огнище.</div>
+            <div class="line">Тук днес на ти с науката говорим</div>
+            <div class="line">и следваме желаното равнище.</div>
+            <div class="repeat-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+              × 2
+            </div>
+          </div>
+        </div>
+
+        <!-- → Финален припев -->
+        <div class="order-divider reveal" style="transition-delay:.18s">
+          <div class="order-divider-line"></div>
+          <div class="order-divider-badge goto-refren">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+            Припев × 2 — Финал
+          </div>
+          <div class="order-divider-line"></div>
+        </div>
+
+        <div class="download-row reveal" style="transition-delay:.2s">
+          <button class="btn-green" onclick="window.print()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>
+            Отпечатай текста
+          </button>
         </div>
       </div>
 
-      <div class="sidebar-info reveal-right" style="transition-delay:.2s">
-        <div class="sidebar-info-label">За химна</div>
-        <p>Химнът се изпълнява на тържествени събрания, в началото на учебната година и при официални прояви.</p>
-        <p>Думите му отразяват гордостта от кварталните корени, уважението към йовковото наследство и устрема към знанието.</p>
-      </div>
+      <!-- RIGHT: SIDEBAR -->
+      <aside class="hymn-sidebar">
 
-      <a href="patron.html" class="patron-link reveal-right" style="transition-delay:.3s">
-        <div class="patron-link-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <div class="creators-card reveal-right">
+          <div class="creators-card-header">
+            <div class="creators-card-header-label">Авторски права</div>
+            <h3>Създатели на химна</h3>
+          </div>
+          <div class="creator-entry">
+            <div class="creator-icon text-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,.9)" stroke-width="1.8"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <div>
+              <div class="creator-role">Текст</div>
+              <div class="creator-name">— въведете автора —</div>
+              <div class="creator-note">Автор на думите на химна</div>
+            </div>
+          </div>
+          <div class="creator-entry">
+            <div class="creator-icon music-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,220,160,.9)" stroke-width="1.8"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <div>
+              <div class="creator-role">Музика</div>
+              <div class="creator-name">— въведете автора —</div>
+              <div class="creator-note">Композитор на мелодията</div>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="patron-link-role">Вижте също</div>
-          <div class="patron-link-name">За патрона Йордан Йовков</div>
+
+        <div class="audio-player reveal-right" style="transition-delay:.1s">
+          <div class="audio-label">Слушайте</div>
+          <div class="audio-title">Химн на СУ „Йордан Йовков“</div>
+          <div class="audio-subtitle">Официална версия · Сливен</div>
+          <div class="audio-controls">
+            <div class="audio-top-row">
+              <button class="audio-main-btn" id="playBtn" aria-label="Пусни/Паузирай" onclick="togglePlay()">
+                <svg class="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <svg class="pause-icon" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="audio-progress-wrap" id="progressWrap" onclick="seekAudio(event)">
+                <div class="audio-progress-track">
+                  <div class="audio-progress-fill" id="progressFill"></div>
+                </div>
+              </div>
+              <div class="audio-time-info" id="timeDisplay">0:00 / 0:00</div>
+            </div>
+            <div class="audio-volume-row">
+              <button class="audio-volume-btn" onclick="toggleMute()" id="volBtn" aria-label="Звук">
+                <svg id="volIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
+              </button>
+              <input type="range" class="audio-volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.8" oninput="setVolume(this.value)">
+            </div>
+          </div>
+          <div class="audio-no-file" id="noFileMsg">
+            <p><strong>Аудио файлът не е качен.</strong><br>Добавете MP3 файл с химна и задайте пътя.</p>
+            <label class="audio-upload-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+              Качи аудио файл
+              <input type="file" accept="audio/*" style="display:none" onchange="loadAudioFile(event)">
+            </label>
+          </div>
         </div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;color:var(--gray);margin-left:auto;flex-shrink:0"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
 
-    </aside>
-  </div>
-</div>
+        <div class="sidebar-info reveal-right" style="transition-delay:.2s">
+          <div class="sidebar-info-label">За химна</div>
+          <p>Химнът се изпълнява на тържествени събрания, в началото на учебната година и при официални прояви.</p>
+          <p>Думите му отразяват гордостта от кварталните корени, уважението към йовковото наследство и устрема към знанието.</p>
+        </div>
 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="images/logo.png" alt="Лого">
-      <p>СУ „Йордан Йовков" — Сливен е средно училище с богата история и традиции, изграждащо знаещи и уверени личности от 1980 година.</p>
-      <div class="footer-motto">„Ако успееш тук, ще успееш навсякъде!"</div>
-    </div>
-    <div class="footer-col">
-      <h5>Навигация</h5>
-      <ul><li><a href="za-nas.html">За нас</a></li><li><a href="priem.html">Прием</a></li><li><a href="obuchenie.html">Обучение</a></li><li><a href="novini.html">Новини</a></li><li><a href="razrabotva-se.html">Проекти</a></li><li><a href="dokumenti.html">Документи</a></li></ul>
-    </div>
-    <div class="footer-col">
-      <h5>Полезни връзки</h5>
-      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
-    </div>
-    <div class="footer-col footer-contact">
-      <h5>Контакти</h5>
-      <p><strong>Адрес:</strong><br>гр. Сливен</p>
-      <p><strong>Телефони:</strong><br>
-        Директор: 044/ 66 72 44<br>
-        Зам. директор: 044/ 66 76 84
-      </p>
-      <p><strong>Имейл:</strong><br><a href="mailto:info-2000114@edu.mon.bg">info-2000114@edu.mon.bg</a></p>
-      <p><strong>Работно време:</strong><br>Пон–Пет: 07:30 – 19:00</p>
+        <a href="patron.html" class="patron-link reveal-right" style="transition-delay:.3s">
+          <div class="patron-link-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div>
+            <div class="patron-link-role">Вижте също</div>
+            <div class="patron-link-name">За патрона Йордан Йовков</div>
+          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;color:var(--gray);margin-left:auto;flex-shrink:0"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+      </aside>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2026 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
-    <span><a href="razrabotva-se.html">Поверителност</a> · <a href="razrabotva-se.html">Достъпност</a></span>
-  </div>
-</footer>
 
-<script type="module" src="assets/js/pages/himn.js" defer></script>
-<script type="module" src="assets/js/main.js"></script>
+  <div id="footer-container"></div>
+
+  <script type="module" src="assets/js/pages/himn.js" defer></script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script src="assets/js/components-init.js"></script>
 
 </body>
 </html>
