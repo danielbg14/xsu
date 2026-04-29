@@ -5,208 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>История – СУ „Йордан Йовков" – Сливен</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="style.css">
-<style>
-:root {
-  --green: #1D7A50;
-  --green-dark: #0F5438;
-  --green-light: #e1f5ee;
-  --teal: #1D9E75;
-  --teal-light: #9FE1CB;
-  --gold: #C9A84C;
-  --gold-light: #f0e2b8;
-  --dark: #1a2e24;
-  --gray: #555;
-  --light: #f0f7f3;
-  --white: #ffffff;
-  --footer-bg: #0b3224;
-  --nav-h: 72px;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-* { scrollbar-width: thin; scrollbar-color: #8fcfb8 #eaf4ef; }
-*::-webkit-scrollbar { width: 10px; } *::-webkit-scrollbar-track { background: #eaf4ef; border-radius: 10px; }
-*::-webkit-scrollbar-thumb { background: #8fcfb8; border-radius: 10px; border: 2px solid #eaf4ef; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Manrope', sans-serif; color: var(--dark); background: var(--white); overflow-x: hidden; }
-a { text-decoration: none; color: inherit; }
-img { display: block; }
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
 
-/* ─── PAGE HERO ─── */
-.page-hero {
-  margin-top: var(--nav-h);
-  background: var(--green-dark);
-  padding: 5rem 8vw 4rem;
-  position: relative;
-  overflow: hidden;
-}
-.page-hero::before {
-  content: '1980';
-  position: absolute; right: 4vw; bottom: -2rem;
-  font-size: 18rem; font-weight: 800;
-  color: rgba(255,255,255,.04);
-  line-height: 1; pointer-events: none;
-  letter-spacing: -0.05em;
-}
-.page-hero::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
-}
-.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: .76rem; color: rgba(255,255,255,.5); margin-bottom: 1.5rem; }
-.breadcrumb a { color: rgba(255,255,255,.5); transition: color .2s; }
-.breadcrumb a:hover { color: var(--gold); }
-.breadcrumb span { color: var(--gold); }
-.breadcrumb svg { width: 12px; height: 12px; }
-.page-hero-eyebrow { font-size: .72rem; font-weight: 600; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); margin-bottom: .8rem; }
-.page-hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 1rem; }
-.page-hero h1 em { color: var(--gold); font-style: italic; }
-.page-hero p { font-size: 1rem; color: rgba(255,255,255,.7); max-width: 560px; line-height: 1.7; }
-.hero-meta { display: flex; gap: 2rem; margin-top: 2.5rem; flex-wrap: wrap; }
-.hero-meta-item { display: flex; flex-direction: column; }
-.hero-meta-item .num { font-size: 2rem; font-weight: 700; color: var(--white); line-height: 1; }
-.hero-meta-item .lbl { font-size: .73rem; color: rgba(255,255,255,.5); letter-spacing: .1em; text-transform: uppercase; margin-top: .2rem; }
-
-/* ─── LAYOUT ─── */
-.history-layout { display: grid; grid-template-columns: 280px 1fr; gap: 0; min-height: 80vh; }
-
-/* ─── SIDEBAR ─── */
-.history-sidebar {
-  background: var(--dark);
-  padding: 3rem 1.8rem;
-  position: sticky; top: var(--nav-h);
-  height: calc(100vh - var(--nav-h));
-  overflow-y: auto;
-}
-.sidebar-title { font-size: .68rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 1.4rem; padding-bottom: .6rem; border-bottom: 1px solid rgba(255,255,255,.08); }
-.decade-nav { display: flex; flex-direction: column; gap: 4px; }
-.decade-btn {
-  background: none; border: none; cursor: pointer;
-  display: flex; align-items: center; gap: 10px;
-  padding: .7rem 1rem;
-  border-radius: 8px;
-  font-family: 'Manrope', sans-serif;
-  font-size: .88rem; font-weight: 500;
-  color: rgba(255,255,255,.5);
-  text-align: left;
-  transition: background .2s, color .2s;
-  width: 100%;
-}
-.decade-btn:hover { background: rgba(255,255,255,.06); color: rgba(255,255,255,.85); }
-.decade-btn.active { background: rgba(29,122,80,.25); color: var(--gold); border: 1px solid rgba(29,122,80,.3); }
-.decade-btn .dbadge { font-size: .65rem; font-weight: 600; background: rgba(201,168,76,.2); color: var(--gold); padding: 2px 7px; border-radius: 50px; margin-left: auto; }
-.decade-btn.active .dbadge { background: rgba(201,168,76,.3); }
-.sidebar-divider { height: 1px; background: rgba(255,255,255,.07); margin: 1rem 0; }
-.sidebar-note { font-size: .74rem; color: rgba(255,255,255,.3); line-height: 1.6; padding: .8rem; background: rgba(255,255,255,.03); border-radius: 8px; border-left: 2px solid rgba(201,168,76,.3); }
-
-/* ─── TIMELINE ─── */
-.history-main { padding: 3rem 4vw 5rem; background: var(--white); }
-.decade-block { margin-bottom: 4rem; scroll-margin-top: calc(var(--nav-h) + 24px); }
-.decade-header {
-  display: flex; align-items: center; gap: 1.2rem;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.2rem;
-  border-bottom: 2px solid var(--green-light);
-  position: relative;
-}
-.decade-header::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px; background: var(--green); }
-.decade-num {
-  font-size: 3.5rem; font-weight: 800; line-height: 1;
-  color: var(--green-light);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
-}
-.decade-info h2 { font-size: 1.4rem; font-weight: 700; color: var(--dark); }
-.decade-info p { font-size: .8rem; color: var(--gray); margin-top: .2rem; }
-.decade-era-badge { background: var(--green); color: var(--white); font-size: .66rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px; border-radius: 50px; }
-
-/* ─── TIMELINE ENTRIES ─── */
-.timeline { position: relative; padding-left: 2rem; }
-.timeline::before { content: ''; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(to bottom, var(--green), var(--green-light)); border-radius: 2px; }
-
-.t-entry { position: relative; padding: 0 0 2.2rem 2rem; }
-.t-entry:last-child { padding-bottom: 0; }
-.t-dot {
-  position: absolute; left: -1.8rem; top: 4px;
-  width: 14px; height: 14px;
-  background: var(--white); border: 2.5px solid var(--green); border-radius: 50%;
-  transition: background .2s, border-color .2s;
-  z-index: 1;
-}
-.t-entry:hover .t-dot { background: var(--green); border-color: var(--green-dark); }
-.t-dot.gold { border-color: var(--gold); }
-.t-entry:hover .t-dot.gold { background: var(--gold); }
-
-.t-year {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
-  color: var(--green); margin-bottom: .5rem;
-}
-.t-year.gold-year { color: var(--gold); }
-.t-year-badge { background: var(--green-light); color: var(--green); font-size: .65rem; font-weight: 600; padding: 2px 8px; border-radius: 50px; }
-.t-year-badge.gold { background: var(--gold-light); color: #8a6820; }
-
-.t-content { background: var(--white); }
-.t-entry:hover .t-content { }
-
-.t-title { font-size: 1.05rem; font-weight: 600; color: var(--dark); margin-bottom: .5rem; line-height: 1.35; }
-.t-text { font-size: .88rem; color: var(--gray); line-height: 1.8; }
-.t-text + .t-text { margin-top: .5rem; }
-
-.t-highlight {
-  margin-top: .8rem;
-  padding: .8rem 1rem;
-  background: var(--green-light);
-  border-left: 3px solid var(--green);
-  border-radius: 0 8px 8px 0;
-  font-size: .84rem; color: var(--dark); line-height: 1.6;
-}
-.t-highlight.gold { background: var(--gold-light); border-color: var(--gold); }
-
-.t-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .7rem; }
-.t-tag { font-size: .66rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 50px; background: var(--green-light); color: var(--green); border: 1px solid rgba(29,122,80,.18); }
-.t-tag.sport { background: #e8f4fd; color: #1a6a9e; border-color: rgba(26,106,158,.18); }
-.t-tag.art { background: #fdf0e8; color: #9e4a1a; border-color: rgba(158,74,26,.18); }
-.t-tag.int { background: #f3e8fd; color: #6a1a9e; border-color: rgba(106,26,158,.18); }
-.t-tag.award { background: var(--gold-light); color: #8a6820; border-color: rgba(201,168,76,.3); }
-
-/* Sub-list */
-.t-sublist { list-style: none; margin-top: .7rem; display: flex; flex-direction: column; gap: .4rem; }
-.t-sublist li { display: flex; align-items: flex-start; gap: 8px; font-size: .84rem; color: var(--gray); line-height: 1.6; }
-.t-sublist li::before { content: '▸'; color: var(--green); flex-shrink: 0; font-size: .7rem; margin-top: 3px; }
-
-/* Management card */
-.t-mgmt { margin-top: .8rem; display: flex; flex-wrap: wrap; gap: .5rem; }
-.mgmt-chip { display: flex; flex-direction: column; background: var(--light); border: 1px solid rgba(29,122,80,.15); border-radius: 8px; padding: .5rem .8rem; min-width: 160px; }
-.mgmt-name { font-size: .82rem; font-weight: 600; color: var(--dark); }
-.mgmt-role { font-size: .7rem; color: var(--green); margin-top: 1px; }
-
-/* Jubilee marker */
-.jubilee-bar { display: flex; align-items: center; gap: 1rem; padding: 1.2rem 1.5rem; background: linear-gradient(135deg, var(--green-dark), var(--green)); border-radius: 12px; margin-bottom: 1rem; }
-.jubilee-bar svg { width: 28px; height: 28px; color: var(--gold); flex-shrink: 0; }
-.jubilee-bar strong { color: var(--white); font-size: 1rem; display: block; }
-.jubilee-bar span { color: rgba(255,255,255,.65); font-size: .78rem; }
-
-/* ─── SECTION BASE ─── */
-.section-label { font-size: .72rem; font-weight: 600; letter-spacing: .25em; text-transform: uppercase; color: var(--green); display: flex; align-items: center; gap: 10px; margin-bottom: .8rem; }
-.section-label::before { content: ''; width: 26px; height: 2px; background: var(--green); flex-shrink: 0; }
-
-/* ─── REVEAL ─── */
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s, transform .6s; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
-@media (max-width: 1100px) {
-  .history-layout { grid-template-columns: 1fr; }
-  .history-sidebar { position: relative; height: auto; top: 0; padding: 1.5rem 2rem; display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
-  .sidebar-title, .sidebar-divider, .sidebar-note { display: none; }
-  .decade-nav { flex-direction: row; flex-wrap: wrap; gap: .4rem; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .hero-meta { gap: 1.2rem; }
-}
-</style>
+<link rel="stylesheet" href="assets/css/pages/istoriq.css">
 </head>
 <body>
 
@@ -235,7 +41,7 @@ img { display: block; }
     <div class="nav-item">
       <a href="obuchenie.html">Обучение <span class="caret"></span></a>
       <div class="dropdown">
-        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="razrabotva-se.html">Електронен дневник</a>
+        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="https://app.shkolo.bg/">Електронен дневник</a>
       </div>
     </div>
     <div class="nav-item">
@@ -267,6 +73,77 @@ img { display: block; }
     <span></span><span></span><span></span>
   </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="istoriq.html">История</a>
+      <a href="patron.html">Патрон</a>
+      <a href="himn.html">Химн</a>
+      <a href="misiq-viziq.html">Мисия и визия</a>
+      <a href="ekip.html">Училищен екип</a>
+      <a href="paralelki.html">Паралелки</a>
+      <a href="materialna-baza.html">Материална база</a>
+      <a href="uniformi.html">Униформи</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="priem-1-klas.html">Прием в I клас</a>
+      <a href="priem-5-klas.html">Прием в V клас</a>
+      <a href="priem-8-klas.html">Прием в VIII клас</a>
+      <a href="dokumenti.html">Необходими документи</a>
+      <a href="faq.html">Често задавани въпроси</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="uchebnici.html">Учебници</a>
+      <a href="uchebni-planove.html">Учебни планове</a>
+      <a href="https://app.shkolo.bg">Електронен дневник</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="razrabotva-se.html">Наредби</a>
+      <a href="razrabotva-se.html">Родителски среща</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="dnevno-razpisanie.html">Дневно разписание</a>
+      <a href="sedmichno-razpisanie.html">Седмично разписание</a>
+      <a href="pochivni-dni.html">Почивни дни и ваканции</a>
+      <a href="klasni-kontrolni.html">Графици класни и контролни</a>
+      <a href="razrabotva-se.html">Консултации</a>
+      <a href="uchenicheski-suvet.html">Ученически съвет</a>
+      <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
+      <a href="nvo.html">НВО</a>
+      <a href="dzi.html">ДЗИ</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item"><a href="#">Проекти</a></div>
+  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="pravilnici.html">Правилници</a>
+      <a href="stipendii.html">Стипендии</a>
+      <a href="razrabotva-se.html">Училищни документи</a>
+      <a href="razrabotva-se.html">Формуляри</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
+  <div class="mobile-menu-actions">
+    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
+    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
+  </div>
+</div>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
@@ -302,22 +179,22 @@ img { display: block; }
   <aside class="history-sidebar">
     <div class="sidebar-title">Навигация по десетилетия</div>
     <div class="decade-nav">
-      <button class="decade-btn active" onclick="scrollTo('d1980')">
+      <button class="decade-btn active" onclick="scrollToSection('d1980')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:15px;height:15px;flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         1980–те
         <span class="dbadge">Основаване</span>
       </button>
-      <button class="decade-btn" onclick="scrollTo('d1990')">
+      <button class="decade-btn" onclick="scrollToSection('d1990')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:15px;height:15px;flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         1990–те
         <span class="dbadge">Промени</span>
       </button>
-      <button class="decade-btn" onclick="scrollTo('d2000')">
+      <button class="decade-btn" onclick="scrollToSection('d2000')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:15px;height:15px;flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         2000–те
         <span class="dbadge">Иновации</span>
       </button>
-      <button class="decade-btn" onclick="scrollTo('d2010')">
+      <button class="decade-btn" onclick="scrollToSection('d2010')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:15px;height:15px;flex-shrink:0"><circle cx="12" cy="12" r="10"/></svg>
         2010–те
         <span class="dbadge">Успехи</span>
@@ -798,49 +675,28 @@ img { display: block; }
     </div>
     <div class="footer-col">
       <h5>Полезни връзки</h5>
-      <ul><li><a href="#">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="#">РУО Сливен</a></li></ul>
+      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
     </div>
     <div class="footer-col footer-contact">
       <h5>Контакти</h5>
       <p><strong>Адрес:</strong><br>гр. Сливен</p>
-      <p><strong>Телефон:</strong><br>044 / …</p>
-      <p><strong>Имейл:</strong><br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fc95929a93bc8f898a938ad18f90958a9992d29e9b">[email&#160;protected]</a></p>
+      <p><strong>Телефони:</strong><br>
+        Директор: 044/ 66 72 44<br>
+        Зам. директор: 044/ 66 76 84
+      </p>
+      <p><strong>Имейл:</strong><br><a href="mailto:info-2000114@edu.mon.bg">info-2000114@edu.mon.bg</a></p>
       <p><strong>Работно време:</strong><br>Пон–Пет: 07:30 – 19:00</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
-    <span><a href="#">Поверителност</a> · <a href="#">Достъпност</a></span>
+    <span>© 2026 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
+    <span><a href="razrabotva-se.html">Поверителност</a> · <a href="razrabotva-se.html">Достъпност</a></span>
   </div>
 </footer>
 
-<script>
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 40); });
 
-function scrollTo(id) {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  document.querySelectorAll('.decade-btn').forEach(b => b.classList.remove('active'));
-  event.currentTarget.classList.add('active');
-}
+<script type="module" src="assets/js/main.js"></script>
+<script type="module" src="assets/js/pages/istoriq.js" defer></script>
 
-// Update active sidebar btn on scroll
-const blocks = ['d1980','d1990','d2000','d2010'];
-const btns = document.querySelectorAll('.decade-btn');
-window.addEventListener('scroll', () => {
-  let current = 0;
-  blocks.forEach((id, i) => {
-    const el = document.getElementById(id);
-    if (el && el.getBoundingClientRect().top < window.innerHeight * 0.5) current = i;
-  });
-  btns.forEach((b, i) => b.classList.toggle('active', i === current));
-});
-
-const revealEls = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-}, { threshold: 0.1 });
-revealEls.forEach(el => io.observe(el));
-</script>
 </body>
 </html>

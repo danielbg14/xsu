@@ -5,108 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Седмично разписание – СУ „Йордан Йовков" – Сливен</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="style.css">
-<style>
-:root {
-  --green: #1D7A50; --green-dark: #0F5438; --green-light: #e1f5ee;
-  --gold: #C9A84C; --dark: #1a2e24; --gray: #555; --light: #f0f7f3;
-  --white: #ffffff; --footer-bg: #0b3224; --nav-h: 72px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Manrope',sans-serif;color:var(--dark);background:var(--white);overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-img{display:block}
- 
-/* === PAGE HERO === */
-.page-hero{margin-top:var(--nav-h);background:var(--green-dark);padding:4rem 8vw 3.5rem;position:relative;overflow:hidden}
-.page-hero-eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;display:flex;align-items:center;gap:10px}
-.page-hero-eyebrow::before{content:'';width:26px;height:2px;background:var(--gold);flex-shrink:0}
-.page-hero h1{font-size:clamp(2rem,4vw,3.5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:1rem}
-.page-hero h1 em{color:var(--gold);font-style:italic}
-.page-hero p{font-size:.95rem;color:rgba(255,255,255,.65);max-width:500px;line-height:1.7}
- 
-/* === CLASS TABS === */
-.tabs-wrapper{background:#fff;border-bottom:2px solid var(--green-light);position:sticky;top:var(--nav-h);z-index:100;box-shadow:0 2px 16px rgba(0,0,0,.06)}
-.tabs-inner{display:flex;overflow-x:auto;padding:0 8vw;gap:0;scrollbar-width:none}
-.tabs-inner::-webkit-scrollbar{display:none}
-.tab-group{display:flex;align-items:center;gap:0;border-right:1px solid var(--green-light)}
-.tab-group:last-child{border-right:none}
-.tab-group-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);padding:.4rem .8rem .2rem;white-space:nowrap;align-self:flex-end;padding-bottom:.8rem}
-.tab-btn{padding:.9rem .75rem;font-size:.82rem;font-weight:600;color:var(--gray);background:none;border:none;cursor:pointer;white-space:nowrap;font-family:'Manrope',sans-serif;border-bottom:3px solid transparent;transition:color .2s,border-color .2s;margin-bottom:-2px}
-.tab-btn:hover{color:var(--green)}
-.tab-btn.active{color:var(--green);border-bottom-color:var(--green)}
- 
-/* === SCHEDULE CONTENT === */
-.schedule-content{padding:3rem 8vw 5rem;background:var(--light)}
-.class-panel{display:none}
-.class-panel.active{display:block}
- 
-.class-header{display:flex;align-items:center;gap:1.2rem;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:2px solid var(--green-light)}
-.class-badge{width:60px;height:60px;background:var(--green);color:#fff;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:700;flex-shrink:0}
-.class-header-info h2{font-size:1.6rem;font-weight:700;color:var(--dark)}
-.class-header-info p{font-size:.85rem;color:var(--gray);margin-top:.2rem}
-.class-tag{display:inline-block;background:var(--green-light);color:var(--green);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .75rem;border-radius:50px;border:1px solid rgba(29,122,80,.2);margin-top:.4rem}
-.class-tag.prof{background:rgba(201,168,76,.12);color:#8a6c1e;border-color:rgba(201,168,76,.3)}
- 
-/* === SCHEDULE TABLE === */
-.schedule-table-wrap{overflow-x:auto;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);margin-bottom:1.5rem}
-.schedule-table{width:100%;border-collapse:collapse;background:#fff;min-width:700px}
-.schedule-table thead tr{background:var(--green);color:#fff}
-.schedule-table thead th{padding:.9rem 1rem;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-align:center;border:none}
-.schedule-table thead th:first-child{text-align:left;border-radius:16px 0 0 0}
-.schedule-table thead th:last-child{border-radius:0 16px 0 0}
-.schedule-table tbody tr{border-bottom:1px solid var(--green-light)}
-.schedule-table tbody tr:last-child{border-bottom:none}
-.schedule-table tbody tr:hover{background:rgba(29,122,80,.03)}
-.schedule-table td{padding:.75rem 1rem;font-size:.83rem;text-align:center;vertical-align:middle;line-height:1.4;color:var(--dark)}
-.schedule-table td:first-child{text-align:left;font-weight:600;color:var(--green);white-space:nowrap;background:rgba(29,122,80,.04);border-right:1px solid var(--green-light)}
-.schedule-table td:nth-child(2){text-align:left;color:var(--gray);font-size:.76rem;white-space:nowrap;border-right:1px solid var(--green-light)}
-.subject-cell{display:flex;flex-direction:column;align-items:center;gap:2px}
-.subject-name{font-weight:500}
-.subject-note{font-size:.68rem;color:var(--gold);font-weight:600}
-.empty-cell{color:#ccc;font-size:.75rem}
- 
-/* Extended rows (lunch, etc.) */
-.schedule-table tr.extended-row td{background:rgba(240,247,243,.8);font-size:.76rem;color:var(--gray);font-style:italic}
-.schedule-table tr.extended-row td:first-child{background:rgba(240,247,243,.8);color:var(--gray);font-weight:400}
- 
-/* Notes */
-.schedule-notes{background:#fff;border-left:3px solid var(--gold);padding:1rem 1.2rem;border-radius:0 12px 12px 0;font-size:.82rem;color:var(--gray);line-height:1.8}
-.schedule-notes strong{color:var(--dark);font-weight:600}
-.schedule-notes ol{padding-left:1.2rem;margin-top:.3rem}
-.schedule-notes li{margin-bottom:.2rem}
- 
-/* Responsive */
-@media(max-width:1100px){
-  .footer-grid{grid-template-columns:1fr 1fr}
-  .nav-item>a{padding:0 .6rem;font-size:.85rem}
-}
-@media(max-width:768px){
-  :root{--nav-h:64px}
-  nav{padding:0 1.2rem}
-  .nav-links,.nav-search{display:none}
-  .hamburger{display:flex}
-  .mobile-menu{display:flex}
-  .nav-logo img{height:44px}
-  .nav-logo-text strong{font-size:.95rem}
-  .nav-logo-text span{display:none}
-  .page-hero{padding:3rem 5vw 2.5rem}
-  .tabs-inner{padding:0 5vw}
-  .schedule-content{padding:2rem 5vw 3rem}
-  footer{padding:3.5rem 5vw 1.5rem}
-  .footer-grid{grid-template-columns:1fr;gap:2rem}
-  .footer-bottom{flex-direction:column;text-align:center;gap:.5rem}
-  .class-badge{width:48px;height:48px;font-size:1.1rem;border-radius:12px}
-  .class-header-info h2{font-size:1.2rem}
-}
- 
-/* BREADCRUMB inside hero */
-.breadcrumb{display:flex;align-items:center;gap:8px;font-size:.75rem;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.2rem}
-.breadcrumb a{color:rgba(255,255,255,.45);transition:color .2s}
-.breadcrumb a:hover{color:var(--gold)}
-.breadcrumb span{color:rgba(255,255,255,.2)}
-</style>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+
+<link rel="stylesheet" href="assets/css/pages/sedmichno-razpisanie.css">
 </head>
 <body>
  
@@ -135,7 +41,7 @@ img{display:block}
     <div class="nav-item">
       <a href="obuchenie.html">Обучение <span class="caret"></span></a>
       <div class="dropdown">
-        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="razrabotva-se.html">Електронен дневник</a>
+        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="https://app.shkolo.bg/">Електронен дневник</a>
       </div>
     </div>
     <div class="nav-item">
@@ -172,10 +78,14 @@ img{display:block}
   <div class="mobile-menu-item">
     <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
     <div class="mobile-submenu">
-      <a href="history.html">История</a>
-      <a href="mision-vision.html">Мисия и визия</a>
-      <a href="ekip.html">Педагогически екип</a>
-      <a href="contacts.html">Контакти</a>
+      <a href="istoriq.html">История</a>
+      <a href="patron.html">Патрон</a>
+      <a href="himn.html">Химн</a>
+      <a href="misiq-viziq.html">Мисия и визия</a>
+      <a href="ekip.html">Училищен екип</a>
+      <a href="paralelki.html">Паралелки</a>
+      <a href="materialna-baza.html">Материална база</a>
+      <a href="uniformi.html">Униформи</a>
     </div>
   </div>
   <div class="mobile-menu-item">
@@ -185,41 +95,50 @@ img{display:block}
       <a href="priem-5-klas.html">Прием в V клас</a>
       <a href="priem-8-klas.html">Прием в VIII клас</a>
       <a href="dokumenti.html">Необходими документи</a>
+      <a href="faq.html">Често задавани въпроси</a>
     </div>
   </div>
   <div class="mobile-menu-item">
     <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
     <div class="mobile-submenu">
-      <a href="#">Учебни планове</a>
-      <a href="sedmichno-razpisanie.html">Разписание</a>
-      <a href="#">Електронен дневник</a>
+      <a href="uchebnici.html">Учебници</a>
+      <a href="uchebni-planove.html">Учебни планове</a>
+      <a href="https://app.shkolo.bg">Електронен дневник</a>
     </div>
   </div>
   <div class="mobile-menu-item">
     <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
     <div class="mobile-submenu">
-      <a href="#">Наредби</a><a href="#">Родителска среща</a>
+      <a href="razrabotva-se.html">Наредби</a>
+      <a href="razrabotva-se.html">Родителски среща</a>
     </div>
   </div>
   <div class="mobile-menu-item">
     <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
     <div class="mobile-submenu">
-      <a href="school-council.html">Ученически съвет</a>
-      <a href="extracurricular-activities.html">Извънкласни дейности</a>
-      <a href="#">Спорт</a>
+      <a href="dnevno-razpisanie.html">Дневно разписание</a>
+      <a href="sedmichno-razpisanie.html">Седмично разписание</a>
+      <a href="pochivni-dni.html">Почивни дни и ваканции</a>
+      <a href="klasni-kontrolni.html">Графици класни и контролни</a>
+      <a href="razrabotva-se.html">Консултации</a>
+      <a href="uchenicheski-suvet.html">Ученически съвет</a>
+      <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
+      <a href="nvo.html">НВО</a>
+      <a href="dzi.html">ДЗИ</a>
     </div>
   </div>
   <div class="mobile-menu-item"><a href="#">Проекти</a></div>
-  <div class="mobile-menu-item"><a href="news.html">Новини</a></div>
+  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
   <div class="mobile-menu-item">
     <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
     <div class="mobile-submenu">
-      <a href="dokumenti.html">Необходими документи</a>
-      <a href="faq.html">ЧЗВ</a>
-      <a href="#">Формуляри</a>
+      <a href="pravilnici.html">Правилници</a>
+      <a href="stipendii.html">Стипендии</a>
+      <a href="razrabotva-se.html">Училищни документи</a>
+      <a href="razrabotva-se.html">Формуляри</a>
     </div>
   </div>
-  <div class="mobile-menu-item"><a href="contacts.html">Контакти</a></div>
+  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
   <div class="mobile-menu-actions">
     <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
     <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
@@ -832,56 +751,27 @@ img{display:block}
     </div>
     <div class="footer-col">
       <h5>Полезни връзки</h5>
-      <ul><li><a href="#">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="#">РУО Сливен</a></li></ul>
+      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
     </div>
     <div class="footer-col footer-contact">
       <h5>Контакти</h5>
       <p><strong>Адрес:</strong><br>гр. Сливен</p>
-      <p><strong>Телефон:</strong><br>044 / …</p>
-      <p><strong>Имейл:</strong><br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fc95929a93bc8f898a938ad18f90958a9992d29e9b">[email&#160;protected]</a></p>
+      <p><strong>Телефони:</strong><br>
+        Директор: 044/ 66 72 44<br>
+        Зам. директор: 044/ 66 76 84
+      </p>
+      <p><strong>Имейл:</strong><br><a href="mailto:info-2000114@edu.mon.bg">info-2000114@edu.mon.bg</a></p>
       <p><strong>Работно време:</strong><br>Пон–Пет: 07:30 – 19:00</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
-    <span><a href="#">Поверителност</a> · <a href="#">Достъпност</a></span>
+    <span>© 2026 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
+    <span><a href="razrabotva-se.html">Поверителност</a> · <a href="razrabotva-se.html">Достъпност</a></span>
   </div>
 </footer>
 
-<script>
-// Nav scroll
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 40) });
 
-// Hamburger
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-let menuOpen = false;
-function openMenu() { menuOpen = true; hamburger.classList.add('open'); hamburger.setAttribute('aria-expanded', 'true'); mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden' }
-function closeMenu() { menuOpen = false; hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', 'false'); mobileMenu.classList.remove('open'); document.body.style.overflow = '' }
-hamburger.addEventListener('click', () => { menuOpen ? closeMenu() : openMenu() });
-mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-document.addEventListener('click', (e) => { if (menuOpen && !mobileMenu.contains(e.target) && !hamburger.contains(e.target)) closeMenu() });
-function toggleMobSub(btn) {
-  const item = btn.closest('.mobile-menu-item');
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.mobile-menu-item.open').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
-}
-
-// Tabs
-const tabBtns = document.querySelectorAll('.tab-btn');
-const panels = document.querySelectorAll('.class-panel');
-tabBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    tabBtns.forEach(b => b.classList.remove('active'));
-    panels.forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('panel-' + btn.dataset.panel).classList.add('active');
-    // scroll to schedule
-    document.querySelector('.schedule-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-</script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/pages/sedmichno-razpisanie.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Консултации – СУ „Йордан Йовков" Сливен</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+
+<link rel="stylesheet" href="assets/css/pages/konsultacii.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo.png" alt="Лого СУ Йордан Йовков">
+    <div class="nav-logo-text">
+      <strong>СУ „Йордан Йовков"</strong>
+      <span>Сливен</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <div class="nav-item">
+      <a href="za-nas.html">За нас <span class="caret"></span></a>
+      <div class="dropdown">
+        <a href="patron.html">Патрон</a><a href="himn.html">Химн</a><a href="istoriq.html">История</a><a href="misiq-viziq.html">Мисия и визия</a><a href="virtualna-razhodka.html">Виртуална разходка</a><a href="ekip.html">Училищен екип</a><a href="paralelki.html">Паралелки</a><a href="materialna-baza.html">Материална база</a><a href="uniformi.html">Униформи</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="priem.html">Прием <span class="caret"></span></a>
+      <div class="dropdown">
+        <a href="priem-1-klas.html">Прием в I клас</a><a href="priem-5-klas.html">Прием в V клас</a><a href="priem-8-klas.html">Прием в VIII клас</a><a href="dokumenti-priem.html">Необходими документи</a><a href="faq.html">Често задавани въпроси</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="obuchenie.html">Обучение <span class="caret"></span></a>
+      <div class="dropdown">
+        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="https://app.shkolo.bg/">Електронен дневник</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="roditeli.html">Родители <span class="caret"></span></a>
+      <div class="dropdown">
+        <a href="razrabotva-se.html">Наредби</a><a href="razrabotva-se.html">Родителски срещи</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="uchenici.html">Ученици <span class="caret"></span></a>
+      <div class="dropdown">
+        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="konsultacii.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
+      </div>
+    </div>
+    <div class="nav-item"><a href="razrabotva-se.html">Проекти</a></div>
+    <div class="nav-item"><a href="novini.html">Новини</a></div>
+    <div class="nav-item">
+      <a href="dokumenti.html">Документи <span class="caret"></span></a>
+      <div class="dropdown">
+        <a href="pravilnici.html">Правилници</a><a href="stipendii.html">Стипендии</a><a href="razrabotva-se.html">Училищни документи</a><a href="razrabotva-se.html">Формуляри</a>
+      </div>
+    </div>
+    <div class="nav-item"><a href="kontakti.html">Контакти</a></div>
+  </div>
+  <button class="nav-search" aria-label="Търсене">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  </button>
+  <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="istoriq.html">История</a>
+      <a href="patron.html">Патрон</a>
+      <a href="himn.html">Химн</a>
+      <a href="misiq-viziq.html">Мисия и визия</a>
+      <a href="ekip.html">Училищен екип</a>
+      <a href="paralelki.html">Паралелки</a>
+      <a href="materialna-baza.html">Материална база</a>
+      <a href="uniformi.html">Униформи</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="priem-1-klas.html">Прием в I клас</a>
+      <a href="priem-5-klas.html">Прием в V клас</a>
+      <a href="priem-8-klas.html">Прием в VIII клас</a>
+      <a href="dokumenti.html">Необходими документи</a>
+      <a href="faq.html">Често задавани въпроси</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="uchebnici.html">Учебници</a>
+      <a href="uchebni-planove.html">Учебни планове</a>
+      <a href="https://app.shkolo.bg">Електронен дневник</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="razrabotva-se.html">Наредби</a>
+      <a href="razrabotva-se.html">Родителски среща</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="dnevno-razpisanie.html">Дневно разписание</a>
+      <a href="sedmichno-razpisanie.html">Седмично разписание</a>
+      <a href="pochivni-dni.html">Почивни дни и ваканции</a>
+      <a href="klasni-kontrolni.html">Графици класни и контролни</a>
+      <a href="konsultacii.html">Консултации</a>
+      <a href="uchenicheski-suvet.html">Ученически съвет</a>
+      <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
+      <a href="nvo.html">НВО</a>
+      <a href="dzi.html">ДЗИ</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item"><a href="#">Проекти</a></div>
+  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
+  <div class="mobile-menu-item">
+    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
+    <div class="mobile-submenu">
+      <a href="pravilnici.html">Правилници</a>
+      <a href="stipendii.html">Стипендии</a>
+      <a href="razrabotva-se.html">Училищни документи</a>
+      <a href="razrabotva-se.html">Формуляри</a>
+    </div>
+  </div>
+  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
+  <div class="mobile-menu-actions">
+    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
+    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="breadcrumb hero-breadcrumb">
+    <a href="index.html">НАЧАЛО</a>
+    <span>/</span>
+    <a href="uchenici.html">УЧЕНИЦИ</a>
+    <span>/</span>
+    <a href="konsultacii.html" style="color:rgba(255,255,255,.7)">КОНСУЛТАЦИИ</a>
+  </div>
+  <div class="page-hero-eyebrow hero-eyebrow">СУ „Йордан Йовков" · Сливен</div>
+  <h1 class="hero-title">Консултации с <em>учители</em></h1>
+  <p class="hero-desc">Редовни консултации по всички предмети за подпомагане на учениците при усвояване на учебния материал.</p>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="consultation-section">
+  <div class="consultation-intro">
+    <p>Консултациите се провеждат по график по всички предмети. Учениците могат да посещават консултациите, за да получат допълнителна помощ при разбиране на учебния материал, подготовка за контролни работи или при затруднения в някой предмет.</p>
+  </div>
+
+  <!-- ТАБУЛАТОРИ -->
+  <div class="term-tabs">
+    <button class="term-tab-btn active" data-term="term1" onclick="switchTerm(event)">I срок</button>
+    <button class="term-tab-btn" data-term="term2" onclick="switchTerm(event)">II срок</button>
+  </div>
+
+  <!-- ТАБЛИЦА I СРОК -->
+  <div class="consultations-table-wrapper active" data-term-content="term1">
+    <table class="consultations-table">
+      <thead>
+        <tr>
+          <th>Име, фамилия на учителя</th>
+          <th>Предмет</th>
+          <th>Консултации</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Анелия Шидерова</td>
+          <td>Човекът и природата<br>Биология и ЗО<br>Химия и ООС</td>
+          <td>Понеделник, 14:05 - 14:50 ч.</td>
+        </tr>
+        <tr>
+          <td>Анна Енчева</td>
+          <td>География и икономика<br>История и цивилизации</td>
+          <td>Четвъртък, 14:05 - 14:45 ч.</td>
+        </tr>
+        <tr>
+          <td>Велияна Добрева</td>
+          <td>География и икономика<br>История и цивилизации<br>Философия<br>Гражданско образование</td>
+          <td>Четвъртък, 14:50 - 15:30 ч.</td>
+        </tr>
+        <tr>
+          <td>Виктор Диндев</td>
+          <td>Информационни технологии</td>
+          <td>Петък, 13:15 - 13:55 ч.</td>
+        </tr>
+        <tr>
+          <td>Даниела Атанасова</td>
+          <td>Български език и литература</td>
+          <td>Сряда, 14:05 – 14:45 ч.</td>
+        </tr>
+        <tr>
+          <td>Димитър Желев</td>
+          <td>Информационни технологии</td>
+          <td>Четвъртък, 15:40 – 16:20 ч.</td>
+        </tr>
+        <tr>
+          <td>Ивелина Ангелова</td>
+          <td>Български език и литература</td>
+          <td>Сряда, 14:05 – 14:45 ч.</td>
+        </tr>
+        <tr>
+          <td>Маргарита Байгуска</td>
+          <td>Английски език</td>
+          <td>Понеделник, 14:50 – 15:35 ч.</td>
+        </tr>
+        <tr>
+          <td>Нина Стоянова</td>
+          <td>Математика<br>Физика и астрономия</td>
+          <td>Петък, 14:05 - 14:45 ч.</td>
+        </tr>
+        <tr>
+          <td>Памела Георгиева</td>
+          <td>Математика</td>
+          <td>Вторник, 14:05 – 14:45 ч.</td>
+        </tr>
+        <tr>
+          <td>Станислав Донев</td>
+          <td>Информационни технологии</td>
+          <td>Вторник, 15:40 – 16:20 ч.</td>
+        </tr>
+        <tr>
+          <td>Стоян Димитров</td>
+          <td>Английски език</td>
+          <td>Сряда, 14:50 – 15:30 ч.</td>
+        </tr>
+        <tr>
+          <td>Аделина Дишлиева</td>
+          <td>Информационни технологии</td>
+          <td>Петък, 13:15 – 13:55 ч.</td>
+        </tr>
+        <tr>
+          <td>Георги Генов</td>
+          <td>Немски език</td>
+          <td>Четвъртък, 13:15 – 13:55 ч.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ТАБЛИЦА II СРОК -->
+  <div class="consultations-table-wrapper" data-term-content="term2">
+    <table class="consultations-table">
+      <thead>
+        <tr>
+          <th>Име, фамилия на учителя</th>
+          <th>Предмет</th>
+          <th>Консултации</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Анелия Шидерова</td>
+          <td>Човекът и природата<br>Биология и ЗО<br>Химия и ООС</td>
+          <td>Вторник, 16:00 ч. – 16:40 ч. </td>
+        </tr>
+        <tr>
+          <td>Анна Енчева</td>
+          <td>География и икономика<br>История и цивилизации</td>
+          <td>Сряда, 14:55 ч. – 15:25 ч.</td>
+        </tr>
+        <tr>
+          <td>Велияна Добрева</td>
+          <td>География и икономика<br>История и цивилизации<br>Философия<br>Гражданско образование</td>
+          <td>Четвъртък, 14:50 - 15:30 ч.</td>
+        </tr>
+        <tr>
+          <td>Виктор Диндев</td>
+          <td>Информационни технологии</td>
+          <td>Петък, 13:15 - 13:55 ч.</td>
+        </tr>
+        <tr>
+          <td>Даниела Атанасова</td>
+          <td>Български език и литература</td>
+          <td>Понеделник, 14:50 – 15:30 ч.</td>
+        </tr>
+        <tr>
+          <td>Димитър Желев</td>
+          <td>Информационни технологии</td>
+          <td>Петък, 13:15 – 13:55 ч.</td>
+        </tr>
+        <tr>
+          <td>Ивелина Ангелова</td>
+          <td>Български език и литература</td>
+          <td>Сряда, 14:05 – 14:45 ч.</td>
+        </tr>
+        <tr>
+          <td>Маргарита Байгуска</td>
+          <td>Английски език</td>
+          <td>Понеделник, 14:05 – 14:45 ч.</td>
+        </tr>
+        <tr>
+          <td>Нина Стоянова</td>
+          <td>Математика<br>Физика и астрономия</td>
+          <td>Петък, 14:05 - 14:45 ч.</td>
+        </tr>
+        <tr>
+          <td>Памела Георгиева</td>
+          <td>Математика</td>
+          <td>Вторник, 14:50 – 15:30 ч.</td>
+        </tr>
+        <tr>
+          <td>Станислав Донев</td>
+          <td>Информационни технологии</td>
+          <td>Петък, 13:15 – 13:55 ч.</td>
+        </tr>
+        <tr>
+          <td>Стоян Димитров</td>
+          <td>Английски език</td>
+          <td>Понеделник, 14:05 – 14:45 ч.</td>
+        </tr>
+        <tr>
+          <td>Аделина Дишлиева</td>
+          <td>Информационни технологии</td>
+          <td>Петък, 13:15 – 13:55 ч.</td>
+        </tr>
+        <tr>
+          <td>Георги Генов</td>
+          <td>Немски език</td>
+          <td>Четвъртък, 13:15 – 13:55 ч.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/pages/konsultacii.js" defer></script>
+  
+</body>
+</html>
