@@ -1,646 +1,598 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ученически съвет – СУ „Йордан Йовков" Сливен</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/variables.css">
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css">
-
-<link rel="stylesheet" href="assets/css/pages/uchenicheski-suvet.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ученически съвет – СУ „Йордан Йовков“ Сливен</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/uchenicheski-suvet.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <img src="images/logo.png" alt="Лого СУ Йордан Йовков">
-    <div class="nav-logo-text">
-      <strong>СУ „Йордан Йовков"</strong>
-      <span>Сливен</span>
-    </div>
-  </a>
-  <div class="nav-links">
-    <div class="nav-item">
-      <a href="za-nas.html">За нас <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="patron.html">Патрон</a><a href="himn.html">Химн</a><a href="istoriq.html">История</a><a href="misiq-viziq.html">Мисия и визия</a><a href="virtualna-razhodka.html">Виртуална разходка</a><a href="ekip.html">Училищен екип</a><a href="paralelki.html">Паралелки</a><a href="materialna-baza.html">Материална база</a><a href="uniformi.html">Униформи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="priem.html">Прием <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="priem-1-klas.html">Прием в I клас</a><a href="priem-5-klas.html">Прием в V клас</a><a href="priem-8-klas.html">Прием в VIII клас</a><a href="dokumenti-priem.html">Необходими документи</a><a href="faq.html">Често задавани въпроси</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="obuchenie.html">Обучение <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="https://app.shkolo.bg/">Електронен дневник</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="roditeli.html">Родители <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="razrabotva-se.html">Наредби</a><a href="razrabotva-se.html">Родителски срещи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="uchenici.html">Ученици <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="konsultacii.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="razrabotva-se.html">Проекти</a></div>
-    <div class="nav-item"><a href="novini.html">Новини</a></div>
-    <div class="nav-item">
-      <a href="dokumenti.html">Документи <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="pravilnici.html">Правилници</a><a href="stipendii.html">Стипендии</a><a href="razrabotva-se.html">Училищни документи</a><a href="razrabotva-se.html">Формуляри</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="kontakti.html">Контакти</a></div>
-  </div>
-  <button class="nav-search" aria-label="Търсене">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-  </button>
-  <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <div id="navbar-container"></div>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="istoriq.html">История</a>
-      <a href="patron.html">Патрон</a>
-      <a href="himn.html">Химн</a>
-      <a href="misiq-viziq.html">Мисия и визия</a>
-      <a href="ekip.html">Училищен екип</a>
-      <a href="paralelki.html">Паралелки</a>
-      <a href="materialna-baza.html">Материална база</a>
-      <a href="uniformi.html">Униформи</a>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="breadcrumb">
+      <a href="index.html">Начало</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="#">Ученици</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Ученически съвет</span>
     </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="priem-1-klas.html">Прием в I клас</a>
-      <a href="priem-5-klas.html">Прием в V клас</a>
-      <a href="priem-8-klas.html">Прием в VIII клас</a>
-      <a href="dokumenti.html">Необходими документи</a>
-      <a href="faq.html">Често задавани въпроси</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="uchebnici.html">Учебници</a>
-      <a href="uchebni-planove.html">Учебни планове</a>
-      <a href="https://app.shkolo.bg">Електронен дневник</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="razrabotva-se.html">Наредби</a>
-      <a href="razrabotva-se.html">Родителски среща</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="dnevno-razpisanie.html">Дневно разписание</a>
-      <a href="sedmichno-razpisanie.html">Седмично разписание</a>
-      <a href="pochivni-dni.html">Почивни дни и ваканции</a>
-      <a href="klasni-kontrolni.html">Графици класни и контролни</a>
-      <a href="konsultacii.html">Консултации</a>
-      <a href="uchenicheski-suvet.html">Ученически съвет</a>
-      <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
-      <a href="nvo.html">НВО</a>
-      <a href="dzi.html">ДЗИ</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="#">Проекти</a></div>
-  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="pravilnici.html">Правилници</a>
-      <a href="stipendii.html">Стипендии</a>
-      <a href="razrabotva-se.html">Училищни документи</a>
-      <a href="razrabotva-se.html">Формуляри</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
-  <div class="mobile-menu-actions">
-    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
-    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
-  </div>
-</div>
-
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="breadcrumb">
-    <a href="index.html">Начало</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href="#">Ученици</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>Ученически съвет</span>
-  </div>
-  <div class="page-hero-label">Гласът на учениците</div>
-  <h1>Ученически<br><em>съвет</em></h1>
-  <p>Ученическият съвет е органът на ученическото самоуправление в СУ „Йордан Йовков". Ние представляваме интересите на всички ученици и работим за по-добра, по-приятна и по-справедлива училищна среда.</p>
-  <div class="hero-meta">
-    <div class="hero-meta-item">
-      <span class="meta-val">15</span>
-      <span class="meta-lab">Членове</span>
-    </div>
-    <div class="hero-meta-item">
-      <span class="meta-val">2024/25</span>
-      <span class="meta-lab">Учебна година</span>
-    </div>
-    <div class="hero-meta-item">
-      <span class="meta-val">12+</span>
-      <span class="meta-lab">Инициативи</span>
-    </div>
-    <div class="hero-meta-item">
-      <span class="meta-val">800+</span>
-      <span class="meta-lab">Представлявани ученици</span>
-    </div>
-  </div>
-</section>
-
-<!-- MISSION STRIP -->
-<div class="mission-strip reveal">
-  <p>Вярваме, че всеки ученик има право на глас. Нашата мисия е да бъдем мост между учениците и ръководството, да организираме значими инициативи и да изграждаме общност, в която всеки се чувства чут и ценен.</p>
-  <div class="mission-pills">
-    <div class="mission-pill">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-      Представителство
-    </div>
-    <div class="mission-pill">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      Инициативи
-    </div>
-    <div class="mission-pill">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-      Диалог
-    </div>
-    <div class="mission-pill">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Защита на правата
-    </div>
-  </div>
-</div>
-
-<!-- STRUCTURE -->
-<section class="section structure-section" id="struktura">
-  <div class="section-label reveal">Организация</div>
-  <h2 class="section-title reveal">Структура на съвета</h2>
-  <p class="section-subtitle reveal">Ученическият съвет е организиран демократично — всеки клас избира свой представител, а заедно те формират ръководен орган.</p>
-
-  <div class="org-chart">
-    <!-- Top: President -->
-    <div class="org-level">
-      <div class="org-node president reveal">
-        <div class="org-node-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <h4>Председател</h4>
-        <div class="role-tag">Ръководи съвета</div>
+    <div class="page-hero-label">Гласът на учениците</div>
+    <h1>Ученически<br><em>съвет</em></h1>
+    <p>Ученическият съвет е органът на ученическото самоуправление в СУ „Йордан Йовков“. Ние представляваме интересите на всички ученици и работим за по-добра, по-приятна и по-справедлива училищна среда.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="meta-val">15</span>
+        <span class="meta-lab">Членове</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="meta-val">2024/25</span>
+        <span class="meta-lab">Учебна година</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="meta-val">12+</span>
+        <span class="meta-lab">Инициативи</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="meta-val">800+</span>
+        <span class="meta-lab">Представлявани ученици</span>
       </div>
     </div>
-    <div class="org-connector"></div>
-    <!-- Vice presidents -->
-    <div class="org-level">
-      <div class="org-node reveal" style="transition-delay:.1s">
-        <div class="org-node-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <h4>Зам.-председател</h4>
-        <div class="role-tag">Инициативи & Събития</div>
+  </section>
+
+  <!-- MISSION STRIP -->
+  <div class="mission-strip reveal">
+    <p>Вярваме, че всеки ученик има право на глас. Нашата мисия е да бъдем мост между учениците и ръководството, да организираме значими инициативи и да изграждаме общност, в която всеки се чувства чут и ценен.</p>
+    <div class="mission-pills">
+      <div class="mission-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Представителство
       </div>
-      <div class="org-node reveal" style="transition-delay:.2s">
-        <div class="org-node-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        </div>
-        <h4>Секретар</h4>
-        <div class="role-tag">Документация & Протоколи</div>
+      <div class="mission-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Инициативи
       </div>
-      <div class="org-node reveal" style="transition-delay:.3s">
-        <div class="org-node-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        </div>
-        <h4>Касиер</h4>
-        <div class="role-tag">Финанси & Бюджет</div>
+      <div class="mission-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Диалог
       </div>
-    </div>
-    <div class="org-connector"></div>
-    <!-- Representatives -->
-    <div class="org-level">
-      <div class="org-node reveal" style="min-width:auto;padding:1rem 1.4rem;transition-delay:.1s">
-        <div style="font-size:.75rem;color:var(--gray);line-height:1.6;text-align:center">
-          <strong style="display:block;color:var(--dark);margin-bottom:.3rem">Представители</strong>
-          по един от всяка паралелка<br>V – XII клас
-        </div>
+      <div class="mission-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Защита на правата
       </div>
     </div>
   </div>
-</section>
 
-<!-- MEMBERS -->
-<section class="section members-section" id="members">
-  <div class="section-label reveal">Мандат 2024/2025</div>
-  <h2 class="section-title reveal">Членове на съвета</h2>
-  <p class="section-subtitle reveal">Запознайте се с учениците, които представляват своите класове и работят за по-добра училищна среда.</p>
+  <!-- STRUCTURE -->
+  <section class="section structure-section" id="struktura">
+    <div class="section-label reveal">Организация</div>
+    <h2 class="section-title reveal">Структура на съвета</h2>
+    <p class="section-subtitle reveal">Ученическият съвет е организиран демократично — всеки клас избира свой представител, а заедно те формират ръководен орган.</p>
 
-  <div class="members-grid">
-
-    <!-- President -->
-    <div class="member-card president-card reveal">
-      <div class="member-avatar">
-        <div class="member-avatar-inner">ИД</div>
-        <span class="president-crown">★ Председател</span>
-        <span class="member-class-badge">XII А</span>
-      </div>
-      <div class="member-info">
-        <div class="member-name">Иван Димитров</div>
-        <div class="member-role">Председател</div>
-        <div class="member-class">XII А клас</div>
-      </div>
-    </div>
-
-    <div class="member-card reveal" style="transition-delay:.08s">
-      <div class="member-avatar">
-        <div class="member-avatar-inner">МС</div>
-        <span class="member-class-badge">XI Б</span>
-      </div>
-      <div class="member-info">
-        <div class="member-name">Мария Стоянова</div>
-        <div class="member-role">Зам.-председател</div>
-        <div class="member-class">XI Б клас</div>
-      </div>
-    </div>
-
-    <div class="member-card reveal" style="transition-delay:.16s">
-      <div class="member-avatar">
-        <div class="member-avatar-inner">ГП</div>
-        <span class="member-class-badge">XII Б</span>
-      </div>
-      <div class="member-info">
-        <div class="member-name">Георги Петров</div>
-        <div class="member-role">Секретар</div>
-        <div class="member-class">XII Б клас</div>
-      </div>
-    </div>
-
-    <div class="member-card reveal" style="transition-delay:.24s">
-      <div class="member-avatar">
-        <div class="member-avatar-inner">ЕН</div>
-        <span class="member-class-badge">XI А</span>
-      </div>
-      <div class="member-info">
-        <div class="member-name">Елена Николова</div>
-        <div class="member-role">Касиер</div>
-        <div class="member-class">XI А клас</div>
-      </div>
-    </div>
-
-    <div class="member-card reveal" style="transition-delay:.08s">
-      <div class="member-avatar">
-        <div class="member-avatar-inner">АВ</div>
-        <span class="member-class-badge">X А</span>
-      </div>
-      <div class="member-info">
-        <div class="member-name">Антон Василев</div>
-        <div class="member-role">Представител</div>
-        <div class="member-class">X А клас</div>
-      </div>
-    </div>
-
-    <div class="member-card reveal" style="transition-delay:.16s">
-      <div class="member-avatar">
-        <div class="member-avatar-inner">СМ</div>
-        <span class="member-class-badge">X Б</span>
-      </div>
-      <div class="member-info">
-        <div class="member-name">Симона Маринова</div>
-        <div class="member-role">Представител</div>
-        <div class="member-class">X Б клас</div>
-      </div>
-    </div>
-
-    <div class="member-card reveal" style="transition-delay:.24s">
-      <div class="member-avatar">
-        <div class="member-avatar-inner">КИ</div>
-        <span class="member-class-badge">IX А</span>
-      </div>
-      <div class="member-info">
-        <div class="member-name">Калин Иванов</div>
-        <div class="member-role">Представител</div>
-        <div class="member-class">IX А клас</div>
-      </div>
-    </div>
-
-    <div class="member-card reveal" style="transition-delay:.32s">
-      <div class="member-avatar">
-        <div class="member-avatar-inner">ДТ</div>
-        <span class="member-class-badge">IX Б</span>
-      </div>
-      <div class="member-info">
-        <div class="member-name">Дария Тодорова</div>
-        <div class="member-role">Представител</div>
-        <div class="member-class">IX Б клас</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- GOALS -->
-<section class="goals-section" id="celi">
-  <div class="section-label reveal">Програма</div>
-  <h2 class="section-title reveal">Нашите цели</h2>
-  <div class="goals-grid">
-    <div class="goal-card reveal">
-      <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-      <div class="goal-num">01</div>
-      <h4>Диалог с ръководството</h4>
-      <p>Провеждаме редовни срещи с директора и педагогическия съвет, за да предаваме идеи и сигнали от учениците.</p>
-    </div>
-    <div class="goal-card reveal" style="transition-delay:.1s">
-      <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <div class="goal-num">02</div>
-      <h4>Организиране на събития</h4>
-      <p>Планираме и осъществяваме тематични дни, коледни и пролетни тържества, спортни турнири и творчески конкурси.</p>
-    </div>
-    <div class="goal-card reveal" style="transition-delay:.2s">
-      <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <div class="goal-num">03</div>
-      <h4>Защита на правата</h4>
-      <p>Наблюдаваме спазването на правилника за вътрешен ред и помагаме при разрешаването на конфликти между ученици.</p>
-    </div>
-    <div class="goal-card reveal" style="transition-delay:.1s">
-      <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-      <div class="goal-num">04</div>
-      <h4>Подпомагане на учениците</h4>
-      <p>Информираме за стипендии, програми и извънучилищни възможности. Организираме взаимопомощ между класове.</p>
-    </div>
-    <div class="goal-card reveal" style="transition-delay:.2s">
-      <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
-      <div class="goal-num">05</div>
-      <h4>Доброволчество и общност</h4>
-      <p>Участваме в благотворителни акции, екологични кампании и инициативи за по-добро местно общество.</p>
-    </div>
-    <div class="goal-card reveal" style="transition-delay:.3s">
-      <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2zM22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
-      <div class="goal-num">06</div>
-      <h4>Прозрачност и отчетност</h4>
-      <p>Публикуваме протоколи от заседанията и отчети за дейността ни, за да сме близо до всеки ученик.</p>
-    </div>
-  </div>
-</section>
-
-<!-- INITIATIVES -->
-<section class="section initiatives-section" id="initiatives">
-  <div class="section-label reveal">Дейности</div>
-  <h2 class="section-title reveal">Инициативи тази година</h2>
-  <p class="section-subtitle reveal">Активни сме целогодишно — вижте какво организирахме и планираме за учениците на СУ „Йордан Йовков".</p>
-
-  <div class="initiatives-grid">
-
-    <div class="initiative-card reveal">
-      <div class="initiative-img">
-        <div class="initiative-img-bg" style="background: linear-gradient(135deg, #1D7A50, #0d4f34)"></div>
-        <div class="initiative-icon-big">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <span class="initiative-cat">Тържество</span>
-      </div>
-      <div class="initiative-body">
-        <div class="initiative-date">15 декември 2024</div>
-        <h3>Коледен концерт „Светлини за теб"</h3>
-        <p>Организирахме вълнуващ коледен концерт с участие на над 150 ученика. Събрахме средства за деца в нужда и изпълнихме атмосферата с празнично настроение.</p>
-        <span class="initiative-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          Реализирано
-        </span>
-      </div>
-    </div>
-
-    <div class="initiative-card reveal" style="transition-delay:.12s">
-      <div class="initiative-img">
-        <div class="initiative-img-bg" style="background: linear-gradient(135deg, #C9A84C, #9a7520)"></div>
-        <div class="initiative-icon-big">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <span class="initiative-cat">Доброволчество</span>
-      </div>
-      <div class="initiative-body">
-        <div class="initiative-date">Октомври – ноември 2024</div>
-        <h3>Акция „Чисто училище – чист ум"</h3>
-        <p>Организирахме почистване на двора и прилежащата зона около училището. Над 80 ученика взеха участие в засаждане на цветя и декорация на коридорите.</p>
-        <span class="initiative-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          Реализирано
-        </span>
-      </div>
-    </div>
-
-    <div class="initiative-card reveal" style="transition-delay:.24s">
-      <div class="initiative-img">
-        <div class="initiative-img-bg" style="background: linear-gradient(135deg, #1a6195, #0f3d5e)"></div>
-        <div class="initiative-icon-big">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        </div>
-        <span class="initiative-cat">Спорт</span>
-      </div>
-      <div class="initiative-body">
-        <div class="initiative-date">Февруари 2025</div>
-        <h3>Междукласен турнир по волейбол</h3>
-        <p>Организирахме турнир с участие на 12 отбора от различни паралелки. Събитието насърчи духа на fair play и партньорство между учениците.</p>
-        <span class="initiative-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          Реализирано
-        </span>
-      </div>
-    </div>
-
-    <div class="initiative-card reveal">
-      <div class="initiative-img">
-        <div class="initiative-img-bg" style="background: linear-gradient(135deg, #7c3aed, #4c1d95)"></div>
-        <div class="initiative-icon-big">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        </div>
-        <span class="initiative-cat">Дигитал</span>
-      </div>
-      <div class="initiative-body">
-        <div class="initiative-date">Март – април 2025</div>
-        <h3>Дигитален вестник „Йовков Днес"</h3>
-        <p>Стартираме първия ученически онлайн медиа проект на училището — с новини, интервюта и статии, писани изцяло от ученици.</p>
-        <span class="initiative-tag" style="background: #f3e8ff; color: #7c3aed; border: 1px solid rgba(124,58,237,.2)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          В процес
-        </span>
-      </div>
-    </div>
-
-    <div class="initiative-card reveal" style="transition-delay:.12s">
-      <div class="initiative-img">
-        <div class="initiative-img-bg" style="background: linear-gradient(135deg, #059669, #064e3b)"></div>
-        <div class="initiative-icon-big">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <span class="initiative-cat">Природа</span>
-      </div>
-      <div class="initiative-body">
-        <div class="initiative-date">Май 2025</div>
-        <h3>Еко-поход „Зелен Сливен"</h3>
-        <p>Планираме еднодневен поход около Сливен с фокус върху опознаване на природата, пречистване на маршрути и фотоконкурс.</p>
-        <span class="initiative-tag" style="background: #f0e2b8; color: #8a5c0a; border: 1px solid rgba(201,168,76,.3)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          Планирано
-        </span>
-      </div>
-    </div>
-
-    <div class="initiative-card reveal" style="transition-delay:.24s">
-      <div class="initiative-img">
-        <div class="initiative-img-bg" style="background: linear-gradient(135deg, #dc2626, #7f1d1d)"></div>
-        <div class="initiative-icon-big">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-        </div>
-        <span class="initiative-cat">Благотворителност</span>
-      </div>
-      <div class="initiative-body">
-        <div class="initiative-date">Юни 2025</div>
-        <h3>Благотворителен базар в края на годината</h3>
-        <p>Традиционният ни базар с ученически творби, домашни изделия и изненади. Средствата отиват за ученици в затруднено положение.</p>
-        <span class="initiative-tag" style="background: #f0e2b8; color: #8a5c0a; border: 1px solid rgba(201,168,76,.3)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          Планирано
-        </span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- JOIN + CONTACT -->
-<section class="join-section" id="join">
-  <div class="section-label reveal">Участие</div>
-  <h2 class="section-title reveal">Стани част от нас</h2>
-  <p class="section-subtitle reveal">Ученическият съвет е отворен за всеки, който иска да промени нещо към по-добро. Ето как можеш да се включиш.</p>
-
-  <div class="join-grid">
-    <div class="join-card reveal-left">
-      <h3>Как да се кандидатираш?</h3>
-      <p>Изборите за нови членове се провеждат в началото на всяка учебна година. Всеки клас избира свой представител чрез тайно гласуване.</p>
-      <ul class="join-steps">
-        <li>
-          <span class="step-num">1</span>
-          Обяви желанието си пред своя класен ръководител и съученици
-        </li>
-        <li>
-          <span class="step-num">2</span>
-          Подготви кратка програма — какво искаш да промениш или подобриш
-        </li>
-        <li>
-          <span class="step-num">3</span>
-          Участвай в изборите в своя клас (провеждат се всяка октомври)
-        </li>
-        <li>
-          <span class="step-num">4</span>
-          При избор — участвай в учредителното заседание на новия съвет
-        </li>
-      </ul>
-    </div>
-
-    <div class="reveal-right" style="display:flex;flex-direction:column;gap:1.5rem">
-      <div class="contact-card">
-        <h3>Свържи се с нас</h3>
-        <div class="contact-row">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    <div class="org-chart">
+      <!-- Top: President -->
+      <div class="org-level">
+        <div class="org-node president reveal">
+          <div class="org-node-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <div>
-            <div class="contact-label">Имейл</div>
-            <div class="contact-val">uchsavet@suvov-sliven.bg</div>
-          </div>
+          <h4>Председател</h4>
+          <div class="role-tag">Ръководи съвета</div>
         </div>
-        <div class="contact-row">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div class="org-connector"></div>
+      <!-- Vice presidents -->
+      <div class="org-level">
+        <div class="org-node reveal" style="transition-delay:.1s">
+          <div class="org-node-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
           </div>
-          <div>
-            <div class="contact-label">Заседания</div>
-            <div class="contact-val">Всеки вторник, 16:00 ч. — стая 204</div>
-          </div>
+          <h4>Зам.-председател</h4>
+          <div class="role-tag">Инициативи & Събития</div>
         </div>
-        <div class="contact-row">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <div class="org-node reveal" style="transition-delay:.2s">
+          <div class="org-node-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
-          <div>
-            <div class="contact-label">Кутия за сигнали</div>
-            <div class="contact-val">До стая на ученическия съвет (ет. 2)</div>
+          <h4>Секретар</h4>
+          <div class="role-tag">Документация & Протоколи</div>
+        </div>
+        <div class="org-node reveal" style="transition-delay:.3s">
+          <div class="org-node-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h4>Касиер</h4>
+          <div class="role-tag">Финанси & Бюджет</div>
+        </div>
+      </div>
+      <div class="org-connector"></div>
+      <!-- Representatives -->
+      <div class="org-level">
+        <div class="org-node reveal" style="min-width:auto;padding:1rem 1.4rem;transition-delay:.1s">
+          <div style="font-size:.75rem;color:var(--gray);line-height:1.6;text-align:center">
+            <strong style="display:block;color:var(--dark);margin-bottom:.3rem">Представители</strong>
+            по един от всяка паралелка<br>V – XII клас
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div style="display:flex;gap:1rem;flex-wrap:wrap">
-        <a class="btn-gold" style="flex:1;justify-content:center" onclick="alert('Скоро!')">
-          Виж протоколите
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a class="btn-outline" style="flex:1;justify-content:center" onclick="alert('Скоро!')">
-          Изпрати сигнал
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+  <!-- MEMBERS -->
+  <section class="section members-section" id="members">
+    <div class="section-label reveal">Мандат 2024/2025</div>
+    <h2 class="section-title reveal">Членове на съвета</h2>
+    <p class="section-subtitle reveal">Запознайте се с учениците, които представляват своите класове и работят за по-добра училищна среда.</p>
+
+    <div class="members-grid">
+
+      <!-- President -->
+      <div class="member-card president-card reveal">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ГС</div>
+          <span class="president-crown">★ Председател</span>
+          <span class="member-class-badge">XI A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Габриела Стефанова</div>
+          <div class="member-role">Председател</div>
+          <div class="member-class">XI A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.16s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ДХ</div>
+          <span class="member-class-badge">X A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Десислава Христова</div>
+          <div class="member-role">Секретар</div>
+          <div class="member-class">X A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.08s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">МГ</div>
+          <span class="member-class-badge">V A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Мадлен Георгиева</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">V A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.16s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ГП</div>
+          <span class="member-class-badge">V A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Гина Пенчева</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">V A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.24s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ЙС</div>
+          <span class="member-class-badge">VI A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Йоана Стайкова</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">VI A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">БГ</div>
+          <span class="member-class-badge">VI A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Божидара Голова</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">VI A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ВП</div>
+          <span class="member-class-badge">VII A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Вили Панова</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">VII A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ВВ</div>
+          <span class="member-class-badge">VII A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Васил Василев</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">VII A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ИД</div>
+          <span class="member-class-badge">VIII A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Ивайло Даскалов</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">VIII A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">МГ</div>
+          <span class="member-class-badge">VIII A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Марио Георгиев</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">VIII A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ЕС</div>
+          <span class="member-class-badge">IX A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Елизабет Сашева</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">IX A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ДК</div>
+          <span class="member-class-badge">IX A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Даниел Константинов</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">IX A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">КП</div>
+          <span class="member-class-badge">X A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Калоян Петров</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">X A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ВК</div>
+          <span class="member-class-badge">XI A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Венцислав Колев</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">XI A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ВД</div>
+          <span class="member-class-badge">XI A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Виктор Динов</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">XI A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">ДД</div>
+          <span class="member-class-badge">XII A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Дамитър Димитров</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">XII A клас</div>
+        </div>
+      </div>
+
+      <div class="member-card reveal" style="transition-delay:.32s">
+        <div class="member-avatar">
+          <div class="member-avatar-inner">НА</div>
+          <span class="member-class-badge">XII A</span>
+        </div>
+        <div class="member-info">
+          <div class="member-name">Николай Анастасов</div>
+          <div class="member-role">Представител</div>
+          <div class="member-class">XII A клас</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GOALS -->
+  <section class="goals-section" id="celi">
+    <div class="section-label reveal">Програма</div>
+    <h2 class="section-title reveal">Нашите цели</h2>
+    <div class="goals-grid">
+      <div class="goal-card reveal">
+        <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <div class="goal-num">01</div>
+        <h4>Диалог с ръководството</h4>
+        <p>Провеждаме редовни срещи с директора и педагогическия съвет, за да предаваме идеи и сигнали от учениците.</p>
+      </div>
+      <div class="goal-card reveal" style="transition-delay:.1s">
+        <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="goal-num">02</div>
+        <h4>Организиране на събития</h4>
+        <p>Планираме и осъществяваме тематични дни, коледни и пролетни тържества, спортни турнири и творчески конкурси.</p>
+      </div>
+      <div class="goal-card reveal" style="transition-delay:.2s">
+        <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="goal-num">03</div>
+        <h4>Защита на правата</h4>
+        <p>Наблюдаваме спазването на правилника за вътрешен ред и помагаме при разрешаването на конфликти между ученици.</p>
+      </div>
+      <div class="goal-card reveal" style="transition-delay:.1s">
+        <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div class="goal-num">04</div>
+        <h4>Подпомагане на учениците</h4>
+        <p>Информираме за стипендии, програми и извънучилищни възможности. Организираме взаимопомощ между класове.</p>
+      </div>
+      <div class="goal-card reveal" style="transition-delay:.2s">
+        <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+        <div class="goal-num">05</div>
+        <h4>Доброволчество и общност</h4>
+        <p>Участваме в благотворителни акции, екологични кампании и инициативи за по-добро местно общество.</p>
+      </div>
+      <div class="goal-card reveal" style="transition-delay:.3s">
+        <div class="goal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2zM22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+        <div class="goal-num">06</div>
+        <h4>Прозрачност и отчетност</h4>
+        <p>Публикуваме протоколи от заседанията и отчети за дейността ни, за да сме близо до всеки ученик.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="images/logo.png" alt="Лого">
-      <p>СУ „Йордан Йовков" — Сливен е средно училище с богата история и традиции, изграждащо знаещи и уверени личности от 1980 година.</p>
-      <div class="footer-motto">„Ако успееш тук, ще успееш навсякъде!"</div>
+  <!-- INITIATIVES -->
+  <section class="section initiatives-section" id="initiatives">
+    <div class="section-label reveal">Дейности</div>
+    <h2 class="section-title reveal">Инициативи тази година</h2>
+    <p class="section-subtitle reveal">Активни сме целогодишно — вижте какво организирахме и планираме за учениците на СУ „Йордан Йовков“.</p>
+
+    <div class="initiatives-grid">
+
+      <div class="initiative-card reveal">
+        <div class="initiative-img">
+          <div class="initiative-img-bg" style="background: linear-gradient(135deg, #1D7A50, #0d4f34)"></div>
+          <div class="initiative-icon-big">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span class="initiative-cat">Тържество</span>
+        </div>
+        <div class="initiative-body">
+          <div class="initiative-date">15 декември 2024</div>
+          <h3>Коледен концерт „Светлини за теб"</h3>
+          <p>Организирахме вълнуващ коледен концерт с участие на над 150 ученика. Събрахме средства за деца в нужда и изпълнихме атмосферата с празнично настроение.</p>
+          <span class="initiative-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Реализирано
+          </span>
+        </div>
+      </div>
+
+      <div class="initiative-card reveal" style="transition-delay:.12s">
+        <div class="initiative-img">
+          <div class="initiative-img-bg" style="background: linear-gradient(135deg, #C9A84C, #9a7520)"></div>
+          <div class="initiative-icon-big">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="initiative-cat">Доброволчество</span>
+        </div>
+        <div class="initiative-body">
+          <div class="initiative-date">Октомври – ноември 2024</div>
+          <h3>Акция „Чисто училище – чист ум"</h3>
+          <p>Организирахме почистване на двора и прилежащата зона около училището. Над 80 ученика взеха участие в засаждане на цветя и декорация на коридорите.</p>
+          <span class="initiative-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Реализирано
+          </span>
+        </div>
+      </div>
+
+      <div class="initiative-card reveal" style="transition-delay:.24s">
+        <div class="initiative-img">
+          <div class="initiative-img-bg" style="background: linear-gradient(135deg, #1a6195, #0f3d5e)"></div>
+          <div class="initiative-icon-big">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <span class="initiative-cat">Спорт</span>
+        </div>
+        <div class="initiative-body">
+          <div class="initiative-date">Февруари 2025</div>
+          <h3>Междукласен турнир по волейбол</h3>
+          <p>Организирахме турнир с участие на 12 отбора от различни паралелки. Събитието насърчи духа на fair play и партньорство между учениците.</p>
+          <span class="initiative-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Реализирано
+          </span>
+        </div>
+      </div>
+
+      <div class="initiative-card reveal">
+        <div class="initiative-img">
+          <div class="initiative-img-bg" style="background: linear-gradient(135deg, #7c3aed, #4c1d95)"></div>
+          <div class="initiative-icon-big">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <span class="initiative-cat">Дигитал</span>
+        </div>
+        <div class="initiative-body">
+          <div class="initiative-date">Март – април 2025</div>
+          <h3>Дигитален вестник „Йовков Днес"</h3>
+          <p>Стартираме първия ученически онлайн медиа проект на училището — с новини, интервюта и статии, писани изцяло от ученици.</p>
+          <span class="initiative-tag" style="background: #f3e8ff; color: #7c3aed; border: 1px solid rgba(124,58,237,.2)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            В процес
+          </span>
+        </div>
+      </div>
+
+      <div class="initiative-card reveal" style="transition-delay:.12s">
+        <div class="initiative-img">
+          <div class="initiative-img-bg" style="background: linear-gradient(135deg, #059669, #064e3b)"></div>
+          <div class="initiative-icon-big">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <span class="initiative-cat">Природа</span>
+        </div>
+        <div class="initiative-body">
+          <div class="initiative-date">Май 2025</div>
+          <h3>Еко-поход „Зелен Сливен"</h3>
+          <p>Планираме еднодневен поход около Сливен с фокус върху опознаване на природата, пречистване на маршрути и фотоконкурс.</p>
+          <span class="initiative-tag" style="background: #f0e2b8; color: #8a5c0a; border: 1px solid rgba(201,168,76,.3)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Планирано
+          </span>
+        </div>
+      </div>
+
+      <div class="initiative-card reveal" style="transition-delay:.24s">
+        <div class="initiative-img">
+          <div class="initiative-img-bg" style="background: linear-gradient(135deg, #dc2626, #7f1d1d)"></div>
+          <div class="initiative-icon-big">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <span class="initiative-cat">Благотворителност</span>
+        </div>
+        <div class="initiative-body">
+          <div class="initiative-date">Юни 2025</div>
+          <h3>Благотворителен базар в края на годината</h3>
+          <p>Традиционният ни базар с ученически творби, домашни изделия и изненади. Средствата отиват за ученици в затруднено положение.</p>
+          <span class="initiative-tag" style="background: #f0e2b8; color: #8a5c0a; border: 1px solid rgba(201,168,76,.3)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Планирано
+          </span>
+        </div>
+      </div>
+
     </div>
-    <div class="footer-col">
-      <h5>Навигация</h5>
-      <ul><li><a href="za-nas.html">За нас</a></li><li><a href="priem.html">Прием</a></li><li><a href="obuchenie.html">Обучение</a></li><li><a href="novini.html">Новини</a></li><li><a href="razrabotva-se.html">Проекти</a></li><li><a href="dokumenti.html">Документи</a></li></ul>
+  </section>
+
+  <!-- JOIN + CONTACT -->
+  <section class="join-section" id="join">
+    <div class="section-label reveal">Участие</div>
+    <h2 class="section-title reveal">Стани част от нас</h2>
+    <p class="section-subtitle reveal">Ученическият съвет е отворен за всеки, който иска да промени нещо към по-добро. Ето как можеш да се включиш.</p>
+
+    <div class="join-grid">
+      <div class="join-card reveal-left">
+        <h3>Как да се кандидатираш?</h3>
+        <p>Изборите за нови членове се провеждат в началото на всяка учебна година. Всеки клас избира свой представител чрез тайно гласуване.</p>
+        <ul class="join-steps">
+          <li>
+            <span class="step-num">1</span>
+            Обяви желанието си пред своя класен ръководител и съученици
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            Подготви кратка програма — какво искаш да промениш или подобриш
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            Участвай в изборите в своя клас (провеждат се всяка октомври)
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            При избор — участвай в учредителното заседание на новия съвет
+          </li>
+        </ul>
+      </div>
+
+      <div class="reveal-right" style="display:flex;flex-direction:column;gap:1.5rem">
+        <div class="contact-card">
+          <h3>Свържи се с нас</h3>
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Имейл</div>
+              <div class="contact-val">uchsavet@suvov-sliven.bg</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Заседания</div>
+              <div class="contact-val">Всеки вторник, 16:00 ч. — стая 204</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Кутия за сигнали</div>
+              <div class="contact-val">До стая на ученическия съвет (ет. 2)</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+          <a class="btn-gold" style="flex:1;justify-content:center" onclick="alert('Скоро!')">
+            Виж протоколите
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn-outline" style="flex:1;justify-content:center" onclick="alert('Скоро!')">
+            Изпрати сигнал
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="footer-col">
-      <h5>Полезни връзки</h5>
-      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
-    </div>
-    <div class="footer-col footer-contact">
-      <h5>Контакти</h5>
-      <p><strong>Адрес:</strong><br>гр. Сливен</p>
-      <p><strong>Телефони:</strong><br>
-        Директор: 044/ 66 72 44<br>
-        Зам. директор: 044/ 66 76 84
-      </p>
-      <p><strong>Имейл:</strong><br><a href="mailto:info-2000114@edu.mon.bg">info-2000114@edu.mon.bg</a></p>
-      <p><strong>Работно време:</strong><br>Пон–Пет: 07:30 – 19:00</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
-    <span><a href="razrabotva-se.html">Поверителност</a> · <a href="razrabotva-se.html">Достъпност</a></span>
-  </div>
-</footer>
+  </section>
+
+  <div id="footer-container"></div>
+
   <script type="module" src="assets/js/main.js"></script>
+  <script src="assets/js/components-init.js"></script>
+  
 </body>
 </html>

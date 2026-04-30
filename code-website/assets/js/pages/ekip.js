@@ -7,5 +7,10 @@
 import { initTeamFilter }  from '../modules/team-filter.js';
 import { initStatCounters } from '../modules/counters.js';
 
-initTeamFilter();
-initStatCounters();
+document.addEventListener("DOMContentLoaded", () => {
+  initTeamFilter();
+  initStatCounters();
+
+  // force initial state
+  document.querySelector('.filter-btn.active')?.click();
+});
