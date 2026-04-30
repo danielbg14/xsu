@@ -132,15 +132,14 @@ img{display:block}
 .priem8-feature{display:flex;align-items:center;gap:.8rem;font-size:.88rem;color:rgba(255,255,255,.75)}
 .priem8-feature svg{width:16px;height:16px;color:var(--gold);flex-shrink:0}
 .priem8-info{display:flex;flex-direction:column;gap:1.5rem}
-.priem8-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.priem8-stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1.5rem;text-align:center}
+.priem8-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+.priem8-stat { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); border-radius: 16px; padding: 2rem; text-align: center; }
 .priem8-stat-num{font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.4rem}
 .priem8-stat-label{font-size:.75rem;color:rgba(255,255,255,.5);letter-spacing:.05em}
 .priem8-cta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:.5rem}
 .priem8-cta .btn-gold{background:var(--gold);color:var(--dark);border-color:var(--gold)}
 .priem8-cta .btn-outline-white{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#fff;padding:.85rem 2rem;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border:2px solid rgba(255,255,255,.3);border-radius:50px;transition:all .3s}
 .priem8-cta .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.priem8-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);border-radius:50px;padding:.6rem 1.2rem;font-size:.78rem;color:var(--gold);font-weight:600;margin-bottom:1rem}
 @media(max-width:900px){.priem8-layout{grid-template-columns:1fr}}
  
 /* NEWS */
@@ -187,6 +186,7 @@ img{display:block}
 .program-card p{font-size:.79rem;color:rgba(255,255,255,.6);line-height:1.65}
 .program-tag{display:inline-block;margin-top:1rem;background:rgba(201,168,76,.25);color:var(--gold);font-size:.68rem;padding:3px 9px;letter-spacing:.06em;border-radius:50px}
  
+
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
 .reveal.visible{opacity:1;transform:translateY(0)}
