@@ -8,52 +8,53 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <!-- Споделени стилове -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/variables.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/components.css">
+  <!-- Shared CSS (same order as all other pages) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
 
-    <!-- Страница-специфичен стил -->
-    <link rel="stylesheet" href="assets/css/pages/uchilishtni-dokumenti.css">
+  <!-- Page-specific CSS only -->
+  <link rel="stylesheet" href="assets/css/pages/uchilishtni-dokumenti.css">
 </head>
 <body>
 
-  <!-- ── NAVBAR (зарежда се от components-init.js) ── -->
+  <!-- Shared navbar (populated by components-init.js) -->
   <div id="navbar-container"></div>
 
-  <!-- ── PAGE HERO ── -->
+  <!-- PAGE HERO -->
   <div class="page-hero">
-    <div class="page-hero-deco"></div>
-    <nav class="page-hero-breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Начало</a>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true">
+    <div class="page-hero-breadcrumb" role="navigation" aria-label="Breadcrumb">
+      <a href="index.html">НАЧАЛО</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
         <path d="M9 18l6-6-6-6"/>
       </svg>
-      <span>Документи</span>
-    </nav>
+      <span>ДОКУМЕНТИ</span>
+    </div>
     <div class="page-hero-label">Официални документи</div>
     <h1>Документи<br><em>на училището</em></h1>
     <p class="page-hero-sub">Правилници, учебни планове, стратегии и годишни отчети на СУ „Йордан Йовков" — Сливен.</p>
   </div>
 
-  <!-- ── MAIN CONTENT ── -->
+  <!-- MAIN CONTENT -->
   <section class="docs-section">
 
-    <!-- Информационен банер -->
+    <!-- Info banner -->
     <div class="docs-info-banner reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
       </svg>
       <p>Всички документи са в актуален вид за учебната <strong>2025/2026 г.</strong> За въпроси или достъп до допълнителни материали се свържете с <a href="kontakti.html">канцеларията на училището</a>.</p>
     </div>
 
-    <!-- ── ДОКУМЕНТИ 2025/2026 ── -->
+    <!-- ДОКУМЕНТИ 2025/2026 -->
     <div class="docs-year-group">
       <div class="docs-year-header reveal">
-        <div class="docs-year-icon" aria-hidden="true">
+        <div class="docs-year-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
             <polyline points="14 2 14 8 20 8"/>
@@ -68,8 +69,9 @@
 
       <div class="docs-grid">
 
-        <a href="#" class="doc-card reveal" style="transition-delay:.05s">
-          <div class="doc-icon general-icon" aria-hidden="true">
+        <!-- Правилник -->
+        <a href="https://10sou.sliven.net/documents/pravilnik_za-deinostta-2025-2026.pdf" class="doc-card reveal" style="transition-delay:.05s" target="_blank" rel="noopener">
+          <div class="doc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
@@ -77,7 +79,7 @@
           <div class="doc-info">
             <div class="doc-name">Правилник за дейността на училището за учебната 2025/2026 г.</div>
             <div class="doc-meta">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               2025/2026 · PDF
             </div>
           </div>
@@ -86,8 +88,9 @@
           </div>
         </a>
 
-        <a href="#" class="doc-card reveal" style="transition-delay:.1s">
-          <div class="doc-icon general-icon" aria-hidden="true">
+        <!-- Годишен план -->
+        <a href="https://10sou.sliven.net/documents/godishen-plan-2025-2026.pdf" class="doc-card reveal" style="transition-delay:.1s" target="_blank" rel="noopener">
+          <div class="doc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M9 11l3 3L22 4"/>
               <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
@@ -96,7 +99,7 @@
           <div class="doc-info">
             <div class="doc-name">Годишен план</div>
             <div class="doc-meta">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               2025/2026 · PDF
             </div>
           </div>
@@ -105,8 +108,9 @@
           </div>
         </a>
 
-        <a href="#" class="doc-card reveal" style="transition-delay:.15s">
-          <div class="doc-icon general-icon" aria-hidden="true">
+        <!-- Форми на обучение -->
+        <a href="https://10sou.sliven.net/documents/formi-na-obuchenie-2025-2026.pdf" class="doc-card reveal" style="transition-delay:.15s" target="_blank" rel="noopener">
+          <div class="doc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
               <circle cx="9" cy="7" r="4"/>
@@ -117,7 +121,7 @@
           <div class="doc-info">
             <div class="doc-name">Форми на обучение</div>
             <div class="doc-meta">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               2025/2026 · PDF
             </div>
           </div>
@@ -126,8 +130,9 @@
           </div>
         </a>
 
-        <a href="#" class="doc-card reveal" style="transition-delay:.2s">
-          <div class="doc-icon general-icon" aria-hidden="true">
+        <!-- Учебни планове -->
+        <a href="https://10sou.sliven.net/documents/uchebni-planove-2025-2026.pdf" class="doc-card reveal" style="transition-delay:.2s" target="_blank" rel="noopener">
+          <div class="doc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/>
               <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
@@ -136,7 +141,7 @@
           <div class="doc-info">
             <div class="doc-name">Училищни учебни планове</div>
             <div class="doc-meta">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               2025/2026 · PDF
             </div>
           </div>
@@ -145,8 +150,9 @@
           </div>
         </a>
 
-        <a href="#" class="doc-card reveal" style="transition-delay:.25s">
-          <div class="doc-icon general-icon" aria-hidden="true">
+        <!-- Етичен кодекс -->
+        <a href="https://10sou.sliven.net/documents/2025-2026/etichen-kodeks-2.pdf" class="doc-card reveal" style="transition-delay:.25s" target="_blank" rel="noopener">
+          <div class="doc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
             </svg>
@@ -154,7 +160,7 @@
           <div class="doc-info">
             <div class="doc-name">Етичен кодекс</div>
             <div class="doc-meta">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               2025/2026 · PDF
             </div>
           </div>
@@ -166,10 +172,12 @@
       </div>
     </div>
 
-    <!-- ── СТРАТЕГИЯ И ИЗПЪЛНЕНИЕ ── -->
+    <hr class="docs-divider">
+
+    <!-- СТРАТЕГИЯ И ИЗПЪЛНЕНИЕ -->
     <div class="strategy-group">
       <div class="strategy-header reveal">
-        <div class="strategy-icon" aria-hidden="true">
+        <div class="strategy-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
           </svg>
@@ -180,8 +188,9 @@
 
       <div class="docs-grid">
 
-        <a href="#" class="doc-card gold-card reveal" style="transition-delay:.05s">
-          <div class="doc-icon general-icon" aria-hidden="true">
+        <!-- Стратегия -->
+        <a href="https://10sou.sliven.net/documents/2025-2026/strategiya-2023-2028-1.pdf" class="doc-card gold-card reveal" style="transition-delay:.05s" target="_blank" rel="noopener">
+          <div class="doc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="18" y1="20" x2="18" y2="10"/>
               <line x1="12" y1="20" x2="12" y2="4"/>
@@ -191,7 +200,7 @@
           <div class="doc-info">
             <div class="doc-name">Стратегия 2023–2028</div>
             <div class="doc-meta">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               2023–2028 · PDF
             </div>
           </div>
@@ -200,8 +209,9 @@
           </div>
         </a>
 
-        <a href="#" class="doc-card gold-card reveal" style="transition-delay:.1s">
-          <div class="doc-icon general-icon" aria-hidden="true">
+        <!-- Отчет -->
+        <a href="https://10sou.sliven.net/documents/2025-2026/otchet-24-25-za-izpalnenie-na-strategiyata.pdf" class="doc-card gold-card reveal" style="transition-delay:.1s" target="_blank" rel="noopener">
+          <div class="doc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="9 11 12 14 22 4"/>
               <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
@@ -210,7 +220,7 @@
           <div class="doc-info">
             <div class="doc-name">Отчет 2024–2025 за изпълнение на стратегията</div>
             <div class="doc-meta">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               2024/2025 · PDF
             </div>
           </div>
@@ -219,8 +229,9 @@
           </div>
         </a>
 
-        <a href="#" class="doc-card gold-card reveal" style="transition-delay:.15s">
-          <div class="doc-icon general-icon" aria-hidden="true">
+        <!-- План към стратегията -->
+        <a href="https://10sou.sliven.net/documents/2025-2026/plan-kym-strategiyata-za-uchebnata-2025-2026.pdf" class="doc-card gold-card reveal" style="transition-delay:.15s" target="_blank" rel="noopener">
+          <div class="doc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
@@ -232,7 +243,7 @@
           <div class="doc-info">
             <div class="doc-name">План към стратегията за учебната 2025–2026</div>
             <div class="doc-meta">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               2025/2026 · PDF
             </div>
           </div>
@@ -246,12 +257,18 @@
 
   </section>
 
-  <!-- ── FOOTER (зарежда се от components-init.js) ── -->
+  <!-- Shared footer (populated by components-init.js) -->
   <div id="footer-container"></div>
 
+  <!--
+    JS зареждане — същият ред като другите страници:
+    1. components-init.js  → зарежда navbar.html + footer.html в контейнерите
+    2. main.js             → initNav, initMobileMenu, initReveal
+    3. uchilishtni-dokumenti.js → само логика специфична за тази страница
+  -->
+  <script src="assets/js/components-init.js" defer></script>
   <script type="module" src="assets/js/main.js"></script>
   <script type="module" src="assets/js/pages/uchilishtni-dokumenti.js" defer></script>
-  <script src="assets/js/components-init.js"></script>
 
 </body>
 </html>

@@ -1,34 +1,106 @@
 /**
- * dokumenti.js — страница-специфична логика за страницата с документи
- * Зависи от: main.js (initNav, initMobileMenu, initReveal) зареден преди това
- *
- * Тук се добавя само логика, специфична за тази страница.
- * Навигацията, мобилното меню и reveal анимациите се управляват от main.js.
+ * uchilishtni-dokumenti.js
+ * Скрипт само за страницата с училищни документи.
+ * НЕ презаписва initNav / initMobileMenu / initReveal от main.js.
+ * Тук добавяме само логика специфична за тази страница.
  */
 
 /**
- * Инициализира hover ефекта на doc-card.
- * (CSS върши по-голямата работа; тук може да се добавят бъдещи JS интеракции)
+ * Маркира активния линк в навбара като "Документи"
+ * Извиква се след като components-init.js е заредил navbar.html.
  */
-function initDocCards() {
-    const cards = document.querySelectorAll('.doc-card');
-  
-    cards.forEach(card => {
-      // Ако картата е просто линк без реален href, спираме default поведението
-      card.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (!href || href === '#') {
-          e.preventDefault();
-          // TODO: замени с реален PDF линк или покажи tooltip/modal
-          console.info('Документът все още няма прикачен файл:', this.querySelector('.doc-name')?.textContent);
+function markActiveNavLink() {
+  const links = document.querySelectorAll('.nav-links a, .nav-item > a');
+  links.forEach(link => {
+    // Премахни предишен active
+    link.classList.remove('active');
+    // Провери дали текстът или href съответства на "Документи"
+    const href = link.getAttribute('href') || '';
+    const text = link.textContent.trim();
+    if (
+      href.includes('uchilishtni-dokumenti') ||
+      text === 'Документи'
+    ) {
+      link.classList.add('active');
+    }
+  });
+}
+
+/**
+ * Анимира doc-card елементите с staggered delay при влизане в viewport.
+ * Използва IntersectionObserver — без конфликт с глобалния reveal.js,
+ * защото работи с клас .doc-card, а не с .reveal.
+ */
+function initDocCardReveal() {
+  const cards = document.querySelectorAll('.doc-card');
+
+  if (!cards.length) return;
+
+  // Задаване на начално скрито състояние чрез inline стил
+  // (не презаписваме глобалния .reveal клас)
+  cards.forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = `opacity .5s ${i * 0.06}s, transform .5s ${i * 0.06}s`;
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
         }
       });
+    },
+    { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+  );
+
+  cards.forEach(card => observer.observe(card));
+}
+
+/**
+ * Подчертава активната група (текуща учебна година) чрез лек highlight.
+ */
+function highlightCurrentYearGroup() {
+  const yearTag = document.querySelector('.docs-year-tag');
+  if (yearTag && yearTag.textContent.includes('Текуща')) {
+    const group = yearTag.closest('.docs-year-group');
+    if (group) {
+      group.style.position = 'relative';
+    }
+  }
+}
+
+/**
+ * Инициализация — чака navbar/footer компонентите да се заредят.
+ * Използва MutationObserver за да засече кога navbar-container е попълнен.
+ */
+function init() {
+  // Изчакай navbar компонента (зареден от components-init.js)
+  const navbarContainer = document.getElementById('navbar-container');
+
+  if (navbarContainer) {
+    const mo = new MutationObserver(() => {
+      if (navbarContainer.innerHTML.trim()) {
+        markActiveNavLink();
+        mo.disconnect();
+      }
     });
+    mo.observe(navbarContainer, { childList: true, subtree: true });
   }
-  
-  // Стартиране след зареждане на DOM-а
+
+  // Инициализирай останалото след DOMContentLoaded
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initDocCards);
+    document.addEventListener('DOMContentLoaded', () => {
+      initDocCardReveal();
+      highlightCurrentYearGroup();
+    });
   } else {
-    initDocCards();
+    initDocCardReveal();
+    highlightCurrentYearGroup();
   }
+}
+
+init();
