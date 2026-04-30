@@ -1,7 +1,3 @@
-/**
- * formulari.js — Филтриране и търсене на формуляри
- */
-
 (function () {
     const grid    = document.getElementById('formulariGrid');
     const empty   = document.getElementById('formulariEmpty');

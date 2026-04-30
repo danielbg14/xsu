@@ -1,6 +1,3 @@
-/**
- * slider.js — Hero слайдер с точки (index.html)
- */
 export function initSlider() {
     const slides = document.querySelectorAll('.hero-slide');
     const dots   = document.querySelectorAll('.hero-dot');

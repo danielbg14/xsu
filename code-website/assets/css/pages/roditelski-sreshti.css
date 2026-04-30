@@ -1,10 +1,3 @@
-/* ================================================================
-   roditelski-sreshti.css
-   Стилове САМО за страницата „Родителски срещи".
-   Nav, footer и споделените компоненти се управляват от style.css,
-   layout.css и components.css — тук не ги override-ваме.
-   ================================================================ */
-
 /* ── PAGE HERO ── */
 .page-hero {
     background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 60%, #2a9d6b 100%);
@@ -13,19 +6,28 @@
     overflow: hidden;
   }
   
-  .page-hero-breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: .75rem;
+  .page-hero .breadcrumb {
     color: rgba(255, 255, 255, .55);
     margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 2;
+    font-size: .75rem;
   }
-  .page-hero-breadcrumb a { color: rgba(255, 255, 255, .55); transition: color .2s; }
-  .page-hero-breadcrumb a:hover { color: var(--gold); }
-  .page-hero-breadcrumb svg { opacity: .4; }
+
+  .page-hero .breadcrumb a {
+      color: rgba(255, 255, 255, .55);
+  }
+
+  .page-hero .breadcrumb a:hover {
+      color: var(--gold);
+  }
+
+  .page-hero .breadcrumb span {
+      color: rgba(255, 255, 255, .55);
+  }
+
+  .page-hero .breadcrumb span:last-child {
+      color: var(--gold);
+      font-weight: 600;
+  }
   
   .page-hero-label {
     font-size: .72rem;

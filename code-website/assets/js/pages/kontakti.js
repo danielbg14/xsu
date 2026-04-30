@@ -1,5 +1,3 @@
-// kontakti.js — page-specific logic
-
 // Highlight today's working hours row
 (function () {
     const dayMap = [null, 'hr-mon', 'hr-tue', 'hr-wed', 'hr-thu', 'hr-fri', null, null];

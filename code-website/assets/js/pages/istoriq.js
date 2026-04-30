@@ -1,5 +1,3 @@
-// istoriq.js — page-specific logic
-
 // Smooth scroll to decade section
 window.scrollToSection = function(id) {
     const element = document.getElementById(id);

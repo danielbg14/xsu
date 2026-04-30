@@ -1,5 +1,3 @@
-// izvunklasni-deinosti.js — page-specific logic
-
 // Sub-tab switching for extracurricular activity categories
 const subBtns = document.querySelectorAll('.sub-tab-btn');
 const subPanels = document.querySelectorAll('.sub-panel');

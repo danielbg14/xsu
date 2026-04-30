@@ -1,7 +1,3 @@
-/**
- * reveal.js — Scroll-reveal анимации чрез IntersectionObserver
- * Поддържа: .reveal, .reveal-left, .reveal-right
- */
 export function initReveal({ selector = '.reveal, .reveal-left, .reveal-right', threshold = 0.1 } = {}) {
     const els = document.querySelectorAll(selector);
     if (!els.length) return;

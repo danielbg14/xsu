@@ -1,11 +1,3 @@
-/**
- * counters.js — Анимирани числа (count-up)
- *
- * Използване:
- *   Прост вариант (index.html): <span class="count-up" data-target="1200"></span>
- *   Разширен вариант (ekip.html): <span class="num">45</span> вътре в .stat-item
- */
-
 /** Прост count-up: .count-up[data-target] */
 export function initCountUp() {
     const counters = document.querySelectorAll('.count-up');

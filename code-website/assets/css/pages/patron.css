@@ -26,8 +26,6 @@ img{display:block}
 .content-wrap{max-width:1100px;margin:0 auto;padding:4rem 8vw}
 .content-grid{display:grid;grid-template-columns:1fr 340px;gap:4rem;align-items:start}
 
-/* SIDEBAR */
-.sidebar{}
 
 /* PORTRAIT CARD */
 .portrait-card{background:var(--green-dark);border-radius:20px;overflow:hidden;margin-bottom:1.5rem}

@@ -1,5 +1,3 @@
-// konsultacii.js — page-specific logic
-
 // Tab switching for consultation terms
 window.switchTerm = function (event) {
     const termId = event.target.getAttribute('data-term');

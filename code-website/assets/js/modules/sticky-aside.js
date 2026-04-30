@@ -1,7 +1,3 @@
-/**
- * sticky-aside.js — Спира sticky sidebar точно преди footer-а
- * Използва се на: dokumenti-priem.html, faq.html и подобни с .priem-side-nav
- */
 export function initStickyAside() {
     const layout = document.querySelector('.content-layout');
     const aside  = document.querySelector('.priem-side-nav');

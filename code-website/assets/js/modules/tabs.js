@@ -1,12 +1,4 @@
 /**
- * tabs.js — Универсален tab switcher
- *
- * Използва се на:
- *   dzi.html             — .session-tab / #tab-may, #tab-june
- *   dnevno-razpisanie.html — .grade-tab / .grade-content
- */
-
-/**
  * Tab switcher за ДЗИ сесии
  * Бутоните са 2: [0]=май, [1]=юни
  */

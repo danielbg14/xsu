@@ -1,6 +1,3 @@
-/**
- * audio-player.js — Аудио плейър за химна (himn.html)
- */
 export function initAudioPlayer() {
     let audio = null;
     let isMuted = false;

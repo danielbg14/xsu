@@ -1,14 +1,3 @@
-/**
- * budget.js  —  Логика за страницата „Бюджет и отчети"
- *
- * Функционалност:
- *  1. Accordion — разгъване/свиване на годишните блокове
- *  2. Year pills — highlight на активната година при скрол
- *  3. Smooth scroll при клик върху year pill
- *
- * Не override-ва нищо от main.js / nav.js / reveal.js
- */
-
 (function () {
     'use strict';
   

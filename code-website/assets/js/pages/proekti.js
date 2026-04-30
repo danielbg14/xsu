@@ -1,7 +1,3 @@
-/**
- * proekti.js — Reveal анимации за страница „Проекти"
- */
-
 (function () {
     const revealEls = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {

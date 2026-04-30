@@ -1,6 +1,3 @@
-/**
- * mobile-menu.js — Hamburger меню и субменюта
- */
 export function initMobileMenu() {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');

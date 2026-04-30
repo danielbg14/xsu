@@ -1,6 +1,3 @@
-/**
- * nav.js — Sticky navbar при скролване
- */
 export function initNav() {
     const navbar = document.getElementById('navbar');
     if (!navbar) return;

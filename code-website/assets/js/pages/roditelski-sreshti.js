@@ -1,13 +1,3 @@
-/**
- * roditelski-sreshti.js
- * Скрипт САМО за страницата „Родителски срещи".
- * НЕ презаписва initNav / initMobileMenu / initReveal от main.js.
- */
-
-/**
- * Маркира активния линк „Родители > Родителски срещи" в навбара.
- * Изчаква navbar-container да бъде попълнен от components-init.js.
- */
 function markActiveNavLink() {
     const navbarContainer = document.getElementById('navbar-container');
     if (!navbarContainer) return;

@@ -1,8 +1,3 @@
-/* ================================================================
-   budget.css  —  page-specific styles for Бюджет и отчети
-   Зависимости: variables.css, reset.css, base.css, layout.css, components.css
-   ================================================================ */
-
 /* ── PAGE HERO ── */
 .page-hero {
     margin-top: var(--nav-h);
