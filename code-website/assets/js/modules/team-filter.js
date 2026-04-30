@@ -7,6 +7,9 @@ export function initTeamFilter() {
     const emptyState  = document.getElementById('empty-state');
     if (!filterBtns.length) return;
   
+    // Show all groups by default on page load
+    groups.forEach(g => g.classList.remove('hidden'));
+  
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => b.classList.remove('active'));

@@ -1,331 +1,175 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Дневно разписание – СУ „Йордан Йовков" – Сливен</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/variables.css">
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css">
-
-<link rel="stylesheet" href="assets/css/pages/dnevno-razpisanie.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дневно разписание – СУ „Йордан Йовков“ – Сливен</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/dnevno-razpisanie.css">
 </head>
 <body>
 
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <img src="images/logo.png" alt="Лого СУ Йордан Йовков">
-    <div class="nav-logo-text">
-      <strong>СУ „Йордан Йовков"</strong>
-      <span>Сливен</span>
-    </div>
-  </a>
-  <div class="nav-links">
-    <div class="nav-item">
-      <a href="za-nas.html">За нас <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="patron.html">Патрон</a><a href="himn.html">Химн</a><a href="istoriq.html">История</a><a href="misiq-viziq.html">Мисия и визия</a><a href="virtualna-razhodka.html">Виртуална разходка</a><a href="ekip.html">Училищен екип</a><a href="paralelki.html">Паралелки</a><a href="materialna-baza.html">Материална база</a><a href="uniformi.html">Униформи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="priem.html">Прием <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="priem-1-klas.html">Прием в I клас</a><a href="priem-5-klas.html">Прием в V клас</a><a href="priem-8-klas.html">Прием в VIII клас</a><a href="dokumenti-priem.html">Необходими документи</a><a href="faq.html">Често задавани въпроси</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="obuchenie.html">Обучение <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="https://app.shkolo.bg/">Електронен дневник</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="roditeli.html">Родители <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="razrabotva-se.html">Наредби</a><a href="razrabotva-se.html">Родителски срещи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="uchenici.html">Ученици <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="konsultacii.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="razrabotva-se.html">Проекти</a></div>
-    <div class="nav-item"><a href="novini.html">Новини</a></div>
-    <div class="nav-item">
-      <a href="dokumenti.html">Документи <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="pravilnici.html">Правилници</a><a href="stipendii.html">Стипендии</a><a href="razrabotva-se.html">Училищни документи</a><a href="razrabotva-se.html">Формуляри</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="kontakti.html">Контакти</a></div>
-  </div>
-  <button class="nav-search" aria-label="Търсене">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-  </button>
-  <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <div id="navbar-container"></div>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="istoriq.html">История</a>
-      <a href="patron.html">Патрон</a>
-      <a href="himn.html">Химн</a>
-      <a href="misiq-viziq.html">Мисия и визия</a>
-      <a href="ekip.html">Училищен екип</a>
-      <a href="paralelki.html">Паралелки</a>
-      <a href="materialna-baza.html">Материална база</a>
-      <a href="uniformi.html">Униформи</a>
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="breadcrumb">
+      <a href="index.html">НАЧАЛО</a>
+      <span>/</span>
+      <a href="obuchenie.html">ОБУЧЕНИЕ</a>
+      <span>/</span>
+      <span style="color:var(--gold)">ДНЕВНО РАЗПИСАНИЕ</span>
     </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="priem-1-klas.html">Прием в I клас</a>
-      <a href="priem-5-klas.html">Прием в V клас</a>
-      <a href="priem-8-klas.html">Прием в VIII клас</a>
-      <a href="dokumenti.html">Необходими документи</a>
-      <a href="faq.html">Често задавани въпроси</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="uchebnici.html">Учебници</a>
-      <a href="uchebni-planove.html">Учебни планове</a>
-      <a href="https://app.shkolo.bg">Електронен дневник</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="razrabotva-se.html">Наредби</a>
-      <a href="razrabotva-se.html">Родителски среща</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="dnevno-razpisanie.html">Дневно разписание</a>
-      <a href="sedmichno-razpisanie.html">Седмично разписание</a>
-      <a href="pochivni-dni.html">Почивни дни и ваканции</a>
-      <a href="klasni-kontrolni.html">Графици класни и контролни</a>
-      <a href="konsultacii.html">Консултации</a>
-      <a href="uchenicheski-suvet.html">Ученически съвет</a>
-      <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
-      <a href="nvo.html">НВО</a>
-      <a href="dzi.html">ДЗИ</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="#">Проекти</a></div>
-  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="pravilnici.html">Правилници</a>
-      <a href="stipendii.html">Стипендии</a>
-      <a href="razrabotva-se.html">Училищни документи</a>
-      <a href="razrabotva-se.html">Формуляри</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
-  <div class="mobile-menu-actions">
-    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
-    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
-  </div>
-</div>
-
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <div class="breadcrumb">
-    <a href="index.html">НАЧАЛО</a>
-    <span>/</span>
-    <a href="obuchenie.html">ОБУЧЕНИЕ</a>
-    <span>/</span>
-    <span style="color:var(--gold)">ДНЕВНО РАЗПИСАНИЕ</span>
-  </div>
-  <div class="page-hero-eyebrow">Обучение · 2025/2026</div>
-  <h1>Дневно <em>разписание</em><br>на часовете</h1>
-  <p>Разписание на учебните часове и дейностите в ЦОУД за учебната 2025/2026 година, утвърдено от директора на училището.</p>
-</div>
-
-<!-- SECTION 1: УЧЕБНИ ЧАСОВЕ -->
-<section class="section" style="background:#fff">
-  <div class="section-label reveal">Учебни часове</div>
-  <h2 class="section-title reveal">Разписание на учебните часове<br>от 1. – 12. клас</h2>
-  <p class="section-subtitle reveal">Учебната 2025/2026 година. Утвърдено от Директор: Диана Кънева.</p>
-
-  <div class="schedule-table-wrap reveal">
-    <table class="schedule-table">
-      <thead>
-        <tr>
-          <th>Час</th>
-          <th>1. и 2. клас</th>
-          <th>3. и 4. клас</th>
-          <th>5. – 12. клас</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td class="time-cell">08:00 – 08:35</td><td class="time-cell">08:00 – 08:40</td><td class="time-cell">08:00 – 08:40</td></tr>
-        <tr><td>2</td><td class="time-cell">09:00 – 09:35</td><td class="time-cell">08:50 – 09:30</td><td class="time-cell">08:55 – 09:35</td></tr>
-        <tr><td>3</td><td class="time-cell">09:45 – 10:20</td><td class="time-cell">09:55 – 10:35</td><td class="time-cell">09:45 – 10:25</td></tr>
-        <tr><td>4</td><td class="time-cell">10:30 – 11:05</td><td class="time-cell">10:45 – 11:25</td><td class="time-cell">10:45 – 11:25</td></tr>
-        <tr><td>5</td><td class="time-cell">11:15 – 11:50</td><td class="time-cell">11:35 – 12:15</td><td class="time-cell">11:35 – 12:15</td></tr>
-        <tr><td>6</td><td style="color:var(--gray);font-style:italic;font-size:.8rem">—</td><td class="time-cell">12:25 – 13:05</td><td class="time-cell">12:25 – 13:05</td></tr>
-        <tr><td>7</td><td style="color:var(--gray);font-style:italic;font-size:.8rem">—</td><td style="color:var(--gray);font-style:italic;font-size:.8rem">—</td><td class="time-cell">13:15 – 13:55</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- SECTION 2: ЦОУД -->
-<section class="section tsoyd-section">
-  <div class="section-label reveal">ЦОУД</div>
-  <h2 class="section-title reveal">Разписание на дейностите ЦОУД<br>1. – 4. клас</h2>
-  <p class="section-subtitle reveal">Целодневна организация на учебния ден — дейности по класове.</p>
-
-  <div class="grade-tab-strip reveal">
-    <button class="grade-tab active" onclick="switchGrade('g1')">1. клас</button>
-    <button class="grade-tab" onclick="switchGrade('g2')">2. клас</button>
-    <button class="grade-tab" onclick="switchGrade('g3')">3. клас</button>
-    <button class="grade-tab" onclick="switchGrade('g4')">4. клас</button>
+    <div class="page-hero-eyebrow">Обучение · 2025/2026</div>
+    <h1>Дневно <em>разписание</em><br>на часовете</h1>
+    <p>Разписание на учебните часове и дейностите в ЦОУД за учебната 2025/2026 година, утвърдено от директора на училището.</p>
   </div>
 
-  <!-- 1 КЛАС -->
-  <div class="grade-content active" id="g1">
-    <span class="class-label">1. клас</span>
-    <div class="schedule-table-wrap">
-      <table class="day-cols-table">
-        <thead><tr><th>Час</th><th>Понеделник</th><th>Вторник</th><th>Сряда</th><th>Четвъртък</th><th>Петък</th></tr></thead>
+  <!-- SECTION 1: УЧЕБНИ ЧАСОВЕ -->
+  <section class="section" style="background:#fff">
+    <div class="section-label reveal">Учебни часове</div>
+    <h2 class="section-title reveal">Разписание на учебните часове<br>от 1. – 12. клас</h2>
+    <p class="section-subtitle reveal">Учебната 2025/2026 година. Утвърдено от Директор: Диана Кънева.</p>
+
+    <div class="schedule-table-wrap reveal">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Час</th>
+            <th>1. и 2. клас</th>
+            <th>3. и 4. клас</th>
+            <th>5. – 12. клас</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td>11:15 – 11:50</td><td>—</td><td>—</td><td class="type-lunch">Обедно хранене</td><td>—</td><td>—</td></tr>
-          <tr><td>11:50 – 12:20</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td></tr>
-          <tr><td>12:20 – 12:55</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-interest">Занимания по интереси</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td></tr>
-          <tr><td>12:55 – 13:30</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-study">Самоподготовка</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td></tr>
-          <tr><td>13:30 – 14:05</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
-          <tr><td>14:05 – 14:40</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-interest">Занимания по интереси</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
-          <tr><td>14:40 – 15:15</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td></tr>
-          <tr><td>15:15 – 15:50</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td>—</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td></tr>
+          <tr><td>1</td><td class="time-cell">08:00 – 08:35</td><td class="time-cell">08:00 – 08:40</td><td class="time-cell">08:00 – 08:40</td></tr>
+          <tr><td>2</td><td class="time-cell">09:00 – 09:35</td><td class="time-cell">08:50 – 09:30</td><td class="time-cell">08:55 – 09:35</td></tr>
+          <tr><td>3</td><td class="time-cell">09:45 – 10:20</td><td class="time-cell">09:55 – 10:35</td><td class="time-cell">09:45 – 10:25</td></tr>
+          <tr><td>4</td><td class="time-cell">10:30 – 11:05</td><td class="time-cell">10:45 – 11:25</td><td class="time-cell">10:45 – 11:25</td></tr>
+          <tr><td>5</td><td class="time-cell">11:15 – 11:50</td><td class="time-cell">11:35 – 12:15</td><td class="time-cell">11:35 – 12:15</td></tr>
+          <tr><td>6</td><td style="color:var(--gray);font-style:italic;font-size:.8rem">—</td><td class="time-cell">12:25 – 13:05</td><td class="time-cell">12:25 – 13:05</td></tr>
+          <tr><td>7</td><td style="color:var(--gray);font-style:italic;font-size:.8rem">—</td><td style="color:var(--gray);font-style:italic;font-size:.8rem">—</td><td class="time-cell">13:15 – 13:55</td></tr>
         </tbody>
       </table>
     </div>
-  </div>
+  </section>
 
-  <!-- 2 КЛАС -->
-  <div class="grade-content" id="g2">
-    <span class="class-label">2. клас</span>
-    <div class="schedule-table-wrap">
-      <table class="day-cols-table">
-        <thead><tr><th>Час</th><th>Понеделник</th><th>Вторник</th><th>Сряда</th><th>Четвъртък</th><th>Петък</th></tr></thead>
-        <tbody>
-          <tr><td>11:50 – 12:20</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td></tr>
-          <tr><td>12:20 – 12:55</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td></tr>
-          <tr><td>12:55 – 13:30</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td></tr>
-          <tr><td>13:30 – 14:05</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
-          <tr><td>14:05 – 14:40</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
-          <tr><td>14:40 – 15:15</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td></tr>
-          <tr><td>15:15 – 15:50</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <!-- SECTION 2: ЦОУД -->
+  <section class="section tsoyd-section">
+    <div class="section-label reveal">ЦОУД</div>
+    <h2 class="section-title reveal">Разписание на дейностите ЦОУД<br>1. – 4. клас</h2>
+    <p class="section-subtitle reveal">Целодневна организация на учебния ден — дейности по класове.</p>
 
-  <!-- 3 КЛАС -->
-  <div class="grade-content" id="g3">
-    <span class="class-label">3. клас</span>
-    <div class="schedule-table-wrap">
-      <table class="day-cols-table">
-        <thead><tr><th>Час</th><th>Понеделник</th><th>Вторник</th><th>Сряда</th><th>Четвъртък</th><th>Петък</th></tr></thead>
-        <tbody>
-          <tr><td>12:25 – 13:05</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="type-lunch">Обедно хранене</td></tr>
-          <tr><td>13:05 – 13:35</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-sport">Организиран отдих и спорт</td></tr>
-          <tr><td>13:35 – 14:15</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-interest">Занимания по интереси</td></tr>
-          <tr><td>14:15 – 14:55</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-study">Самоподготовка</td></tr>
-          <tr><td>14:55 – 15:35</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
-          <tr><td>15:35 – 16:15</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-interest">Занимания по интереси</td></tr>
-          <tr><td>16:15 – 16:55</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-sport">Организиран отдих и спорт</td></tr>
-          <tr><td>16:55 – 17:35</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td>—</td></tr>
-        </tbody>
-      </table>
+    <div class="grade-tab-strip reveal">
+      <button class="grade-tab active" onclick="switchGrade('g1')">1. клас</button>
+      <button class="grade-tab" onclick="switchGrade('g2')">2. клас</button>
+      <button class="grade-tab" onclick="switchGrade('g3')">3. клас</button>
+      <button class="grade-tab" onclick="switchGrade('g4')">4. клас</button>
     </div>
-  </div>
 
-  <!-- 4 КЛАС -->
-  <div class="grade-content" id="g4">
-    <span class="class-label">4. клас</span>
-    <div class="schedule-table-wrap">
-      <table class="day-cols-table">
-        <thead><tr><th>Час</th><th>Понеделник</th><th>Вторник</th><th>Сряда</th><th>Четвъртък</th><th>Петък</th></tr></thead>
-        <tbody>
-          <tr><td>12:25 – 13:05</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="type-lunch">Обедно хранене</td></tr>
-          <tr><td>13:05 – 13:35</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td></tr>
-          <tr><td>13:35 – 14:15</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-study">Самоподготовка</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td></tr>
-          <tr><td>14:15 – 14:55</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
-          <tr><td>14:55 – 15:35</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
-          <tr><td>15:35 – 16:20</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-interest">Занимания по интереси</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
-          <tr><td>16:20 – 17:00</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td></tr>
-          <tr><td>17:00 – 17:40</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td>—</td></tr>
-        </tbody>
-      </table>
+    <!-- 1 КЛАС -->
+    <div class="grade-content active" id="g1">
+      <span class="class-label">1. клас</span>
+      <div class="schedule-table-wrap">
+        <table class="day-cols-table">
+          <thead><tr><th>Час</th><th>Понеделник</th><th>Вторник</th><th>Сряда</th><th>Четвъртък</th><th>Петък</th></tr></thead>
+          <tbody>
+            <tr><td>11:15 – 11:50</td><td>—</td><td>—</td><td class="type-lunch">Обедно хранене</td><td>—</td><td>—</td></tr>
+            <tr><td>11:50 – 12:20</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td></tr>
+            <tr><td>12:20 – 12:55</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-interest">Занимания по интереси</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td></tr>
+            <tr><td>12:55 – 13:30</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-study">Самоподготовка</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td></tr>
+            <tr><td>13:30 – 14:05</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
+            <tr><td>14:05 – 14:40</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-interest">Занимания по интереси</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
+            <tr><td>14:40 – 15:15</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td></tr>
+            <tr><td>15:15 – 15:50</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td>—</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div>
 
-  <!-- LEGEND -->
-  <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.5rem" class="reveal">
-    <span style="display:flex;align-items:center;gap:6px;font-size:.8rem"><span style="width:12px;height:12px;border-radius:50%;background:#c0392b;display:inline-block"></span>Обедно хранене</span>
-    <span style="display:flex;align-items:center;gap:6px;font-size:.8rem"><span style="width:12px;height:12px;border-radius:50%;background:#2980b9;display:inline-block"></span>Организиран отдих и спорт</span>
-    <span style="display:flex;align-items:center;gap:6px;font-size:.8rem"><span style="width:12px;height:12px;border-radius:50%;background:#8e44ad;display:inline-block"></span>Занимания по интереси</span>
-    <span style="display:flex;align-items:center;gap:6px;font-size:.8rem"><span style="width:12px;height:12px;border-radius:50%;background:var(--green);display:inline-block"></span>Самоподготовка</span>
-  </div>
+    <!-- 2 КЛАС -->
+    <div class="grade-content" id="g2">
+      <span class="class-label">2. клас</span>
+      <div class="schedule-table-wrap">
+        <table class="day-cols-table">
+          <thead><tr><th>Час</th><th>Понеделник</th><th>Вторник</th><th>Сряда</th><th>Четвъртък</th><th>Петък</th></tr></thead>
+          <tbody>
+            <tr><td>11:50 – 12:20</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td></tr>
+            <tr><td>12:20 – 12:55</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td></tr>
+            <tr><td>12:55 – 13:30</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td></tr>
+            <tr><td>13:30 – 14:05</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
+            <tr><td>14:05 – 14:40</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
+            <tr><td>14:40 – 15:15</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td></tr>
+            <tr><td>15:15 – 15:50</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-  <div class="note-box reveal">
-    <strong>Забележка:</strong> Разписанието е утвърдено от Директор <strong>Диана Кънева</strong> и е в сила за учебната 2025/2026 година. При промени ще бъдете уведомени допълнително.
-  </div>
-</section>
+    <!-- 3 КЛАС -->
+    <div class="grade-content" id="g3">
+      <span class="class-label">3. клас</span>
+      <div class="schedule-table-wrap">
+        <table class="day-cols-table">
+          <thead><tr><th>Час</th><th>Понеделник</th><th>Вторник</th><th>Сряда</th><th>Четвъртък</th><th>Петък</th></tr></thead>
+          <tbody>
+            <tr><td>12:25 – 13:05</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="type-lunch">Обедно хранене</td></tr>
+            <tr><td>13:05 – 13:35</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-sport">Организиран отдих и спорт</td></tr>
+            <tr><td>13:35 – 14:15</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-interest">Занимания по интереси</td></tr>
+            <tr><td>14:15 – 14:55</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-study">Самоподготовка</td></tr>
+            <tr><td>14:55 – 15:35</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
+            <tr><td>15:35 – 16:15</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-interest">Занимания по интереси</td></tr>
+            <tr><td>16:15 – 16:55</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-sport">Организиран отдих и спорт</td></tr>
+            <tr><td>16:55 – 17:35</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="images/logo.png" alt="Лого">
-      <p>СУ „Йордан Йовков" — Сливен е средно училище с богата история и традиции, изграждащо знаещи и уверени личности от 1980 година.</p>
-      <div class="footer-motto">„Ако успееш тук, ще успееш навсякъде!"</div>
+    <!-- 4 КЛАС -->
+    <div class="grade-content" id="g4">
+      <span class="class-label">4. клас</span>
+      <div class="schedule-table-wrap">
+        <table class="day-cols-table">
+          <thead><tr><th>Час</th><th>Понеделник</th><th>Вторник</th><th>Сряда</th><th>Четвъртък</th><th>Петък</th></tr></thead>
+          <tbody>
+            <tr><td>12:25 – 13:05</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="type-lunch">Обедно хранене</td></tr>
+            <tr><td>13:05 – 13:35</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-lunch">Обедно хранене</td><td class="type-lunch">Обедно хранене</td></tr>
+            <tr><td>13:35 – 14:15</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-study">Самоподготовка</td><td class="type-sport">Организиран отдих и спорт</td><td class="type-sport">Организиран отдих и спорт</td></tr>
+            <tr><td>14:15 – 14:55</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
+            <tr><td>14:55 – 15:35</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
+            <tr><td>15:35 – 16:20</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td><td class="type-interest">Занимания по интереси</td><td class="type-study">Самоподготовка</td><td class="type-study">Самоподготовка</td></tr>
+            <tr><td>16:20 – 17:00</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td></tr>
+            <tr><td>17:00 – 17:40</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td class="type-interest">Занимания по интереси</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="footer-col">
-      <h5>Навигация</h5>
-      <ul><li><a href="za-nas.html">За нас</a></li><li><a href="priem.html">Прием</a></li><li><a href="obuchenie.html">Обучение</a></li><li><a href="novini.html">Новини</a></li><li><a href="razrabotva-se.html">Проекти</a></li><li><a href="dokumenti.html">Документи</a></li></ul>
-    </div>
-    <div class="footer-col">
-      <h5>Полезни връзки</h5>
-      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
-    </div>
-    <div class="footer-col footer-contact">
-      <h5>Контакти</h5>
-      <p><strong>Адрес:</strong><br>гр. Сливен</p>
-      <p><strong>Телефони:</strong><br>
-        Директор: 044/ 66 72 44<br>
-        Зам. директор: 044/ 66 76 84
-      </p>
-      <p><strong>Имейл:</strong><br><a href="mailto:info-2000114@edu.mon.bg">info-2000114@edu.mon.bg</a></p>
-      <p><strong>Работно време:</strong><br>Пон–Пет: 07:30 – 19:00</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
-    <span><a href="razrabotva-se.html">Поверителност</a> · <a href="razrabotva-se.html">Достъпност</a></span>
-  </div>
-</footer>
 
-<script type="module" src="assets/js/pages/dnevno-razpisanie.js" defer></script>
-<script type="module" src="assets/js/main.js"></script>
+    <!-- LEGEND -->
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.5rem" class="reveal">
+      <span style="display:flex;align-items:center;gap:6px;font-size:.8rem"><span style="width:12px;height:12px;border-radius:50%;background:#c0392b;display:inline-block"></span>Обедно хранене</span>
+      <span style="display:flex;align-items:center;gap:6px;font-size:.8rem"><span style="width:12px;height:12px;border-radius:50%;background:#2980b9;display:inline-block"></span>Организиран отдих и спорт</span>
+      <span style="display:flex;align-items:center;gap:6px;font-size:.8rem"><span style="width:12px;height:12px;border-radius:50%;background:#8e44ad;display:inline-block"></span>Занимания по интереси</span>
+      <span style="display:flex;align-items:center;gap:6px;font-size:.8rem"><span style="width:12px;height:12px;border-radius:50%;background:var(--green);display:inline-block"></span>Самоподготовка</span>
+    </div>
+
+    <div class="note-box reveal">
+      <strong>Забележка:</strong> Разписанието е утвърдено от Директор <strong>Диана Кънева</strong> и е в сила за учебната 2025/2026 година. При промени ще бъдете уведомени допълнително.
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script type="module" src="assets/js/pages/dnevno-razpisanie.js" defer></script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script src="assets/js/components-init.js"></script>
 
 </body>
 </html>

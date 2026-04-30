@@ -29,3 +29,11 @@ const cardObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.05 });
 document.querySelectorAll('.member-group').forEach(g => cardObs.observe(g));
+
+document.addEventListener("DOMContentLoaded", () => {
+  initTeamFilter();
+  initStatCounters();
+
+  // force initial state
+  document.querySelector('.filter-btn.active')?.click();
+});

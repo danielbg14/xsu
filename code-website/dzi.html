@@ -1,366 +1,210 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ДЗИ – СУ „Йордан Йовков" – Сливен</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/variables.css">
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css">
-
-<link rel="stylesheet" href="assets/css/pages/dzi.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ДЗИ – СУ „Йордан Йовков“ – Сливен</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/dzi.css">
 </head>
 <body>
 
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <img src="images/logo.png" alt="Лого СУ Йордан Йовков">
-    <div class="nav-logo-text">
-      <strong>СУ „Йордан Йовков"</strong>
-      <span>Сливен</span>
-    </div>
-  </a>
-  <div class="nav-links">
-    <div class="nav-item">
-      <a href="za-nas.html">За нас <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="patron.html">Патрон</a><a href="himn.html">Химн</a><a href="istoriq.html">История</a><a href="misiq-viziq.html">Мисия и визия</a><a href="virtualna-razhodka.html">Виртуална разходка</a><a href="ekip.html">Училищен екип</a><a href="paralelki.html">Паралелки</a><a href="materialna-baza.html">Материална база</a><a href="uniformi.html">Униформи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="priem.html">Прием <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="priem-1-klas.html">Прием в I клас</a><a href="priem-5-klas.html">Прием в V клас</a><a href="priem-8-klas.html">Прием в VIII клас</a><a href="dokumenti-priem.html">Необходими документи</a><a href="faq.html">Често задавани въпроси</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="obuchenie.html">Обучение <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="https://app.shkolo.bg/">Електронен дневник</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="roditeli.html">Родители <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="razrabotva-se.html">Наредби</a><a href="razrabotva-se.html">Родителски срещи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="uchenici.html">Ученици <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="konsultacii.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="razrabotva-se.html">Проекти</a></div>
-    <div class="nav-item"><a href="novini.html">Новини</a></div>
-    <div class="nav-item">
-      <a href="dokumenti.html">Документи <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="pravilnici.html">Правилници</a><a href="stipendii.html">Стипендии</a><a href="razrabotva-se.html">Училищни документи</a><a href="razrabotva-se.html">Формуляри</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="kontakti.html">Контакти</a></div>
-  </div>
-  <button class="nav-search" aria-label="Търсене">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-  </button>
-  <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <div id="navbar-container"></div>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="istoriq.html">История</a>
-      <a href="patron.html">Патрон</a>
-      <a href="himn.html">Химн</a>
-      <a href="misiq-viziq.html">Мисия и визия</a>
-      <a href="ekip.html">Училищен екип</a>
-      <a href="paralelki.html">Паралелки</a>
-      <a href="materialna-baza.html">Материална база</a>
-      <a href="uniformi.html">Униформи</a>
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="breadcrumb">
+      <a href="index.html">НАЧАЛО</a>
+      <span>/</span>
+      <a href="uchenici.html">УЧЕНИЦИ</a>
+      <span>/</span>
+      <span style="color:var(--gold)">ДЗИ</span>
     </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="priem-1-klas.html">Прием в I клас</a>
-      <a href="priem-5-klas.html">Прием в V клас</a>
-      <a href="priem-8-klas.html">Прием в VIII клас</a>
-      <a href="dokumenti.html">Необходими документи</a>
-      <a href="faq.html">Често задавани въпроси</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="uchebnici.html">Учебници</a>
-      <a href="uchebni-planove.html">Учебни планове</a>
-      <a href="https://app.shkolo.bg">Електронен дневник</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="razrabotva-se.html">Наредби</a>
-      <a href="razrabotva-se.html">Родителски среща</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="dnevno-razpisanie.html">Дневно разписание</a>
-      <a href="sedmichno-razpisanie.html">Седмично разписание</a>
-      <a href="pochivni-dni.html">Почивни дни и ваканции</a>
-      <a href="klasni-kontrolni.html">Графици класни и контролни</a>
-      <a href="konsultacii.html">Консултации</a>
-      <a href="uchenicheski-suvet.html">Ученически съвет</a>
-      <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
-      <a href="nvo.html">НВО</a>
-      <a href="dzi.html">ДЗИ</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="#">Проекти</a></div>
-  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="pravilnici.html">Правилници</a>
-      <a href="stipendii.html">Стипендии</a>
-      <a href="razrabotva-se.html">Училищни документи</a>
-      <a href="razrabotva-se.html">Формуляри</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
-  <div class="mobile-menu-actions">
-    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
-    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
-  </div>
-</div>
-
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <div class="breadcrumb">
-    <a href="index.html">НАЧАЛО</a>
-    <span>/</span>
-    <a href="uchenici.html">УЧЕНИЦИ</a>
-    <span>/</span>
-    <span style="color:var(--gold)">ДЗИ</span>
-  </div>
-  <div class="page-hero-eyebrow">Ученици · Изпити</div>
-  <h1>Държавни <em>зрелостни</em><br>изпити</h1>
-  <p>Информация за провеждането на ДЗИ за учебната 2025/2026 година — дати, срокове и важни указания.</p>
-</div>
-
-<!-- MAIN CONTENT -->
-<section class="section" style="background:#fff">
-  <div class="section-label reveal">Графици 2025/2026</div>
-  <h2 class="section-title reveal">Дати и срокове за провеждане</h2>
-  <p class="section-subtitle reveal">Изберете сесията, за която търсите информация.</p>
-
-  <!-- SESSION TABS -->
-  <div class="session-tabs">
-    <button class="session-tab active" onclick="switchTab('may')">Сесия май – юни</button>
-    <button class="session-tab" onclick="switchTab('aug')">Сесия август – септември</button>
+    <div class="page-hero-eyebrow">Ученици · Изпити</div>
+    <h1>Държавни <em>зрелостни</em><br>изпити</h1>
+    <p>Информация за провеждането на ДЗИ за учебната 2025/2026 година — дати, срокове и важни указания.</p>
   </div>
 
-  <!-- MAY SESSION -->
-  <div class="session-content active" id="tab-may">
-    <div class="timeline">
-      <div class="timeline-item reveal">
-        <div class="timeline-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-        </div>
-        <div class="timeline-body">
-          <div class="timeline-date">05.02.2026 – 20.02.2026</div>
-          <div class="timeline-title">Подаване на заявления за допускане до ДЗИ</div>
-          <div class="timeline-desc">Заявленията се подават в канцеларията на училището в рамките на посочения период.</div>
-          <span class="timeline-badge">Административна процедура</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <div class="timeline-body">
-          <div class="timeline-date">до 19.05.2026 г.</div>
-          <div class="timeline-title">Издаване на служебна бележка за допускане</div>
-          <div class="timeline-desc">Служебните бележки се издават от канцеларията на училището.</div>
-          <span class="timeline-badge">Документ</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot" style="border-color:var(--green);background:var(--green)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="timeline-body" style="border-color:var(--green);border-width:2px">
-          <div class="timeline-date">20 май 2026 г. · 08:30 ч.</div>
-          <div class="timeline-title">Задължителен ДЗИ по Български език и литература</div>
-          <div class="timeline-desc">Първи задължителен държавен зрелостен изпит за всички зрелостници.</div>
-          <span class="timeline-badge">Изпит · Задължителен</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot" style="border-color:var(--gold)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-        </div>
-        <div class="timeline-body">
-          <div class="timeline-date">22 май 2026 г. · 08:30 ч.</div>
-          <div class="timeline-title">Втори задължителен ДЗИ / ДИ за придобиване на проф. квалификация</div>
-          <div class="timeline-desc">Включва и задължителния държавен изпит за придобиване на професионална квалификация в частта му по теория на професията.</div>
-          <span class="timeline-badge gold">Изпит · Задължителен</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <div class="timeline-body">
-          <div class="timeline-date">26 май – 02 юни 2026 г.</div>
-          <div class="timeline-title">Допълнителни ДЗИ по желание на ученика</div>
-          <div class="timeline-desc">Изпити по допълнителни предмети по желание — за разширяване на зрелостната диплома.</div>
-          <span class="timeline-badge">Изпити · По желание</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="timeline-body">
-          <div class="timeline-date">до 11.06.2026 г.</div>
-          <div class="timeline-title">Обявяване на резултатите</div>
-          <div class="timeline-desc">Резултатите от ДЗИ се обявяват на информационното табло и в електронния дневник.</div>
-          <span class="timeline-badge">Резултати</span>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- MAIN CONTENT -->
+  <section class="section" style="background:#fff">
+    <div class="section-label reveal">Графици 2025/2026</div>
+    <h2 class="section-title reveal">Дати и срокове за провеждане</h2>
+    <p class="section-subtitle reveal">Изберете сесията, за която търсите информация.</p>
 
-  <!-- AUGUST SESSION -->
-  <div class="session-content" id="tab-aug">
-    <div class="timeline">
-      <div class="timeline-item reveal">
-        <div class="timeline-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-        </div>
-        <div class="timeline-body">
-          <div class="timeline-date">22.06.2026 – 03.07.2026</div>
-          <div class="timeline-title">Подаване на заявления за допускане до ДЗИ</div>
-          <div class="timeline-desc">Заявленията за августовската сесия се подават в канцеларията на училището.</div>
-          <span class="timeline-badge">Административна процедура</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <div class="timeline-body">
-          <div class="timeline-date">до 20.08.2026 г.</div>
-          <div class="timeline-title">Издаване на служебна бележка за допускане</div>
-          <div class="timeline-desc">Служебните бележки се издават от канцеларията на училището.</div>
-          <span class="timeline-badge">Документ</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot" style="border-color:var(--green);background:var(--green)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="timeline-body" style="border-color:var(--green);border-width:2px">
-          <div class="timeline-date">21 август 2026 г. · 08:30 ч.</div>
-          <div class="timeline-title">Задължителен ДЗИ по Български език и литература</div>
-          <div class="timeline-desc">Първи задължителен държавен зрелостен изпит за зрелостниците от августовската сесия.</div>
-          <span class="timeline-badge">Изпит · Задължителен</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot" style="border-color:var(--gold)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-        </div>
-        <div class="timeline-body">
-          <div class="timeline-date">24 август 2026 г. · 08:30 ч.</div>
-          <div class="timeline-title">Втори задължителен ДЗИ / ДИ за придобиване на проф. квалификация</div>
-          <div class="timeline-desc">Включва и задължителния държавен изпит за придобиване на професионална квалификация в частта му по теория на професията.</div>
-          <span class="timeline-badge gold">Изпит · Задължителен</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <div class="timeline-body">
-          <div class="timeline-date">25 – 28 август 2026 г.</div>
-          <div class="timeline-title">Допълнителни ДЗИ по желание на ученика</div>
-          <div class="timeline-desc">Изпити по допълнителни предмети по желание.</div>
-          <span class="timeline-badge">Изпити · По желание</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="timeline-body">
-          <div class="timeline-date">до 04.09.2026 г.</div>
-          <div class="timeline-title">Обявяване на резултатите</div>
-          <div class="timeline-desc">Резултатите от ДЗИ се обявяват на информационното табло и в електронния дневник.</div>
-          <span class="timeline-badge">Резултати</span>
-        </div>
-      </div>
+    <!-- SESSION TABS -->
+    <div class="session-tabs">
+      <button class="session-tab active" onclick="switchTab('may')">Сесия май – юни</button>
+      <button class="session-tab" onclick="switchTab('aug')">Сесия август – септември</button>
     </div>
-  </div>
 
-  <!-- ORDER INFO -->
-  <div class="order-box reveal">
-    <div class="order-box-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+    <!-- MAY SESSION -->
+    <div class="session-content active" id="tab-may">
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-date">05.02.2026 – 20.02.2026</div>
+            <div class="timeline-title">Подаване на заявления за допускане до ДЗИ</div>
+            <div class="timeline-desc">Заявленията се подават в канцеларията на училището в рамките на посочения период.</div>
+            <span class="timeline-badge">Административна процедура</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-date">до 19.05.2026 г.</div>
+            <div class="timeline-title">Издаване на служебна бележка за допускане</div>
+            <div class="timeline-desc">Служебните бележки се издават от канцеларията на училището.</div>
+            <span class="timeline-badge">Документ</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" style="border-color:var(--green);background:var(--green)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="timeline-body" style="border-color:var(--green);border-width:2px">
+            <div class="timeline-date">20 май 2026 г. · 08:30 ч.</div>
+            <div class="timeline-title">Задължителен ДЗИ по Български език и литература</div>
+            <div class="timeline-desc">Първи задължителен държавен зрелостен изпит за всички зрелостници.</div>
+            <span class="timeline-badge">Изпит · Задължителен</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" style="border-color:var(--gold)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-date">22 май 2026 г. · 08:30 ч.</div>
+            <div class="timeline-title">Втори задължителен ДЗИ / ДИ за придобиване на проф. квалификация</div>
+            <div class="timeline-desc">Включва и задължителния държавен изпит за придобиване на професионална квалификация в частта му по теория на професията.</div>
+            <span class="timeline-badge gold">Изпит · Задължителен</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-date">26 май – 02 юни 2026 г.</div>
+            <div class="timeline-title">Допълнителни ДЗИ по желание на ученика</div>
+            <div class="timeline-desc">Изпити по допълнителни предмети по желание — за разширяване на зрелостната диплома.</div>
+            <span class="timeline-badge">Изпити · По желание</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-date">до 11.06.2026 г.</div>
+            <div class="timeline-title">Обявяване на резултатите</div>
+            <div class="timeline-desc">Резултатите от ДЗИ се обявяват на информационното табло и в електронния дневник.</div>
+            <span class="timeline-badge">Резултати</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <h4>Нормативна основа</h4>
-      <p>Графикът е определен съгласно <strong>Заповед № РД09-2072/26.08.2025 г.</strong> за организиране и провеждане на държавните зрелостни изпити за учебната 2025–2026 година.<br><br>
-      <a class="link-gold" onclick="alert('Скоро!')">Повече информация можете да намерите тук →</a></p>
-    </div>
-  </div>
-</section>
 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="images/logo.png" alt="Лого">
-      <p>СУ „Йордан Йовков" — Сливен е средно училище с богата история и традиции, изграждащо знаещи и уверени личности от 1980 година.</p>
-      <div class="footer-motto">„Ако успееш тук, ще успееш навсякъде!"</div>
+    <!-- AUGUST SESSION -->
+    <div class="session-content" id="tab-aug">
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-date">22.06.2026 – 03.07.2026</div>
+            <div class="timeline-title">Подаване на заявления за допускане до ДЗИ</div>
+            <div class="timeline-desc">Заявленията за августовската сесия се подават в канцеларията на училището.</div>
+            <span class="timeline-badge">Административна процедура</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-date">до 20.08.2026 г.</div>
+            <div class="timeline-title">Издаване на служебна бележка за допускане</div>
+            <div class="timeline-desc">Служебните бележки се издават от канцеларията на училището.</div>
+            <span class="timeline-badge">Документ</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" style="border-color:var(--green);background:var(--green)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="timeline-body" style="border-color:var(--green);border-width:2px">
+            <div class="timeline-date">21 август 2026 г. · 08:30 ч.</div>
+            <div class="timeline-title">Задължителен ДЗИ по Български език и литература</div>
+            <div class="timeline-desc">Първи задължителен държавен зрелостен изпит за зрелостниците от августовската сесия.</div>
+            <span class="timeline-badge">Изпит · Задължителен</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" style="border-color:var(--gold)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-date">24 август 2026 г. · 08:30 ч.</div>
+            <div class="timeline-title">Втори задължителен ДЗИ / ДИ за придобиване на проф. квалификация</div>
+            <div class="timeline-desc">Включва и задължителния държавен изпит за придобиване на професионална квалификация в частта му по теория на професията.</div>
+            <span class="timeline-badge gold">Изпит · Задължителен</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-date">25 – 28 август 2026 г.</div>
+            <div class="timeline-title">Допълнителни ДЗИ по желание на ученика</div>
+            <div class="timeline-desc">Изпити по допълнителни предмети по желание.</div>
+            <span class="timeline-badge">Изпити · По желание</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-date">до 04.09.2026 г.</div>
+            <div class="timeline-title">Обявяване на резултатите</div>
+            <div class="timeline-desc">Резултатите от ДЗИ се обявяват на информационното табло и в електронния дневник.</div>
+            <span class="timeline-badge">Резултати</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footer-col">
-      <h5>Навигация</h5>
-      <ul><li><a href="za-nas.html">За нас</a></li><li><a href="priem.html">Прием</a></li><li><a href="obuchenie.html">Обучение</a></li><li><a href="novini.html">Новини</a></li><li><a href="razrabotva-se.html">Проекти</a></li><li><a href="dokumenti.html">Документи</a></li></ul>
-    </div>
-    <div class="footer-col">
-      <h5>Полезни връзки</h5>
-      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
-    </div>
-    <div class="footer-col footer-contact">
-      <h5>Контакти</h5>
-      <p><strong>Адрес:</strong><br>гр. Сливен</p>
-      <p><strong>Телефони:</strong><br>
-        Директор: 044/ 66 72 44<br>
-        Зам. директор: 044/ 66 76 84
-      </p>
-      <p><strong>Имейл:</strong><br><a href="mailto:info-2000114@edu.mon.bg">info-2000114@edu.mon.bg</a></p>
-      <p><strong>Работно време:</strong><br>Пон–Пет: 07:30 – 19:00</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
-    <span><a href="razrabotva-se.html">Поверителност</a> · <a href="razrabotva-se.html">Достъпност</a></span>
-  </div>
-</footer>
 
-<script type="module" src="assets/js/pages/dzi.js" defer></script>
-<script type="module" src="assets/js/main.js"></script>
+    <!-- ORDER INFO -->
+    <div class="order-box reveal">
+      <div class="order-box-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </div>
+      <div>
+        <h4>Нормативна основа</h4>
+        <p>Графикът е определен съгласно <strong>Заповед № РД09-2072/26.08.2025 г.</strong> за организиране и провеждане на държавните зрелостни изпити за учебната 2025–2026 година.<br><br>
+        <a class="link-gold" onclick="alert('Скоро!')">Повече информация можете да намерите тук →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script type="module" src="assets/js/pages/dzi.js" defer></script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script src="assets/js/components-init.js"></script>
 
 </body>
 </html>

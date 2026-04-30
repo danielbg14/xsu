@@ -1,460 +1,304 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Почивни дни и ваканции 2025/2026 – СУ „Йордан Йовков" – Сливен</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/variables.css">
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css">
-
-<link rel="stylesheet" href="assets/css/pages/pochivni-dni.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Почивни дни и ваканции 2025/2026 – СУ „Йордан Йовков“ – Сливен</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/pochivni-dni.css">
 </head>
 <body>
 
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <img src="images/logo.png" alt="Лого СУ Йордан Йовков">
-    <div class="nav-logo-text">
-      <strong>СУ „Йордан Йовков"</strong>
-      <span>Сливен</span>
-    </div>
-  </a>
-  <div class="nav-links">
-    <div class="nav-item">
-      <a href="za-nas.html">За нас <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="patron.html">Патрон</a><a href="himn.html">Химн</a><a href="istoriq.html">История</a><a href="misiq-viziq.html">Мисия и визия</a><a href="virtualna-razhodka.html">Виртуална разходка</a><a href="ekip.html">Училищен екип</a><a href="paralelki.html">Паралелки</a><a href="materialna-baza.html">Материална база</a><a href="uniformi.html">Униформи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="priem.html">Прием <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="priem-1-klas.html">Прием в I клас</a><a href="priem-5-klas.html">Прием в V клас</a><a href="priem-8-klas.html">Прием в VIII клас</a><a href="dokumenti-priem.html">Необходими документи</a><a href="faq.html">Често задавани въпроси</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="obuchenie.html">Обучение <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="https://app.shkolo.bg/">Електронен дневник</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="roditeli.html">Родители <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="razrabotva-se.html">Наредби</a><a href="razrabotva-se.html">Родителски срещи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="uchenici.html">Ученици <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="konsultacii.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="razrabotva-se.html">Проекти</a></div>
-    <div class="nav-item"><a href="novini.html">Новини</a></div>
-    <div class="nav-item">
-      <a href="dokumenti.html">Документи <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="pravilnici.html">Правилници</a><a href="stipendii.html">Стипендии</a><a href="razrabotva-se.html">Училищни документи</a><a href="razrabotva-se.html">Формуляри</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="kontakti.html">Контакти</a></div>
-  </div>
-  <button class="nav-search" aria-label="Търсене">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-  </button>
-  <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <div id="navbar-container"></div>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="istoriq.html">История</a>
-      <a href="patron.html">Патрон</a>
-      <a href="himn.html">Химн</a>
-      <a href="misiq-viziq.html">Мисия и визия</a>
-      <a href="ekip.html">Училищен екип</a>
-      <a href="paralelki.html">Паралелки</a>
-      <a href="materialna-baza.html">Материална база</a>
-      <a href="uniformi.html">Униформи</a>
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="breadcrumb">
+      <a href="index.html">НАЧАЛО</a> › <a href="#">УЧЕНИЦИ</a> › <span>ПОЧИВНИ ДНИ И ВАКАНЦИИ</span>
     </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="priem-1-klas.html">Прием в I клас</a>
-      <a href="priem-5-klas.html">Прием в V клас</a>
-      <a href="priem-8-klas.html">Прием в VIII клас</a>
-      <a href="dokumenti.html">Необходими документи</a>
-      <a href="faq.html">Често задавани въпроси</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="uchebnici.html">Учебници</a>
-      <a href="uchebni-planove.html">Учебни планове</a>
-      <a href="https://app.shkolo.bg">Електронен дневник</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="razrabotva-se.html">Наредби</a>
-      <a href="razrabotva-se.html">Родителски среща</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="dnevno-razpisanie.html">Дневно разписание</a>
-      <a href="sedmichno-razpisanie.html">Седмично разписание</a>
-      <a href="pochivni-dni.html">Почивни дни и ваканции</a>
-      <a href="klasni-kontrolni.html">Графици класни и контролни</a>
-      <a href="konsultacii.html">Консултации</a>
-      <a href="uchenicheski-suvet.html">Ученически съвет</a>
-      <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
-      <a href="nvo.html">НВО</a>
-      <a href="dzi.html">ДЗИ</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="#">Проекти</a></div>
-  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="pravilnici.html">Правилници</a>
-      <a href="stipendii.html">Стипендии</a>
-      <a href="razrabotva-se.html">Училищни документи</a>
-      <a href="razrabotva-se.html">Формуляри</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
-  <div class="mobile-menu-actions">
-    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
-    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
-  </div>
-</div>
+    <div class="page-hero-eyebrow">Учебна 2025 / 2026 година · МОН</div>
+    <h1>Почивни дни<br>и <em>ваканции</em></h1>
+    <p class="page-hero-lead">Официалният учебен календар с всички ваканции, неучебни дни, дати за НВО и ДЗИ, и краища на учебната година по класове — съгласно Заповед № РД09-2069/26.08.2025 г. на МОН.</p>
+  </section>
 
-<!-- HERO -->
-<section class="page-hero">
-  <div class="breadcrumb">
-    <a href="index.html">НАЧАЛО</a> › <a href="#">УЧЕНИЦИ</a> › <span>ПОЧИВНИ ДНИ И ВАКАНЦИИ</span>
-  </div>
-  <div class="page-hero-eyebrow">Учебна 2025 / 2026 година · МОН</div>
-  <h1>Почивни дни<br>и <em>ваканции</em></h1>
-  <p class="page-hero-lead">Официалният учебен календар с всички ваканции, неучебни дни, дати за НВО и ДЗИ, и краища на учебната година по класове — съгласно Заповед № РД09-2069/26.08.2025 г. на МОН.</p>
-</section>
-
-<!-- SOURCE BANNER -->
-<div class="source-banner">
-  Информацията е по официалния календар на Министерство на образованието и науката (МОН),
-  Заповед № РД09-2069/26.08.2025 г. —
-  <a href="https://www.mon.bg/dyasno-menyu/vakantsii/" target="_blank">mon.bg</a>
-</div>
-
-<div class="main-section">
-
-  <!-- Year summary stats -->
-  <div class="year-timeline">
-    <div class="timeline-stat">
-      <div class="ts-num">15.09</div>
-      <div class="ts-label">Начало на учебната година<br><strong>2025/2026</strong></div>
-    </div>
-    <div class="timeline-stat">
-      <div class="ts-num">03.02</div>
-      <div class="ts-label">Начало на <strong>втори учебен срок</strong><br>2026 г.</div>
-    </div>
-    <div class="timeline-stat">
-      <div class="ts-num">5</div>
-      <div class="ts-label">Официални ваканции<br>(есенна, коледна, междусрочна, пролетна, лятна)</div>
-    </div>
-    <div class="timeline-stat">
-      <div class="ts-num">1</div>
-      <div class="ts-label">Неучебен ден<br>02.03.2026 г. (Ден на Освобождението)</div>
-    </div>
+  <!-- SOURCE BANNER -->
+  <div class="source-banner">
+    Информацията е по официалния календар на Министерство на образованието и науката (МОН),
+    Заповед № РД09-2069/26.08.2025 г. —
+    <a href="https://www.mon.bg/dyasno-menyu/vakantsii/" target="_blank">mon.bg</a>
   </div>
 
-  <!-- ВАКАНЦИИ -->
-  <div class="section-label">Ваканции</div>
-  <h2 class="section-title">Ученически ваканции 2025/2026</h2>
+  <div class="main-section">
 
-  <div class="vacation-cards">
-
-    <!-- Есенна -->
-    <div class="vac-card autumn status-past">
-      <div class="vac-header">
-        <span class="vac-status badge-past badge-done">Приключила</span>
+    <!-- Year summary stats -->
+    <div class="year-timeline">
+      <div class="timeline-stat">
+        <div class="ts-num">15.09</div>
+        <div class="ts-label">Начало на учебната година<br><strong>2025/2026</strong></div>
       </div>
-      <div class="vac-body">
-        <div class="vac-name">Есенна ваканция</div>
-        <div class="vac-dates">31.10 – 03.11.2025 г.</div>
-        <div class="vac-duration">4 дни (вкл. почивни)</div>
-        <div class="vac-note">За всички ученици от I до XII клас.</div>
+      <div class="timeline-stat">
+        <div class="ts-num">03.02</div>
+        <div class="ts-label">Начало на <strong>втори учебен срок</strong><br>2026 г.</div>
+      </div>
+      <div class="timeline-stat">
+        <div class="ts-num">5</div>
+        <div class="ts-label">Официални ваканции<br>(есенна, коледна, междусрочна, пролетна, лятна)</div>
+      </div>
+      <div class="timeline-stat">
+        <div class="ts-num">1</div>
+        <div class="ts-label">Неучебен ден<br>02.03.2026 г. (Ден на Освобождението)</div>
       </div>
     </div>
 
-    <!-- Коледна -->
-    <div class="vac-card winter status-past">
-      <div class="vac-header">
-        <span class="vac-status badge-past badge-done">Приключила</span>
+    <!-- ВАКАНЦИИ -->
+    <div class="section-label">Ваканции</div>
+    <h2 class="section-title">Ученически ваканции 2025/2026</h2>
+
+    <div class="vacation-cards">
+
+      <!-- Есенна -->
+      <div class="vac-card autumn status-past">
+        <div class="vac-header">
+          <span class="vac-status badge-past badge-done">Приключила</span>
+        </div>
+        <div class="vac-body">
+          <div class="vac-name">Есенна ваканция</div>
+          <div class="vac-dates">31.10 – 03.11.2025 г.</div>
+          <div class="vac-duration">4 дни (вкл. почивни)</div>
+          <div class="vac-note">За всички ученици от I до XII клас.</div>
+        </div>
       </div>
-      <div class="vac-body">
-        <div class="vac-name">Коледна ваканция</div>
-        <div class="vac-dates">24.12.2025 – 04.01.2026 г.</div>
-        <div class="vac-duration">12 дни (вкл. Коледа и Нова година)</div>
-        <div class="vac-note">Включва Коледа (24–26 дек.) и Нова Година (1 ян.). Учениците се връщат на 05.01.2026 г.</div>
+
+      <!-- Коледна -->
+      <div class="vac-card winter status-past">
+        <div class="vac-header">
+          <span class="vac-status badge-past badge-done">Приключила</span>
+        </div>
+        <div class="vac-body">
+          <div class="vac-name">Коледна ваканция</div>
+          <div class="vac-dates">24.12.2025 – 04.01.2026 г.</div>
+          <div class="vac-duration">12 дни (вкл. Коледа и Нова година)</div>
+          <div class="vac-note">Включва Коледа (24–26 дек.) и Нова Година (1 ян.). Учениците се връщат на 05.01.2026 г.</div>
+        </div>
+      </div>
+
+      <!-- Междусрочна -->
+      <div class="vac-card inter status-past">
+        <div class="vac-header">
+          <span class="vac-status badge-past badge-done">Приключила</span>
+        </div>
+        <div class="vac-body">
+          <div class="vac-name">Междусрочна ваканция</div>
+          <div class="vac-dates">31.01 – 02.02.2026 г.</div>
+          <div class="vac-duration">3 дни</div>
+          <div class="vac-note">Край на първия учебен срок. Вторият срок започва на 03.02.2026 г.</div>
+        </div>
+      </div>
+
+      <!-- Пролетна I–XI -->
+      <div class="vac-card spring status-past">
+        <div class="vac-header">
+          <span class="vac-status badge-past badge-done">Приключила</span>
+        </div>
+        <div class="vac-body">
+          <div class="vac-name">Пролетна ваканция</div>
+          <div class="vac-dates">04.04 – 13.04.2026 г.</div>
+          <div class="vac-duration">10 дни · за I – XI клас</div>
+          <div class="vac-note">Включва Великденските празници (12 апр. 2026 г. – Великден). За XII клас: 08.04–13.04.2026 г.</div>
+        </div>
+      </div>
+
+      <!-- Пролетна XII -->
+      <div class="vac-card spring status-past">
+        <div class="vac-header">
+          <span class="vac-status badge-past badge-done">Приключила</span>
+        </div>
+        <div class="vac-body">
+          <div class="vac-name">Пролетна ваканция (XII кл.)</div>
+          <div class="vac-dates">08.04 – 13.04.2026 г.</div>
+          <div class="vac-duration">6 дни · само за XII клас</div>
+          <div class="vac-note">По-кратка пролетна ваканция за дванадесетокласниците поради предстоящите матури.</div>
+        </div>
+      </div>
+
+      <!-- Лятна -->
+      <div class="vac-card summer">
+        <div class="vac-header">
+          <span class="vac-status badge-upcoming">Предстояща</span>
+        </div>
+        <div class="vac-body">
+          <div class="vac-name">Лятна ваканция</div>
+          <div class="vac-dates">От края на учебната година</div>
+          <div class="vac-duration">до 14.09.2026 г. (начало на новата уч. година)</div>
+          <div class="vac-note">Краят варира по класове — вижте таблицата по-долу.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- НЕУЧЕБНИ ДНИ -->
+    <div class="section-label">Неучебни дни</div>
+    <h2 class="section-title">Специални неучебни дни</h2>
+
+    <div class="exams-list" style="margin-bottom: 1.5rem;">
+      <div class="exam-row" style="border-left-color: var(--holiday);">
+        <div class="exam-date" style="color: var(--holiday);">02.03.2026</div>
+        <div class="exam-name">Неучебен ден — Ден преди 3 март (Ден на Освобождението на България)</div>
+        <div class="exam-for">Всички ученици</div>
       </div>
     </div>
 
-    <!-- Междусрочна -->
-    <div class="vac-card inter status-past">
-      <div class="vac-header">
-        <span class="vac-status badge-past badge-done">Приключила</span>
+    <!-- КРАЯ НА УЧЕБНАТА ГОДИНА -->
+    <div class="section-label">Край на учебната година</div>
+    <h2 class="section-title">Завършване по класове</h2>
+
+    <div class="yearend-grid">
+      <div class="yearend-card">
+        <div class="yearend-class">XII клас</div>
+        <div class="yearend-date">15 май 2026</div>
+        <div style="font-size:.75rem; color:var(--gray); margin-top:.3rem;">31 учебни седмици</div>
       </div>
-      <div class="vac-body">
-        <div class="vac-name">Междусрочна ваканция</div>
-        <div class="vac-dates">31.01 – 02.02.2026 г.</div>
-        <div class="vac-duration">3 дни</div>
-        <div class="vac-note">Край на първия учебен срок. Вторият срок започва на 03.02.2026 г.</div>
+      <div class="yearend-card">
+        <div class="yearend-class">I – III клас</div>
+        <div class="yearend-date">29 май 2026</div>
+        <div style="font-size:.75rem; color:var(--gray); margin-top:.3rem;">32 учебни седмици</div>
+      </div>
+      <div class="yearend-card">
+        <div class="yearend-class">IV – VI клас</div>
+        <div class="yearend-date">12 юни 2026</div>
+        <div style="font-size:.75rem; color:var(--gray); margin-top:.3rem;">34 учебни седмици</div>
+      </div>
+      <div class="yearend-card">
+        <div class="yearend-class">VII – XI клас</div>
+        <div class="yearend-date">30 юни 2026</div>
+        <div style="font-size:.75rem; color:var(--gray); margin-top:.3rem;">36 учебни седмици</div>
+      </div>
+      <div class="yearend-card" style="border-left-color: var(--gold);">
+        <div class="yearend-class">X–XI кл. (проф. / дуално)</div>
+        <div class="yearend-date" style="color:var(--gold);">30 юни 2026</div>
+        <div style="font-size:.75rem; color:var(--gray); margin-top:.3rem;">+ 2 или 4 седмици практика (юли–авг.)</div>
       </div>
     </div>
 
-    <!-- Пролетна I–XI -->
-    <div class="vac-card spring status-past">
-      <div class="vac-header">
-        <span class="vac-status badge-past badge-done">Приключила</span>
+    <!-- НВО И ДЗИ -->
+    <div class="section-label">Изпити</div>
+    <h2 class="section-title">НВО и Държавни зрелостни изпити (ДЗИ / Матури)</h2>
+
+    <div class="exams-list">
+      <div class="exam-row">
+        <div class="exam-date">20.05.2026</div>
+        <div class="exam-name">Задължителен ДЗИ по Български език и литература</div>
+        <div class="exam-for">XII клас</div>
       </div>
-      <div class="vac-body">
-        <div class="vac-name">Пролетна ваканция</div>
-        <div class="vac-dates">04.04 – 13.04.2026 г.</div>
-        <div class="vac-duration">10 дни · за I – XI клас</div>
-        <div class="vac-note">Включва Великденските празници (12 апр. 2026 г. – Великден). За XII клас: 08.04–13.04.2026 г.</div>
+      <div class="exam-row">
+        <div class="exam-date">22.05.2026</div>
+        <div class="exam-name">Втори задължителен ДЗИ и изпит за придобиване на проф. квалификация</div>
+        <div class="exam-for">XII клас</div>
+      </div>
+      <div class="exam-row" style="border-left-color:#0d7fa8;">
+        <div class="exam-date" style="color:#0d7fa8;">03.06.2026</div>
+        <div class="exam-name">НВО по Български език и литература</div>
+        <div class="exam-for">IV клас</div>
+      </div>
+      <div class="exam-row" style="border-left-color:#0d7fa8;">
+        <div class="exam-date" style="color:#0d7fa8;">04.06.2026</div>
+        <div class="exam-name">НВО по Математика</div>
+        <div class="exam-for">IV клас</div>
+      </div>
+      <div class="exam-row" style="border-left-color:#0d7fa8;">
+        <div class="exam-date" style="color:#0d7fa8;">17.06.2026</div>
+        <div class="exam-name">НВО по Български език и литература</div>
+        <div class="exam-for">VII и X клас</div>
+      </div>
+      <div class="exam-row" style="border-left-color:#0d7fa8;">
+        <div class="exam-date" style="color:#0d7fa8;">19.06.2026</div>
+        <div class="exam-name">НВО по Математика с интегриране на други учебни предмети</div>
+        <div class="exam-for">VII и X клас</div>
       </div>
     </div>
 
-    <!-- Пролетна XII -->
-    <div class="vac-card spring status-past">
-      <div class="vac-header">
-        <span class="vac-status badge-past badge-done">Приключила</span>
-      </div>
-      <div class="vac-body">
-        <div class="vac-name">Пролетна ваканция (XII кл.)</div>
-        <div class="vac-dates">08.04 – 13.04.2026 г.</div>
-        <div class="vac-duration">6 дни · само за XII клас</div>
-        <div class="vac-note">По-кратка пролетна ваканция за дванадесетокласниците поради предстоящите матури.</div>
-      </div>
-    </div>
+    <!-- НАЦИОНАЛНИ ПРАЗНИЦИ -->
+    <div class="section-label">Национални празници</div>
+    <h2 class="section-title">Официални празници в учебната година</h2>
 
-    <!-- Лятна -->
-    <div class="vac-card summer">
-      <div class="vac-header">
-        <span class="vac-status badge-upcoming">Предстояща</span>
+    <div class="holidays-grid">
+      <div class="holiday-card">
+        <div class="hday-flag"></div>
+        <div>
+          <div class="hday-name">Ден на народните будители</div>
+          <div class="hday-date">01 ноември 2025 г.</div>
+        </div>
       </div>
-      <div class="vac-body">
-        <div class="vac-name">Лятна ваканция</div>
-        <div class="vac-dates">От края на учебната година</div>
-        <div class="vac-duration">до 14.09.2026 г. (начало на новата уч. година)</div>
-        <div class="vac-note">Краят варира по класове — вижте таблицата по-долу.</div>
+      <div class="holiday-card">
+        <div class="hday-flag"></div>
+        <div>
+          <div class="hday-name">Рождество Христово — Коледа</div>
+          <div class="hday-date">24–26 декември 2025 г.</div>
+        </div>
+      </div>
+      <div class="holiday-card">
+        <div class="hday-flag"></div>
+        <div>
+          <div class="hday-name">Нова Година</div>
+          <div class="hday-date">01 януари 2026 г.</div>
+        </div>
+      </div>
+      <div class="holiday-card">
+        <div class="hday-flag"></div>
+        <div>
+          <div class="hday-name">Ден на Освобождението</div>
+          <div class="hday-date">03 март 2026 г.</div>
+        </div>
+      </div>
+      <div class="holiday-card">
+        <div class="hday-flag"></div>
+        <div>
+          <div class="hday-name">Великден</div>
+          <div class="hday-date">12 април 2026 г.</div>
+        </div>
+      </div>
+      <div class="holiday-card">
+        <div class="hday-flag"></div>
+        <div>
+          <div class="hday-name">Ден на труда и международната работническа солидарност</div>
+          <div class="hday-date">01 май 2026 г.</div>
+        </div>
+      </div>
+      <div class="holiday-card">
+        <div class="hday-flag"></div>
+        <div>
+          <div class="hday-name">Ден на светите братя Кирил и Методий</div>
+          <div class="hday-date">24 май 2026 г.</div>
+        </div>
+      </div>
+      <div class="holiday-card">
+        <div class="hday-flag"></div>
+        <div>
+          <div class="hday-name">Ден на Съединението на България</div>
+          <div class="hday-date">06 септември 2026 г.</div>
+        </div>
+      </div>
+      <div class="holiday-card">
+        <div class="hday-flag"></div>
+        <div>
+          <div class="hday-name">Ден на Независимостта на България</div>
+          <div class="hday-date">22 септември 2026 г.</div>
+        </div>
       </div>
     </div>
 
   </div>
 
-  <!-- НЕУЧЕБНИ ДНИ -->
-  <div class="section-label">Неучебни дни</div>
-  <h2 class="section-title">Специални неучебни дни</h2>
-
-  <div class="exams-list" style="margin-bottom: 1.5rem;">
-    <div class="exam-row" style="border-left-color: var(--holiday);">
-      <div class="exam-date" style="color: var(--holiday);">02.03.2026</div>
-      <div class="exam-name">Неучебен ден — Ден преди 3 март (Ден на Освобождението на България)</div>
-      <div class="exam-for">Всички ученици</div>
-    </div>
-  </div>
-
-  <!-- КРАЯ НА УЧЕБНАТА ГОДИНА -->
-  <div class="section-label">Край на учебната година</div>
-  <h2 class="section-title">Завършване по класове</h2>
-
-  <div class="yearend-grid">
-    <div class="yearend-card">
-      <div class="yearend-class">XII клас</div>
-      <div class="yearend-date">15 май 2026</div>
-      <div style="font-size:.75rem; color:var(--gray); margin-top:.3rem;">31 учебни седмици</div>
-    </div>
-    <div class="yearend-card">
-      <div class="yearend-class">I – III клас</div>
-      <div class="yearend-date">29 май 2026</div>
-      <div style="font-size:.75rem; color:var(--gray); margin-top:.3rem;">32 учебни седмици</div>
-    </div>
-    <div class="yearend-card">
-      <div class="yearend-class">IV – VI клас</div>
-      <div class="yearend-date">12 юни 2026</div>
-      <div style="font-size:.75rem; color:var(--gray); margin-top:.3rem;">34 учебни седмици</div>
-    </div>
-    <div class="yearend-card">
-      <div class="yearend-class">VII – XI клас</div>
-      <div class="yearend-date">30 юни 2026</div>
-      <div style="font-size:.75rem; color:var(--gray); margin-top:.3rem;">36 учебни седмици</div>
-    </div>
-    <div class="yearend-card" style="border-left-color: var(--gold);">
-      <div class="yearend-class">X–XI кл. (проф. / дуално)</div>
-      <div class="yearend-date" style="color:var(--gold);">30 юни 2026</div>
-      <div style="font-size:.75rem; color:var(--gray); margin-top:.3rem;">+ 2 или 4 седмици практика (юли–авг.)</div>
-    </div>
-  </div>
-
-  <!-- НВО И ДЗИ -->
-  <div class="section-label">Изпити</div>
-  <h2 class="section-title">НВО и Държавни зрелостни изпити (ДЗИ / Матури)</h2>
-
-  <div class="exams-list">
-    <div class="exam-row">
-      <div class="exam-date">20.05.2026</div>
-      <div class="exam-name">Задължителен ДЗИ по Български език и литература</div>
-      <div class="exam-for">XII клас</div>
-    </div>
-    <div class="exam-row">
-      <div class="exam-date">22.05.2026</div>
-      <div class="exam-name">Втори задължителен ДЗИ и изпит за придобиване на проф. квалификация</div>
-      <div class="exam-for">XII клас</div>
-    </div>
-    <div class="exam-row" style="border-left-color:#0d7fa8;">
-      <div class="exam-date" style="color:#0d7fa8;">03.06.2026</div>
-      <div class="exam-name">НВО по Български език и литература</div>
-      <div class="exam-for">IV клас</div>
-    </div>
-    <div class="exam-row" style="border-left-color:#0d7fa8;">
-      <div class="exam-date" style="color:#0d7fa8;">04.06.2026</div>
-      <div class="exam-name">НВО по Математика</div>
-      <div class="exam-for">IV клас</div>
-    </div>
-    <div class="exam-row" style="border-left-color:#0d7fa8;">
-      <div class="exam-date" style="color:#0d7fa8;">17.06.2026</div>
-      <div class="exam-name">НВО по Български език и литература</div>
-      <div class="exam-for">VII и X клас</div>
-    </div>
-    <div class="exam-row" style="border-left-color:#0d7fa8;">
-      <div class="exam-date" style="color:#0d7fa8;">19.06.2026</div>
-      <div class="exam-name">НВО по Математика с интегриране на други учебни предмети</div>
-      <div class="exam-for">VII и X клас</div>
-    </div>
-  </div>
-
-  <!-- НАЦИОНАЛНИ ПРАЗНИЦИ -->
-  <div class="section-label">Национални празници</div>
-  <h2 class="section-title">Официални празници в учебната година</h2>
-
-  <div class="holidays-grid">
-    <div class="holiday-card">
-      <div class="hday-flag"></div>
-      <div>
-        <div class="hday-name">Ден на народните будители</div>
-        <div class="hday-date">01 ноември 2025 г.</div>
-      </div>
-    </div>
-    <div class="holiday-card">
-      <div class="hday-flag"></div>
-      <div>
-        <div class="hday-name">Рождество Христово — Коледа</div>
-        <div class="hday-date">24–26 декември 2025 г.</div>
-      </div>
-    </div>
-    <div class="holiday-card">
-      <div class="hday-flag"></div>
-      <div>
-        <div class="hday-name">Нова Година</div>
-        <div class="hday-date">01 януари 2026 г.</div>
-      </div>
-    </div>
-    <div class="holiday-card">
-      <div class="hday-flag"></div>
-      <div>
-        <div class="hday-name">Ден на Освобождението</div>
-        <div class="hday-date">03 март 2026 г.</div>
-      </div>
-    </div>
-    <div class="holiday-card">
-      <div class="hday-flag"></div>
-      <div>
-        <div class="hday-name">Великден</div>
-        <div class="hday-date">12 април 2026 г.</div>
-      </div>
-    </div>
-    <div class="holiday-card">
-      <div class="hday-flag"></div>
-      <div>
-        <div class="hday-name">Ден на труда и международната работническа солидарност</div>
-        <div class="hday-date">01 май 2026 г.</div>
-      </div>
-    </div>
-    <div class="holiday-card">
-      <div class="hday-flag"></div>
-      <div>
-        <div class="hday-name">Ден на светите братя Кирил и Методий</div>
-        <div class="hday-date">24 май 2026 г.</div>
-      </div>
-    </div>
-    <div class="holiday-card">
-      <div class="hday-flag"></div>
-      <div>
-        <div class="hday-name">Ден на Съединението на България</div>
-        <div class="hday-date">06 септември 2026 г.</div>
-      </div>
-    </div>
-    <div class="holiday-card">
-      <div class="hday-flag"></div>
-      <div>
-        <div class="hday-name">Ден на Независимостта на България</div>
-        <div class="hday-date">22 септември 2026 г.</div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="images/logo.png" alt="Лого">
-      <p>СУ „Йордан Йовков" — Сливен е средно училище с богата история и традиции, изграждащо знаещи и уверени личности от 1980 година.</p>
-      <div class="footer-motto">„Ако успееш тук, ще успееш навсякъде!"</div>
-    </div>
-    <div class="footer-col">
-      <h5>Навигация</h5>
-      <ul><li><a href="za-nas.html">За нас</a></li><li><a href="priem.html">Прием</a></li><li><a href="obuchenie.html">Обучение</a></li><li><a href="novini.html">Новини</a></li><li><a href="razrabotva-se.html">Проекти</a></li><li><a href="dokumenti.html">Документи</a></li></ul>
-    </div>
-    <div class="footer-col">
-      <h5>Полезни връзки</h5>
-      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
-    </div>
-    <div class="footer-col footer-contact">
-      <h5>Контакти</h5>
-      <p><strong>Адрес:</strong><br>гр. Сливен</p>
-      <p><strong>Телефони:</strong><br>
-        Директор: 044/ 66 72 44<br>
-        Зам. директор: 044/ 66 76 84
-      </p>
-      <p><strong>Имейл:</strong><br><a href="mailto:info-2000114@edu.mon.bg">info-2000114@edu.mon.bg</a></p>
-      <p><strong>Работно време:</strong><br>Пон–Пет: 07:30 – 19:00</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
-    <span><a href="razrabotva-se.html">Поверителност</a> · <a href="razrabotva-se.html">Достъпност</a></span>
-  </div>
-</footer>
-
+  <div id="footer-container"></div>
 
   <script type="module" src="assets/js/main.js"></script>
+  <script src="assets/js/components-init.js"></script>
+
 </body>
 </html>

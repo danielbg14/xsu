@@ -1,0 +1,374 @@
+/* ================================================================
+   dokumenti.css — страница-специфични стилове
+   Зависи от: variables.css, reset.css, base.css, layout.css, components.css
+   ================================================================ */
+
+/* ── PAGE HERO BANNER ── */
+.page-hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 60%, #2a9d6e 100%);
+    padding: calc(var(--nav-h) + 4rem) 8vw 4rem;
+    overflow: hidden;
+  }
+  
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 80% 50%, rgba(201, 168, 76, .12) 0%, transparent 60%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  
+  .page-hero-deco {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .07);
+    pointer-events: none;
+  }
+  
+  .page-hero-deco::after {
+    content: '';
+    position: absolute;
+    inset: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .05);
+  }
+  
+  .page-hero-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .78rem;
+    color: rgba(255, 255, 255, .55);
+    margin-bottom: 1.5rem;
+  }
+  
+  .page-hero-breadcrumb a {
+    color: rgba(255, 255, 255, .55);
+    transition: color .2s;
+  }
+  
+  .page-hero-breadcrumb a:hover { color: var(--gold); }
+  
+  .page-hero-label {
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: .8rem;
+  }
+  
+  .page-hero-label::before {
+    content: '';
+    width: 26px;
+    height: 2px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  
+  .page-hero h1 {
+    font-size: clamp(2rem, 4.5vw, 3.6rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  
+  .page-hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+  
+  .page-hero-sub {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, .65);
+    max-width: 560px;
+    line-height: 1.75;
+  }
+  
+  /* ── MAIN DOCS SECTION ── */
+  .docs-section {
+    padding: 4rem 8vw 6rem;
+  }
+  
+  /* ── INFO BANNER ── */
+  .docs-info-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--green-light);
+    border: 1px solid rgba(29, 122, 80, .15);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .docs-info-banner svg {
+    width: 20px;
+    height: 20px;
+    color: var(--green);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  .docs-info-banner p {
+    font-size: .87rem;
+    color: #2a5c40;
+    line-height: 1.7;
+  }
+  
+  .docs-info-banner strong { font-weight: 600; }
+  
+  .docs-info-banner a {
+    color: var(--green);
+    font-weight: 600;
+  }
+  
+  /* ── YEAR GROUP ── */
+  .docs-year-group {
+    margin-bottom: 4rem;
+  }
+  
+  .docs-year-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--green-light);
+  }
+  
+  .docs-year-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--green);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+  }
+  
+  .docs-year-icon svg { width: 22px; height: 22px; }
+  
+  .docs-year-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  
+  .docs-year-tag {
+    margin-left: auto;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: .35rem .9rem;
+    border-radius: 50px;
+    flex-shrink: 0;
+  }
+  
+  /* ── STRATEGY GROUP ── */
+  .strategy-group { margin-top: 4rem; }
+  
+  .strategy-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(201, 168, 76, .2);
+  }
+  
+  .strategy-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--gold);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--dark);
+  }
+  
+  .strategy-icon svg { width: 22px; height: 22px; }
+  
+  .strategy-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  
+  .strategy-tag {
+    margin-left: auto;
+    background: rgba(201, 168, 76, .12);
+    color: #9a7530;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: .35rem .9rem;
+    border-radius: 50px;
+    flex-shrink: 0;
+  }
+  
+  /* ── DOCS GRID ── */
+  .docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 1.25rem;
+  }
+  
+  /* ── DOC CARD ── */
+  .doc-card {
+    position: relative;
+    background: var(--white);
+    border: 1.5px solid #e4ede8;
+    border-radius: var(--radius-lg);
+    padding: 1.4rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: border-color .25s, box-shadow .25s, transform .25s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .doc-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--green);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .3s ease;
+    border-radius: 0 2px 2px 0;
+  }
+  
+  .doc-card:hover {
+    border-color: var(--green);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  .doc-card:hover::before { transform: scaleY(1); }
+  
+  /* ── DOC ICON ── */
+  .doc-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background .25s;
+  }
+  
+  .doc-icon svg { width: 20px; height: 20px; }
+  
+  .doc-icon.general-icon {
+    background: var(--green-light);
+    color: var(--green);
+  }
+  
+  .doc-card:hover .doc-icon.general-icon { background: #c3ecd9; }
+  
+  /* ── DOC INFO ── */
+  .doc-info { flex: 1; min-width: 0; }
+  
+  .doc-name {
+    font-size: .92rem;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.4;
+    margin-bottom: .35rem;
+    transition: color .2s;
+  }
+  
+  .doc-card:hover .doc-name { color: var(--green); }
+  
+  .doc-meta {
+    font-size: .74rem;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .doc-meta svg { width: 12px; height: 12px; flex-shrink: 0; }
+  
+  /* ── DOWNLOAD BUTTON ── */
+  .doc-download {
+    width: 34px;
+    height: 34px;
+    background: var(--light);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--gray);
+    transition: background .2s, color .2s;
+  }
+  
+  .doc-download svg { width: 15px; height: 15px; }
+  
+  .doc-card:hover .doc-download {
+    background: var(--green);
+    color: #fff;
+  }
+  
+  /* ── GOLD VARIANT (strategy cards) ── */
+  .doc-card.gold-card::before { background: var(--gold); }
+  
+  .doc-card.gold-card:hover {
+    border-color: var(--gold);
+  }
+  
+  .doc-card.gold-card .doc-icon.general-icon {
+    background: rgba(201, 168, 76, .12);
+    color: #9a7530;
+  }
+  
+  .doc-card.gold-card:hover .doc-icon.general-icon {
+    background: rgba(201, 168, 76, .22);
+  }
+  
+  .doc-card.gold-card:hover .doc-name { color: #9a7530; }
+  
+  .doc-card.gold-card:hover .doc-download {
+    background: var(--gold);
+    color: var(--dark);
+  }
+  
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1100px) {
+    .docs-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  }
+  
+  @media (max-width: 768px) {
+    .page-hero { padding: calc(var(--nav-h) + 2.5rem) 5vw 2.5rem; }
+    .docs-section { padding: 2.5rem 5vw 4rem; }
+    .docs-grid { grid-template-columns: 1fr; }
+    .docs-year-header { flex-wrap: wrap; }
+    .docs-year-tag,
+    .strategy-tag { margin-left: 0; }
+  }

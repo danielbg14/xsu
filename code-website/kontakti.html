@@ -1,473 +1,316 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Контакти – СУ „Йордан Йовков" Сливен</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/variables.css">
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css">
-<link rel="stylesheet" href="assets/css/pages/kontakti.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти – СУ „Йордан Йовков“ Сливен</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/kontakti.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <img src="images/logo.png" alt="Лого СУ Йордан Йовков">
-    <div class="nav-logo-text">
-      <strong>СУ „Йордан Йовков"</strong>
-      <span>Сливен</span>
-    </div>
-  </a>
-  <div class="nav-links">
-    <div class="nav-item">
-      <a href="za-nas.html">За нас <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="patron.html">Патрон</a><a href="himn.html">Химн</a><a href="istoriq.html">История</a><a href="misiq-viziq.html">Мисия и визия</a><a href="virtualna-razhodka.html">Виртуална разходка</a><a href="ekip.html">Училищен екип</a><a href="paralelki.html">Паралелки</a><a href="materialna-baza.html">Материална база</a><a href="uniformi.html">Униформи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="priem.html">Прием <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="priem-1-klas.html">Прием в I клас</a><a href="priem-5-klas.html">Прием в V клас</a><a href="priem-8-klas.html">Прием в VIII клас</a><a href="dokumenti-priem.html">Необходими документи</a><a href="faq.html">Често задавани въпроси</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="obuchenie.html">Обучение <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="uchebnici.html">Учебници</a><a href="uchebni-planove.html">Учебни планове</a><a href="https://app.shkolo.bg/">Електронен дневник</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="roditeli.html">Родители <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="razrabotva-se.html">Наредби</a><a href="razrabotva-se.html">Родителски срещи</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="uchenici.html">Ученици <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="dnevno-razpisanie.html">Дневно разписание</a><a href="sedmichno-razpisanie.html">Седмично разписание</a><a href="pochivni-dni.html">Почивни дни и ваканции</a><a href="klasni-kontrolni.html">Графици класни и контролни</a><a href="konsultacii.html">Консултации</a><a href="uchenicheski-suvet.html">Ученически съвет</a><a href="izvunklasni-deinosti.html">Извънкласни дейности</a><a href="nvo.html">НВО</a><a href="dzi.html">ДЗИ</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="razrabotva-se.html">Проекти</a></div>
-    <div class="nav-item"><a href="novini.html">Новини</a></div>
-    <div class="nav-item">
-      <a href="dokumenti.html">Документи <span class="caret"></span></a>
-      <div class="dropdown">
-        <a href="pravilnici.html">Правилници</a><a href="stipendii.html">Стипендии</a><a href="razrabotva-se.html">Училищни документи</a><a href="razrabotva-se.html">Формуляри</a>
-      </div>
-    </div>
-    <div class="nav-item"><a href="kontakti.html">Контакти</a></div>
-  </div>
-  <button class="nav-search" aria-label="Търсене">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-  </button>
-  <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <div id="navbar-container"></div>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="istoriq.html">История</a>
-      <a href="patron.html">Патрон</a>
-      <a href="himn.html">Химн</a>
-      <a href="misiq-viziq.html">Мисия и визия</a>
-      <a href="ekip.html">Училищен екип</a>
-      <a href="paralelki.html">Паралелки</a>
-      <a href="materialna-baza.html">Материална база</a>
-      <a href="uniformi.html">Униформи</a>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-dots"></div>
+    <div class="breadcrumb">
+      <a href="index.html">НАЧАЛО</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>КОНТАКТИ</span>
     </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="priem-1-klas.html">Прием в I клас</a>
-      <a href="priem-5-klas.html">Прием в V клас</a>
-      <a href="priem-8-klas.html">Прием в VIII клас</a>
-      <a href="dokumenti.html">Необходими документи</a>
-      <a href="faq.html">Често задавани въпроси</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="uchebnici.html">Учебници</a>
-      <a href="uchebni-planove.html">Учебни планове</a>
-      <a href="https://app.shkolo.bg">Електронен дневник</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="razrabotva-se.html">Наредби</a>
-      <a href="razrabotva-se.html">Родителски среща</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="dnevno-razpisanie.html">Дневно разписание</a>
-      <a href="sedmichno-razpisanie.html">Седмично разписание</a>
-      <a href="pochivni-dni.html">Почивни дни и ваканции</a>
-      <a href="klasni-kontrolni.html">Графици класни и контролни</a>
-      <a href="konsultacii.html">Консултации</a>
-      <a href="uchenicheski-suvet.html">Ученически съвет</a>
-      <a href="izvunklasni-deinosti.html">Извънкласни дейности</a>
-      <a href="nvo.html">НВО</a>
-      <a href="dzi.html">ДЗИ</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="#">Проекти</a></div>
-  <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
-    <div class="mobile-submenu">
-      <a href="pravilnici.html">Правилници</a>
-      <a href="stipendii.html">Стипендии</a>
-      <a href="razrabotva-se.html">Училищни документи</a>
-      <a href="razrabotva-se.html">Формуляри</a>
-    </div>
-  </div>
-  <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
-  <div class="mobile-menu-actions">
-    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
-    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
-  </div>
-</div>
+    <h1>Свържете се<br><em>с нас</em></h1>
+    <p>Имате въпрос, идея или нужда от информация? Екипът на СУ „Йордан Йовков“ е на ваше разположение. Намерете ни лесно — по телефон, имейл или лично.</p>
+  </section>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-dots"></div>
-  <div class="breadcrumb">
-    <a href="index.html">НАЧАЛО</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>КОНТАКТИ</span>
-  </div>
-  <h1>Свържете се<br><em>с нас</em></h1>
-  <p>Имате въпрос, идея или нужда от информация? Екипът на СУ „Йордан Йовков" е на ваше разположение. Намерете ни лесно — по телефон, имейл или лично.</p>
-</section>
+  <!-- MAIN CONTACTS + MAP -->
+  <div class="contacts-main">
 
-<!-- MAIN CONTACTS + MAP -->
-<div class="contacts-main">
+    <!-- LEFT: Cards stack -->
+    <div class="contact-cards-stack">
 
-  <!-- LEFT: Cards stack -->
-  <div class="contact-cards-stack">
-
-    <!-- Address -->
-    <div class="contact-card address-card reveal">
-      <div class="card-inner">
-        <div class="card-icon-row">
-          <div class="card-icon green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <!-- Address -->
+      <div class="contact-card address-card reveal">
+        <div class="card-inner">
+          <div class="card-icon-row">
+            <div class="card-icon green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="card-header-text">
+              <div class="card-category">Местоположение</div>
+              <div class="card-title">Адрес на училището</div>
+            </div>
           </div>
-          <div class="card-header-text">
-            <div class="card-category">Местоположение</div>
-            <div class="card-title">Адрес на училището</div>
+          <div class="address-detail">гр. Сливен 8808<br>кв. „Българка"</div>
+          <div class="address-sub">СУ „Йордан Йовков“ – Сливен</div>
+          <div class="address-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Активно учебно заведение
           </div>
         </div>
-        <div class="address-detail">гр. Сливен 8808<br>кв. „Българка"</div>
-        <div class="address-sub">СУ „Йордан Йовков" – Сливен</div>
-        <div class="address-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          Активно учебно заведение
-        </div>
       </div>
-    </div>
 
-    <!-- Phones -->
-    <div class="contact-card reveal" style="transition-delay:.1s">
-      <div class="card-inner">
-        <div class="card-icon-row">
-          <div class="card-icon teal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <!-- Phones -->
+      <div class="contact-card reveal" style="transition-delay:.1s">
+        <div class="card-inner">
+          <div class="card-icon-row">
+            <div class="card-icon teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="card-header-text">
+              <div class="card-category">Телефони за връзка</div>
+              <div class="card-title">Обадете ни се</div>
+            </div>
           </div>
-          <div class="card-header-text">
-            <div class="card-category">Телефони за връзка</div>
-            <div class="card-title">Обадете ни се</div>
-          </div>
-        </div>
-        <div class="phone-rows">
-          <div class="phone-row">
-            <div class="phone-role">
-              <div class="role-dot"></div>
-              <div>
-                <div class="role-label">Директор</div>
-                <div class="role-sublabel">Управление и организация</div>
+          <div class="phone-rows">
+            <div class="phone-row">
+              <div class="phone-role">
+                <div class="role-dot"></div>
+                <div>
+                  <div class="role-label">Директор</div>
+                  <div class="role-sublabel">Управление и организация</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="phone-number">044 / 66 72 44</div>
+                <a href="tel:35944667244" class="phone-call-btn" aria-label="Обади се на директора">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:10px">
-              <div class="phone-number">044 / 66 72 44</div>
-              <a href="tel:0044667244" class="phone-call-btn" aria-label="Обади се на директора">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="phone-row">
-            <div class="phone-role">
-              <div class="role-dot"></div>
-              <div>
-                <div class="role-label">Помощник-директор</div>
-                <div class="role-sublabel">Учебна дейност</div>
+            <div class="phone-row">
+              <div class="phone-role">
+                <div class="role-dot"></div>
+                <div>
+                  <div class="role-label">Помощник-директор</div>
+                  <div class="role-sublabel">Учебна дейност</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="phone-number">044 / 66 76 84</div>
+                <a href="tel:35944667684" class="phone-call-btn" aria-label="Обади се на помощник-директора">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:10px">
-              <div class="phone-number">044 / 66 76 84</div>
-              <a href="tel:0044667684" class="phone-call-btn" aria-label="Обади се на помощник-директора">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="phone-row">
-            <div class="phone-role">
-              <div class="role-dot"></div>
-              <div>
-                <div class="role-label">Главен счетоводител</div>
-                <div class="role-sublabel">Финансови въпроси</div>
+            <div class="phone-row">
+              <div class="phone-role">
+                <div class="role-dot"></div>
+                <div>
+                  <div class="role-label">Главен счетоводител</div>
+                  <div class="role-sublabel">Финансови въпроси</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="phone-number">044 / 66 74 68</div>
+                <a href="tel:35944667468" class="phone-call-btn" aria-label="Обади се на счетоводителя">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:10px">
-              <div class="phone-number">044 / 66 74 68</div>
-              <a href="tel:0044667468" class="phone-call-btn" aria-label="Обади се на счетоводителя">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="phone-row fax-row">
-            <div class="phone-role">
-              <div class="role-dot"></div>
-              <div>
-                <div class="role-label">Факс</div>
-                <div class="role-sublabel">За документи и кореспонденция</div>
+            <div class="phone-row fax-row">
+              <div class="phone-role">
+                <div class="role-dot"></div>
+                <div>
+                  <div class="role-label">Факс</div>
+                  <div class="role-sublabel">За документи и кореспонденция</div>
+                </div>
               </div>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px">
-              <div class="phone-number">044 / 66 76 84</div>
-              <div class="phone-call-btn" style="cursor:default">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 17H2a3 3 0 01-3-3V5a3 3 0 013-3h3M17 17v4H7v-4M17 3H7v10h10V3z"/></svg>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="phone-number">044 / 66 76 84</div>
+                <div class="phone-call-btn" style="cursor:default">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 17H2a3 3 0 01-3-3V5a3 3 0 013-3h3M17 17v4H7v-4M17 3H7v10h10V3z"/></svg>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Email -->
-    <div class="contact-card reveal" style="transition-delay:.2s">
-      <div class="card-inner">
-        <div class="card-icon-row">
-          <div class="card-icon gold">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <!-- Email -->
+      <div class="contact-card reveal" style="transition-delay:.2s">
+        <div class="card-inner">
+          <div class="card-icon-row">
+            <div class="card-icon gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="card-header-text">
+              <div class="card-category">Електронна поща</div>
+              <div class="card-title">Пишете ни</div>
+            </div>
           </div>
-          <div class="card-header-text">
-            <div class="card-category">Електронна поща</div>
-            <div class="card-title">Пишете ни</div>
+          <div class="email-display" id="emailDisplay" onclick="copyEmail()" title="Кликни за копиране">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:20px;height:20px;color:var(--green);flex-shrink:0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="email-text">info-2000114@edu.mon.bg</span>
+            <div class="email-copy-btn" aria-label="Копирай имейл">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            </div>
           </div>
-        </div>
-        <div class="email-display" id="emailDisplay" onclick="copyEmail()" title="Кликни за копиране">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:20px;height:20px;color:var(--green);flex-shrink:0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span class="email-text">info-2000114@edu.mon.bg</span>
-          <div class="email-copy-btn" aria-label="Копирай имейл">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          <div class="copy-success" id="copySuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Имейлът е копиран!
           </div>
-        </div>
-        <div class="copy-success" id="copySuccess">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          Имейлът е копиран!
         </div>
       </div>
-    </div>
-  </div><!-- /contact-cards-stack -->
+    </div><!-- /contact-cards-stack -->
 
-  <!-- RIGHT: Map + quick info -->
-  <div class="map-side">
+    <!-- RIGHT: Map + quick info -->
+    <div class="map-side">
 
-    <div class="map-container reveal-right">
-      <div class="map-header">
-        <div class="map-header-left">
-          <div class="map-pin"></div>
+      <div class="map-container reveal-right">
+        <div class="map-header">
+          <div class="map-header-left">
+            <div class="map-pin"></div>
+            <div>
+              <h3>На картата</h3>
+              <span>кв. „Българка“, Сливен</span>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=СУ+Йордан+Йовков+Сливен" target="_blank" class="map-open-link">
+            Отвори в Google Maps
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d733.209727225909!2d26.33898112513345!3d42.685954559339976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a627342e1a9943%3A0xbb3cff58694a0d57!2z0KHRgNC10LTQvdC-INGD0YfQuNC70LjRidC1INCZ0L7RgNC00LDQvSDQmdC-0LLQutC-0LI!5e0!3m2!1sbg!2sbg!4v1739480475945!5m2!1sbg!2sbg"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Карта с местоположението на СУ Йордан Йовков Сливен">
+        </iframe>
+      </div>
+
+      <div class="quick-info-strip reveal-right" style="transition-delay:.15s">
+        <h4>Бърза информация</h4>
+        <div class="info-row">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
           <div>
-            <h3>На картата</h3>
-            <span>кв. „Българка", Сливен</span>
+            <div class="info-text-label">Директор</div>
+            <div class="info-text-val">044 / 66 72 44</div>
           </div>
         </div>
-        <a href="https://maps.google.com/?q=СУ+Йордан+Йовков+Сливен" target="_blank" class="map-open-link">
-          Отвори в Google Maps
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-        </a>
+        <div class="info-row">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="info-text-label">Имейл</div>
+            <div class="info-text-val">info-2000114@edu.mon.bg</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div>
+            <div class="info-text-label">Работни дни</div>
+            <div class="info-text-val">Понеделник – Петък</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="info-text-label">Работно време</div>
+            <div class="info-text-val">07:30 – 19:00 ч.</div>
+          </div>
+        </div>
       </div>
-      <iframe
-        class="map-embed"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d733.209727225909!2d26.33898112513345!3d42.685954559339976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a627342e1a9943%3A0xbb3cff58694a0d57!2z0KHRgNC10LTQvdC-INGD0YfQuNC70LjRidC1INCZ0L7RgNC00LDQvSDQmdC-0LLQutC-0LI!5e0!3m2!1sbg!2sbg!4v1739480475945!5m2!1sbg!2sbg"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        title="Карта с местоположението на СУ Йордан Йовков Сливен">
-      </iframe>
-    </div>
 
-    <div class="quick-info-strip reveal-right" style="transition-delay:.15s">
-      <h4>Бърза информация</h4>
-      <div class="info-row">
-        <div class="info-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div>
-          <div class="info-text-label">Директор</div>
-          <div class="info-text-val">044 / 66 72 44</div>
-        </div>
-      </div>
-      <div class="info-row">
-        <div class="info-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <div>
-          <div class="info-text-label">Имейл</div>
-          <div class="info-text-val">info-2000114@edu.mon.bg</div>
-        </div>
-      </div>
-      <div class="info-row">
-        <div class="info-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <div>
-          <div class="info-text-label">Работни дни</div>
-          <div class="info-text-val">Понеделник – Петък</div>
-        </div>
-      </div>
-      <div class="info-row">
-        <div class="info-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div>
-          <div class="info-text-label">Работно време</div>
-          <div class="info-text-val">07:30 – 19:00 ч.</div>
-        </div>
-      </div>
-    </div>
+    </div><!-- /map-side -->
 
-  </div><!-- /map-side -->
+  </div><!-- /contacts-main -->
 
-</div><!-- /contacts-main -->
-
-<!-- CONTACT FORM -->
-<section class="form-section" id="forma">
-  <div class="form-section-inner">
-    <div class="form-intro reveal-left">
-      <div class="section-label">Онлайн форма</div>
-      <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.6rem)">Изпратете<br>съобщение</h2>
-      <p>Имате въпрос относно прием, документи, учебна програма или друга тема? Попълнете формата и ние ще се свържем с вас в рамките на 1–2 работни дни.</p>
-      <ul class="form-reasons">
-        <li><div class="form-reason-dot"></div>Въпроси за прием в I, V или VIII клас</li>
-        <li><div class="form-reason-dot"></div>Информация за учебни програми</li>
-        <li><div class="form-reason-dot"></div>Административни и финансови въпроси</li>
-        <li><div class="form-reason-dot"></div>Обратна връзка и предложения</li>
-        <li><div class="form-reason-dot"></div>Медийни запитвания и партньорства</li>
-      </ul>
-      <div style="display:flex;align-items:center;gap:10px;padding:1rem 1.2rem;background:var(--green-light);border-radius:12px;border:1px solid rgba(29,122,80,.15)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--green);flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <span style="font-size:.8rem;color:var(--green);line-height:1.5">За спешни въпроси, моля обадете се директно на посочените телефонни номера.</span>
+  <!-- CONTACT FORM -->
+  <section class="form-section" id="forma">
+    <div class="form-section-inner">
+      <div class="form-intro reveal-left">
+        <div class="section-label">Онлайн форма</div>
+        <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.6rem)">Изпратете<br>съобщение</h2>
+        <p>Имате въпрос относно прием, документи, учебна програма или друга тема? Попълнете формата и ние ще се свържем с вас в рамките на 1–2 работни дни.</p>
+        <ul class="form-reasons">
+          <li><div class="form-reason-dot"></div>Въпроси за прием в I, V или VIII клас</li>
+          <li><div class="form-reason-dot"></div>Информация за учебни програми</li>
+          <li><div class="form-reason-dot"></div>Административни и финансови въпроси</li>
+          <li><div class="form-reason-dot"></div>Обратна връзка и предложения</li>
+          <li><div class="form-reason-dot"></div>Медийни запитвания и партньорства</li>
+        </ul>
+        <div style="display:flex;align-items:center;gap:10px;padding:1rem 1.2rem;background:var(--green-light);border-radius:12px;border:1px solid rgba(29,122,80,.15)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--green);flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span style="font-size:.8rem;color:var(--green);line-height:1.5">За спешни въпроси, моля обадете се директно на посочените телефонни номера.</span>
+        </div>
       </div>
-    </div>
 
-    <form class="contact-form reveal-right" onsubmit="handleFormSubmit(event)">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fname">Собствено име</label>
-          <input type="text" id="fname" placeholder="Иван" required>
+      <form class="contact-form reveal-right" onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Собствено име</label>
+            <input type="text" id="fname" placeholder="Иван" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Фамилия</label>
+            <input type="text" id="lname" placeholder="Петров" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Имейл адрес</label>
+            <input type="email" id="email" placeholder="ivan@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон (незадължително)</label>
+            <input type="tel" id="phone" placeholder="088 / XXX XXXX">
+          </div>
         </div>
         <div class="form-group">
-          <label for="lname">Фамилия</label>
-          <input type="text" id="lname" placeholder="Петров" required>
+          <label for="subject">Относно</label>
+          <select id="subject" required>
+            <option value="" disabled selected>Изберете тема...</option>
+            <option>Прием в I клас</option>
+            <option>Прием в V клас</option>
+            <option>Прием в VIII клас</option>
+            <option>Документи и административни въпроси</option>
+            <option>Учебни програми и разписание</option>
+            <option>Финансови въпроси</option>
+            <option>Извънкласни дейности</option>
+            <option>Обратна връзка</option>
+            <option>Друго</option>
+          </select>
         </div>
-      </div>
-      <div class="form-row">
         <div class="form-group">
-          <label for="email">Имейл адрес</label>
-          <input type="email" id="email" placeholder="ivan@gmail.com" required>
+          <label for="message">Съобщение</label>
+          <textarea id="message" placeholder="Опишете вашия въпрос или коментар..." required></textarea>
         </div>
-        <div class="form-group">
-          <label for="phone">Телефон (незадължително)</label>
-          <input type="tel" id="phone" placeholder="088 / XXX XXXX">
+        <div class="form-submit-row">
+          <button type="submit" class="btn-green">
+            Изпратете
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="submit-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Данните ви са защитени
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label for="subject">Относно</label>
-        <select id="subject" required>
-          <option value="" disabled selected>Изберете тема...</option>
-          <option>Прием в I клас</option>
-          <option>Прием в V клас</option>
-          <option>Прием в VIII клас</option>
-          <option>Документи и административни въпроси</option>
-          <option>Учебни програми и разписание</option>
-          <option>Финансови въпроси</option>
-          <option>Извънкласни дейности</option>
-          <option>Обратна връзка</option>
-          <option>Друго</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="message">Съобщение</label>
-        <textarea id="message" placeholder="Опишете вашия въпрос или коментар..." required></textarea>
-      </div>
-      <div class="form-submit-row">
-        <button type="submit" class="btn-green">
-          Изпратете
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        </button>
-        <div class="submit-note">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Данните ви са защитени
+        <div id="formSuccess" style="display:none;margin-top:1rem;padding:1rem 1.2rem;background:#e1f5ee;border-radius:12px;border:1.5px solid rgba(29,122,80,.25);color:var(--green);font-size:.88rem;font-weight:600;display:none;align-items:center;gap:8px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px;flex-shrink:0"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Вашето съобщение беше изпратено успешно. Ще се свържем с вас скоро!
         </div>
-      </div>
-      <div id="formSuccess" style="display:none;margin-top:1rem;padding:1rem 1.2rem;background:#e1f5ee;border-radius:12px;border:1.5px solid rgba(29,122,80,.25);color:var(--green);font-size:.88rem;font-weight:600;display:none;align-items:center;gap:8px">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px;flex-shrink:0"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        Вашето съобщение беше изпратено успешно. Ще се свържем с вас скоро!
-      </div>
-    </form>
-  </div>
-</section>
+      </form>
+    </div>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="images/logo.png" alt="Лого">
-      <p>СУ „Йордан Йовков" — Сливен е средно училище с богата история и традиции, изграждащо знаещи и уверени личности от 1980 година.</p>
-      <div class="footer-motto">„Ако успееш тук, ще успееш навсякъде!"</div>
-    </div>
-    <div class="footer-col">
-      <h5>Навигация</h5>
-      <ul><li><a href="za-nas.html">За нас</a></li><li><a href="priem.html">Прием</a></li><li><a href="obuchenie.html">Обучение</a></li><li><a href="novini.html">Новини</a></li><li><a href="razrabotva-se.html">Проекти</a></li><li><a href="dokumenti.html">Документи</a></li></ul>
-    </div>
-    <div class="footer-col">
-      <h5>Полезни връзки</h5>
-      <ul><li><a href="https://app.shkolo.bg/">Електронен дневник</a></li><li><a href="uchebni-planove.html">Учебни планове</a></li><li><a href="uchenicheski-suvet.html">Ученически съвет</a></li><li><a href="https://programisti.com" target="_blank">programisti.com</a></li><li><a href="https://web.mon.bg/mon/" target="_blank">МОН</a></li><li><a href="https://www.ruo-sliven.bg/" target="_blank">РУО Сливен</a></li></ul>
-    </div>
-    <div class="footer-col footer-contact">
-      <h5>Контакти</h5>
-      <p><strong>Адрес:</strong><br>гр. Сливен</p>
-      <p><strong>Телефони:</strong><br>
-        Директор: 044/ 66 72 44<br>
-        Зам. директор: 044/ 66 76 84
-      </p>
-      <p><strong>Имейл:</strong><br><a href="mailto:info-2000114@edu.mon.bg">info-2000114@edu.mon.bg</a></p>
-      <p><strong>Работно време:</strong><br>Пон–Пет: 07:30 – 19:00</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 СУ „Йордан Йовков" – Сливен. Всички права запазени.</span>
-    <span><a href="razrabotva-se.html">Поверителност</a> · <a href="razrabotva-se.html">Достъпност</a></span>
-  </div>
-</footer>
+  <div id="footer-container"></div>
 
   <script type="module" src="assets/js/main.js"></script>
+  <script src="assets/js/components-init.js"></script>
   <script type="module" src="assets/js/pages/kontakti.js" defer></script>
   
 </body>
