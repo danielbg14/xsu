@@ -1,68 +1,156 @@
-:root {
-  --green: #1D7A50;
-  --green-dark: #0F5438;
-  --green-light: #e1f5ee;
-  --teal: #1D9E75;
-  --teal-light: #9FE1CB;
-  --gold: #C9A84C;
-  --gold-light: #f0e2b8;
-  --dark: #1a2e24;
-  --gray: #555;
-  --light: #f0f7f3;
-  --white: #ffffff;
-  --footer-bg: #0b3224;
-  --nav-h: 72px;
+  :root {
+    --green: #1D7A50;
+    --green-dark: #0F5438;
+    --green-light: #e1f5ee;
+    --teal: #1D9E75;
+    --teal-light: #9FE1CB;
+    --gold: #C9A84C;
+    --gold-light: #f0e2b8;
+    --dark: #1a2e24;
+    --gray: #555;
+    --light: #f0f7f3;
+    --white: #ffffff;
+    --footer-bg: #0b3224;
+    --nav-h: 72px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', sans-serif; color: var(--dark); background: var(--white); overflow-x: hidden; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ═══════════════════════════════════════
+    АНИМАЦИИ
+  ═══════════════════════════════════════ */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.88); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  @keyframes lineExpand {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+  @keyframes countUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-breadcrumb  { animation: slideDown 0.55s cubic-bezier(.22,.68,0,1.2) 0.15s both; }
+  .hero-eyebrow     { animation: fadeUp   0.55s cubic-bezier(.22,.68,0,1.2) 0.30s both; }
+  .hero-title       { animation: fadeUp   0.65s cubic-bezier(.22,.68,0,1.2) 0.45s both; }
+  .hero-desc        { animation: fadeUp   0.55s cubic-bezier(.22,.68,0,1.2) 0.62s both; }
+
+  /* ═══════════════════════════════════════
+    PAGE HERO
+  ═══════════════════════════════════════ */
+  .page-hero {
+    margin-top: var(--nav-h);
+    padding: 2rem 8vw;        /* ← намалено от 5rem */
+    min-height: 40rem;
+    position: relative;
+    overflow: hidden;
+    color: white;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;   /* ← беше "top" (невалидно) */
+    text-align: center;
+  
+    background-image: url('../../../images/ekip.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  /* Тъмно затъмнение */
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  /* Текстът над затъмнението */
+  .page-hero > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Малък текст */
+  .page-hero-eyebrow {
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: .8rem;
+  }
+
+  /* Заглавие */
+  .page-hero h1 {
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+.page-hero h1 em {
+  color: var(--gold);
+  font-style: italic;
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Manrope', sans-serif; color: var(--dark); background: var(--white); overflow-x: hidden; }
-a { text-decoration: none; color: inherit; }
+
+/* Текст */
+.page-hero p {
+  font-size: 1rem;
+  color: rgba(255,255,255,.85);
+  max-width: 520px;
+  line-height: 1.75;
+  margin: 0 auto;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+  font-size: .78rem;
+  color: rgba(255,255,255,.45);
+  transition: color .2s;
+}
+
+.breadcrumb a:hover { color: var(--gold); }
+
+.breadcrumb span {
+  font-size: .78rem;
+  color: rgba(255,255,255,.25);
+}
 
 /* ═══════════════════════════════════════
-   АНИМАЦИИ
+   STATS
 ═══════════════════════════════════════ */
-
-/* --- Fade-up: базов клас --- */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(28px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-18px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.88); }
-  to   { opacity: 1; transform: scale(1); }
-}
-@keyframes lineExpand {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
-}
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Hero елементи — зареждат се при load */
-.hero-breadcrumb  { animation: slideDown 0.55s cubic-bezier(.22,.68,0,1.2) 0.15s both; }
-.hero-eyebrow     { animation: fadeUp   0.55s cubic-bezier(.22,.68,0,1.2) 0.30s both; }
-.hero-title       { animation: fadeUp   0.65s cubic-bezier(.22,.68,0,1.2) 0.45s both; }
-.hero-desc        { animation: fadeUp   0.55s cubic-bezier(.22,.68,0,1.2) 0.62s both; }
-
-/* Hero overlay blur reveal */
-.page-hero::after {
-  content: '';
-  position: absolute; inset: 0; z-index: 0;
-  background: linear-gradient(rgba(0,0,0,0.473), rgba(0,0,0,0.733));
-  animation: fadeIn 0.9s ease 0s both;
-}
-
-/* Stats числа */
 .stat-item {
   animation: countUp 0.5s cubic-bezier(.22,.68,0,1.2) both;
 }
@@ -71,7 +159,9 @@ a { text-decoration: none; color: inherit; }
 .stat-item:nth-child(3) { animation-delay: 0.34s; }
 .stat-item:nth-child(4) { animation-delay: 0.46s; }
 
-/* Filter bar */
+/* ═══════════════════════════════════════
+   FILTER BAR
+═══════════════════════════════════════ */
 .filter-btn {
   animation: fadeUp 0.4s cubic-bezier(.22,.68,0,1.2) both;
 }
@@ -82,7 +172,9 @@ a { text-decoration: none; color: inherit; }
 .filter-btn:nth-child(5) { animation-delay: 0.33s; }
 .filter-btn:nth-child(6) { animation-delay: 0.40s; }
 
-/* Scroll reveal — базово скрит стейт */
+/* ═══════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════ */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -94,15 +186,11 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(0);
 }
 
-/* Group header линия */
-.group-line {
-  transform-origin: left center;
-}
+.group-line { transform-origin: left center; }
 .reveal.visible .group-line {
   animation: lineExpand 0.6s cubic-bezier(.22,.68,0,1.2) 0.2s both;
 }
 
-/* Карти — stagger при reveal на групата */
 .member-card {
   opacity: 0;
   transform: translateY(24px) scale(0.97);
@@ -115,85 +203,6 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(0) scale(1);
 }
 
-/* ═══════════════════════════════════════
-   PAGE HERO
-═══════════════════════════════════════ */
-.page-hero {
-  margin-top: var(--nav-h);
-  padding: 3rem 8vw 6rem;
-  position: relative;
-  overflow: hidden;
-  background: var(--green-dark);
-  color: white;
-  text-align: left;
-}
-
-.page-hero > * {
-  position: relative;
-  z-index: 2; 
-}
-
-/* малък текст */
-.page-hero-eyebrow {
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .25em;
-  text-transform: uppercase;
-  color: var(--gold);
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-}
-
-/* заглавие */
-.page-hero h1 {
-  font-size: clamp(2.2rem, 4vw, 3.6rem);
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.1;
-  text-align: left;
-}
-
-.page-hero h1 em {
-  color: var(--gold);
-  font-style: italic;
-}
-
-/* текст */
-.page-hero p {
-  font-size: 1rem;
-  color: rgba(255,255,255,.85);
-  max-width: 520px;
-  line-height: 1.75;
-  text-align: left;
-  margin: 0;
-  margin-top: 0.5rem;
-}
-
-/* breadcrumb */
-.breadcrumb {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 2rem;
-  margin-top: 0;
-}
-
-.breadcrumb a {
-  font-size: .78rem;
-  color: rgba(255,255,255,.45);
-  transition: color .2s;
-}
-
-.breadcrumb a:hover {
-  color: var(--gold);
-}
-
-.breadcrumb span {
-  font-size: .78rem;
-  color: rgba(255,255,255,.25);
-}
 /* ═══════════════════════════════════════
    FILTER BAR
 ═══════════════════════════════════════ */
@@ -219,7 +228,6 @@ a { text-decoration: none; color: inherit; }
   background: transparent; color: var(--gray);
   border-radius: 50px; cursor: pointer;
   white-space: nowrap;
-  /* transition само за hover — анимацията е отделна */
   transition: background .25s, color .25s, border-color .25s, transform .2s;
 }
 .filter-btn:hover { border-color: var(--green); color: var(--green); background: var(--green-light); transform: translateY(-2px); }
@@ -239,9 +247,8 @@ a { text-decoration: none; color: inherit; }
 .team-section { padding: 4rem 8vw 6rem; background: var(--light); }
 .group-header {
   display: flex; align-items: center; gap: 1rem;
-  margin-bottom: 1rem; 
-  padding-top: 1.5rem;  /* разстояние от картите отгоре */
-
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
 }
 .group-header:first-of-type { margin-top: 0; }
 .group-line { flex: 1; height: 1px; background: rgba(29,122,80,.15); }
@@ -329,7 +336,6 @@ a { text-decoration: none; color: inherit; }
 }
 .stat-item .lbl { font-size: .75rem; color: var(--gray); margin-top: .2rem; }
 
-/* Пулсиращ ефект на числото при появяване */
 @keyframes numPop {
   0%   { transform: scale(0.6); opacity: 0; }
   70%  { transform: scale(1.15); opacity: 1; }
@@ -339,7 +345,9 @@ a { text-decoration: none; color: inherit; }
   animation: numPop 0.55s cubic-bezier(.22,.68,0,1.2) both;
 }
 
-/* EMPTY STATE */
+/* ═══════════════════════════════════════
+   EMPTY STATE
+═══════════════════════════════════════ */
 .empty-state {
   text-align: center; padding: 4rem 2rem; color: var(--gray);
   display: none;
@@ -347,9 +355,12 @@ a { text-decoration: none; color: inherit; }
 .empty-state svg { width: 48px; height: 48px; opacity: .25; margin: 0 auto 1rem; }
 .empty-state p { font-size: .9rem; }
 
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .page-hero { padding: 3rem 1.5rem 2.5rem; }
+  .page-hero { padding: 3rem 1.5rem; min-height: 28rem; }
   .filter-section { padding: 0 1rem; }
   .team-section { padding: 2rem 1.5rem 4rem; }
   .stats-bar { padding: 1.5rem; gap: 1.5rem; }

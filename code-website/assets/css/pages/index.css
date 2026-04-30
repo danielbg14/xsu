@@ -40,14 +40,18 @@ img{display:block}
 .hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(130deg,rgba(0,0,0,.68) 0%,rgba(0,0,0,.4) 55%,rgba(0,0,0,.18) 100%)}
 .hero-content{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:0 8vw;max-width:760px}
 .hero-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;opacity:0;transform:translateY(24px);transition:opacity .9s .3s,transform .9s .3s}
-.hero-title{font-size:clamp(2.4rem,5.5vw,4.8rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:1.2rem;opacity:0;transform:translateY(24px);transition:opacity .9s .5s,transform .9s .5s;white-space:nowrap;}
+.hero-title{font-size:clamp(2.4rem,5.5vw,4.8rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:1.2rem;white-space:nowrap;}
 .hero-title em{color:var(--gold);font-style:italic}
+.hero-title .w1{display:inline-block;opacity:0;transform:translateY(24px);transition:opacity .9s .5s,transform .9s .5s}
+.hero-title .w2{display:inline-block;opacity:0;transform:translateY(24px);transition:opacity .9s .72s,transform .9s .72s}
+.hero-slide.active .hero-title .w1,
+.hero-slide.active .hero-title .w2{opacity:1;transform:translateY(0)}
 .hero-subtitle{font-size:1rem;font-weight:300;color:rgba(255,255,255,.82);line-height:1.7;margin-bottom:2.2rem;max-width:460px;opacity:0;transform:translateY(24px);transition:opacity .9s .7s,transform .9s .7s}
 .hero-btn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;padding:.9rem 1.2rem;font-size:.85rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:2px solid var(--green);border-radius:50px;width:fit-content;transition:background .3s}
 .hero-btn:hover{background:transparent}
 .hero-btn svg{width:15px;height:15px;transition:transform .3s}
 .hero-btn:hover svg{transform:translateX(4px)}
-.hero-slide.active .hero-eyebrow,.hero-slide.active .hero-title,.hero-slide.active .hero-subtitle,.hero-slide.active .hero-btn{opacity:1;transform:translateY(0)}
+.hero-slide.active .hero-eyebrow,.hero-slide.active .hero-subtitle,.hero-slide.active .hero-btn{opacity:1;transform:translateY(0)}
 .hero-indicators{position:absolute;bottom:2.5rem;left:8vw;z-index:3;display:flex;gap:10px}
 .hero-dot{width:36px;height:3px;background:rgba(255,255,255,.3);cursor:pointer;transition:background .3s,width .3s;border:none;border-radius:2px}
 .hero-dot.active{background:var(--gold);width:60px}
