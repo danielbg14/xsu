@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Родителски срещи – СУ „Йордан Йовков" – Сливен</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Споделени стилове (същия ред като останалите страници) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <!-- Само page-specific CSS -->
+  <link rel="stylesheet" href="assets/css/pages/roditelski-sreshti.css">
+</head>
+<body>
+
+  <!-- Споделен navbar (зарежда се от components-init.js) -->
+  <div id="navbar-container"></div>
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <div class="page-hero-breadcrumb" role="navigation" aria-label="Breadcrumb">
+      <a href="index.html">НАЧАЛО</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+      <a href="roditeli.html">РОДИТЕЛИ</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+      <span>РОДИТЕЛСКИ СРЕЩИ</span>
+    </div>
+
+    <div class="page-hero-label">Учебна година 2025/2026</div>
+
+    <h1>Родителски<br><em>срещи</em></h1>
+
+    <p class="page-hero-sub">
+      График на родителските срещи по класове за учебната 2025/2026 г.
+      Поканваме всички родители да присъстват и да участват активно в живота на училището.
+    </p>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-value">4</span>
+        <span class="hero-stat-label">срещи годишно</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">24</span>
+        <span class="hero-stat-label">паралелки</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">2</span>
+        <span class="hero-stat-label">предстоящи</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAIN CONTENT ── -->
+  <section class="meetings-section">
+
+    <!-- Информационен банер -->
+    <div class="meetings-info-banner reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <p>
+        Родителските срещи се провеждат в <strong>учебния корпус на СУ „Йордан Йовков"</strong>.
+        Часовете са ориентировъчни — проверявайте актуална информация при класния ръководител.
+        При промяна в графика ще бъдете уведомени чрез <a href="https://app.shkolo.bg/" target="_blank" rel="noopener">електронния дневник</a>.
+      </p>
+    </div>
+
+    <!-- Табове -->
+    <div class="meetings-tabs reveal">
+      <button class="tab-btn active" data-tab="all">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        Всички
+      </button>
+      <button class="tab-btn" data-tab="upcoming">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        Предстоящи
+      </button>
+      <button class="tab-btn" data-tab="past">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+        Минали
+      </button>
+    </div>
+
+    <!-- ══ СЛЕДВАЩА СРЕЩА (банер) ══ -->
+    <div
+      class="next-meeting-banner reveal"
+      data-next-meeting="2025-11-20T18:00:00"
+    >
+      <div class="next-meeting-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+          <path d="M16 3.13a4 4 0 010 7.75"/>
+        </svg>
+      </div>
+      <div class="next-meeting-body">
+        <div class="next-meeting-eyebrow">Следваща родителска среща</div>
+        <div class="next-meeting-title">Втора родителска среща — I–IV клас</div>
+        <div class="next-meeting-details">
+          <div class="next-meeting-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            20 ноември 2025 г. (четвъртък)
+          </div>
+          <div class="next-meeting-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            18:00 ч.
+          </div>
+          <div class="next-meeting-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Класните стаи
+          </div>
+        </div>
+        <div class="countdown-strip">
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-days">—</span>
+            <span class="countdown-lbl">дни</span>
+          </div>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-hours">—</span>
+            <span class="countdown-lbl">часа</span>
+          </div>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-mins">—</span>
+            <span class="countdown-lbl">мин</span>
+          </div>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-secs">—</span>
+            <span class="countdown-lbl">сек</span>
+          </div>
+        </div>
+      </div>
+      <div class="next-meeting-cta">
+        <a href="https://app.shkolo.bg/" target="_blank" rel="noopener" class="btn-gold">
+          Електронен дневник
+        </a>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         ПРЕДСТОЯЩИ СРЕЩИ
+    ══════════════════════════════════════════════ -->
+    <div class="meetings-group" data-filter="upcoming">
+      <div class="meetings-group-header reveal">
+        <div class="meetings-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h2 class="meetings-group-title">Предстоящи родителски срещи</h2>
+        <span class="meetings-group-tag">2025 / 2026</span>
+      </div>
+
+      <div class="meetings-grid">
+
+        <!-- Среща 1 — I–IV клас, 20.11.2025 -->
+        <div class="meeting-card upcoming">
+          <div class="meeting-card-top">
+            <div class="meeting-date-badge">
+              <span class="day">20</span>
+              <span class="month">ное</span>
+            </div>
+            <div class="meeting-card-meta">
+              <div class="meeting-class-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="10" height="10"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                I–IV клас
+              </div>
+              <div class="meeting-title">Втора родителска среща</div>
+            </div>
+          </div>
+          <div class="meeting-details">
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Четвъртък, 20 ноември 2025 г. — 18:00 ч.
+            </div>
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Класни стаи на I–IV клас
+            </div>
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Успех от I срок · Поведение · Предложения на родителите
+            </div>
+          </div>
+          <div class="meeting-card-footer">
+            <span class="meeting-status upcoming">Предстояща</span>
+            <a href="https://app.shkolo.bg/" target="_blank" rel="noopener" class="meeting-action">
+              Дневник
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Среща 2 — V–VIII клас, 21.11.2025 -->
+        <div class="meeting-card upcoming">
+          <div class="meeting-card-top">
+            <div class="meeting-date-badge">
+              <span class="day">21</span>
+              <span class="month">ное</span>
+            </div>
+            <div class="meeting-card-meta">
+              <div class="meeting-class-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="10" height="10"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                V–VIII клас
+              </div>
+              <div class="meeting-title">Втора родителска среща</div>
+            </div>
+          </div>
+          <div class="meeting-details">
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Петък, 21 ноември 2025 г. — 18:00 ч.
+            </div>
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Класни стаи на V–VIII клас
+            </div>
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Учебни резултати · Дисциплина · НВО подготовка (VII кл.)
+            </div>
+          </div>
+          <div class="meeting-card-footer">
+            <span class="meeting-status upcoming">Предстояща</span>
+            <a href="https://app.shkolo.bg/" target="_blank" rel="noopener" class="meeting-action">
+              Дневник
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Среща 3 — IX–XII клас, 25.11.2025 -->
+        <div class="meeting-card upcoming">
+          <div class="meeting-card-top">
+            <div class="meeting-date-badge">
+              <span class="day">25</span>
+              <span class="month">ное</span>
+            </div>
+            <div class="meeting-card-meta">
+              <div class="meeting-class-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="10" height="10"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                IX–XII клас
+              </div>
+              <div class="meeting-title">Втора родителска среща</div>
+            </div>
+          </div>
+          <div class="meeting-details">
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Вторник, 25 ноември 2025 г. — 18:30 ч.
+            </div>
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Класни стаи на горен етаж
+            </div>
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Матури (XII кл.) · Резултати · Отсъствия
+            </div>
+          </div>
+          <div class="meeting-card-footer">
+            <span class="meeting-status upcoming">Предстояща</span>
+            <a href="https://app.shkolo.bg/" target="_blank" rel="noopener" class="meeting-action">
+              Дневник
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="meetings-divider">
+
+    <!-- ══════════════════════════════════════════════
+         МИНАЛИ СРЕЩИ
+    ══════════════════════════════════════════════ -->
+    <div class="meetings-group" data-filter="past">
+      <div class="meetings-group-header reveal">
+        <div class="meetings-group-icon gold">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h2 class="meetings-group-title">Проведени срещи</h2>
+        <span class="meetings-group-tag gold">Архив 2025/2026</span>
+      </div>
+
+      <div class="meetings-grid">
+
+        <!-- 1-ва среща — I–IV клас -->
+        <div class="meeting-card gold-card past">
+          <div class="meeting-card-top">
+            <div class="meeting-date-badge">
+              <span class="day">18</span>
+              <span class="month">сеп</span>
+            </div>
+            <div class="meeting-card-meta">
+              <div class="meeting-class-badge">I–IV клас</div>
+              <div class="meeting-title">Първа родителска среща — начало на учебната година</div>
+            </div>
+          </div>
+          <div class="meeting-details">
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Четвъртък, 18 септември 2025 г. — 18:00 ч.
+            </div>
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Запознаване · Организация · Такси
+            </div>
+          </div>
+          <div class="meeting-card-footer">
+            <span class="meeting-status completed">Проведена</span>
+          </div>
+        </div>
+
+        <!-- 1-ва среща — V–VIII клас -->
+        <div class="meeting-card gold-card past">
+          <div class="meeting-card-top">
+            <div class="meeting-date-badge">
+              <span class="day">19</span>
+              <span class="month">сеп</span>
+            </div>
+            <div class="meeting-card-meta">
+              <div class="meeting-class-badge">V–VIII клас</div>
+              <div class="meeting-title">Първа родителска среща — начало на учебната година</div>
+            </div>
+          </div>
+          <div class="meeting-details">
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Петък, 19 септември 2025 г. — 18:00 ч.
+            </div>
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Учебен план · Извънкласни дейности · НВО информация (VII кл.)
+            </div>
+          </div>
+          <div class="meeting-card-footer">
+            <span class="meeting-status completed">Проведена</span>
+          </div>
+        </div>
+
+        <!-- 1-ва среща — IX–XII клас -->
+        <div class="meeting-card gold-card past">
+          <div class="meeting-card-top">
+            <div class="meeting-date-badge">
+              <span class="day">22</span>
+              <span class="month">сеп</span>
+            </div>
+            <div class="meeting-card-meta">
+              <div class="meeting-class-badge">IX–XII клас</div>
+              <div class="meeting-title">Първа родителска среща — начало на учебната година</div>
+            </div>
+          </div>
+          <div class="meeting-details">
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Понеделник, 22 септември 2025 г. — 18:30 ч.
+            </div>
+            <div class="meeting-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              ДЗИ (XII кл.) · Профилирани предмети · Стипендии
+            </div>
+          </div>
+          <div class="meeting-card-footer">
+            <span class="meeting-status completed">Проведена</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="meetings-divider">
+
+    <!-- ══ КОНТАКТИ НА КЛАСНИ РЪКОВОДИТЕЛИ ══ -->
+    <div class="meetings-group" data-filter="all">
+      <div class="meetings-group-header reveal">
+        <div class="meetings-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.1 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+        </div>
+        <h2 class="meetings-group-title">Контакти на класни ръководители</h2>
+      </div>
+
+      <div class="contacts-strip reveal">
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-name">I–IV клас</div>
+            <div class="contact-role">Начален етап — класни ръководители</div>
+            <div class="contact-val">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Чрез електронния дневник
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-name">V–VIII клас</div>
+            <div class="contact-role">Прогимназиален етап — класни ръководители</div>
+            <div class="contact-val">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Чрез електронния дневник
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-name">IX–XII клас</div>
+            <div class="contact-role">Гимназиален етап — класни ръководители</div>
+            <div class="contact-val">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Чрез електронния дневник
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-name">Канцелария</div>
+            <div class="contact-role">СУ „Йордан Йовков" — Сливен</div>
+            <div class="contact-val">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8"/></svg>
+              <a href="kontakti.html">Виж контакти</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Споделен footer (зарежда се от components-init.js) -->
+  <div id="footer-container"></div>
+
+  <!--
+    JS зареждане — същия ред като останалите страници:
+    1. components-init.js  → зарежда navbar.html + footer.html
+    2. main.js             → initNav, initMobileMenu, initReveal
+    3. roditelski-sreshti.js → само page-specific логика
+  -->
+  <script src="assets/js/components-init.js" defer></script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/pages/roditelski-sreshti.js" defer></script>
+
+</body>
+</html>
