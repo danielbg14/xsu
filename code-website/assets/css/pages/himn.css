@@ -640,6 +640,9 @@ a {
 
 /* PRINT */
 @media print {
+  body {
+    zoom: 0.95;
+  }
   nav,
   .mobile-menu,
   .page-hero,

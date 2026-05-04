@@ -62,6 +62,9 @@
   animation: slideDown 0.55s cubic-bezier(0.22, 0.68, 0, 1.2) 0.15s both;
 }
 .hero-eyebrow {
+  opacity: 0;
+}
+.hero-slide.active .hero-eyebrow:not(.done) {
   animation: fadeUp 0.55s cubic-bezier(0.22, 0.68, 0, 1.2) 0.3s both;
 }
 .hero-title {
