@@ -43,7 +43,7 @@
       <a href="roditeli.html">Родители <span class="caret"></span></a>
       <div class="dropdown">
         <a href="razrabotva-se.html">Наредби</a>
-        <a href="/roditelski-sreshti.html">Родителски срещи</a>
+        <a href="roditelski-sreshti.html">Родителски срещи</a>
       </div>
     </div>
     <div class="nav-item">
@@ -81,48 +81,91 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+
+<div class="nav-search-overlay" id="navSearchOverlay" aria-hidden="true">
+  <div class="nav-search-panel" role="dialog" aria-label="Търсене в сайта">
+    <form class="nav-search-form" id="navSearchForm">
+      <input
+        type="search"
+        id="navSearchInput"
+        class="nav-search-input"
+        placeholder="Търси страница, секция или ключова дума..."
+        autocomplete="off"
+      >
+      <button type="submit" class="nav-search-submit">Търси</button>
+      <button type="button" class="nav-search-close" id="navSearchClose" aria-label="Затвори търсачката">Затвори</button>
+    </form>
+    <div class="nav-search-suggestions" id="navSearchSuggestions" aria-live="polite"></div>
+  </div>
+</div>
  
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Навигационно меню">
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">За нас <span class="mob-caret"></span></button>
+  <div class="mobile-menu-item has-submenu">
+    <div class="mobile-menu-row">
+      <a href="za-nas.html">За нас</a>
+      <button class="mobile-submenu-toggle" onclick="toggleMobSub(this)" aria-label="Покажи подстраници за За нас">
+        <span class="mob-caret"></span>
+      </button>
+    </div>
     <div class="mobile-submenu">
       <a href="istoriq.html">История</a>
       <a href="patron.html">Патрон</a>
       <a href="himn.html">Химн</a>
       <a href="misiq-viziq.html">Мисия и визия</a>
+      <a href="virtualna-razhodka.html">Виртуална разходка</a>
       <a href="ekip.html">Училищен екип</a>
       <a href="paralelki.html">Паралелки</a>
       <a href="materialna-baza.html">Материална база</a>
       <a href="uniformi.html">Униформи</a>
     </div>
   </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Прием <span class="mob-caret"></span></button>
+  <div class="mobile-menu-item has-submenu">
+    <div class="mobile-menu-row">
+      <a href="priem.html">Прием</a>
+      <button class="mobile-submenu-toggle" onclick="toggleMobSub(this)" aria-label="Покажи подстраници за Прием">
+        <span class="mob-caret"></span>
+      </button>
+    </div>
     <div class="mobile-submenu">
       <a href="priem-1-klas.html">Прием в I клас</a>
       <a href="priem-5-klas.html">Прием в V клас</a>
       <a href="priem-8-klas.html">Прием в VIII клас</a>
-      <a href="dokumenti.html">Необходими документи</a>
+      <a href="dokumenti-priem.html">Необходими документи</a>
       <a href="faq.html">Често задавани въпроси</a>
     </div>
   </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Обучение <span class="mob-caret"></span></button>
+  <div class="mobile-menu-item has-submenu">
+    <div class="mobile-menu-row">
+      <a href="obuchenie.html">Обучение</a>
+      <button class="mobile-submenu-toggle" onclick="toggleMobSub(this)" aria-label="Покажи подстраници за Обучение">
+        <span class="mob-caret"></span>
+      </button>
+    </div>
     <div class="mobile-submenu">
       <a href="uchebnici.html">Учебници</a>
       <a href="uchebni-planove.html">Учебни планове</a>
-      <a href="https://app.shkolo.bg">Електронен дневник</a>
+      <a href="https://app.shkolo.bg" target="_blank">Електронен дневник</a>
     </div>
   </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Родители <span class="mob-caret"></span></button>
+  <div class="mobile-menu-item has-submenu">
+    <div class="mobile-menu-row">
+      <a href="roditeli.html">Родители</a>
+      <button class="mobile-submenu-toggle" onclick="toggleMobSub(this)" aria-label="Покажи подстраници за Родители">
+        <span class="mob-caret"></span>
+      </button>
+    </div>
     <div class="mobile-submenu">
       <a href="razrabotva-se.html">Наредби</a>
-      <a href="/roditelski-sreshti.html">Родителски срещи</a>
+      <a href="roditelski-sreshti.html">Родителски срещи</a>
     </div>
   </div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Ученици <span class="mob-caret"></span></button>
+  <div class="mobile-menu-item has-submenu">
+    <div class="mobile-menu-row">
+      <a href="uchenici.html">Ученици</a>
+      <button class="mobile-submenu-toggle" onclick="toggleMobSub(this)" aria-label="Покажи подстраници за Ученици">
+        <span class="mob-caret"></span>
+      </button>
+    </div>
     <div class="mobile-submenu">
       <a href="dnevno-razpisanie.html">Дневно разписание</a>
       <a href="sedmichno-razpisanie.html">Седмично разписание</a>
@@ -137,19 +180,24 @@
   </div>
   <div class="mobile-menu-item"><a href="proekti.html">Проекти</a></div>
   <div class="mobile-menu-item"><a href="novini.html">Новини</a></div>
-  <div class="mobile-menu-item">
-    <button onclick="toggleMobSub(this)">Документи <span class="mob-caret"></span></button>
+  <div class="mobile-menu-item has-submenu">
+    <div class="mobile-menu-row">
+      <a href="dokumenti.html">Документи</a>
+      <button class="mobile-submenu-toggle" onclick="toggleMobSub(this)" aria-label="Покажи подстраници за Документи">
+        <span class="mob-caret"></span>
+      </button>
+    </div>
     <div class="mobile-submenu">
       <a href="pravilnici.html">Правилници</a>
       <a href="stipendii.html">Стипендии</a>
       <a href="budget-otcheti.html">Бюджет и отчети</a>
-      <a href="razrabotva-se.html">Училищни документи</a>
+      <a href="uchilishtni-dokumenti.html">Училищни документи</a>
       <a href="formulari.html">Формуляри</a>
     </div>
   </div>
   <div class="mobile-menu-item"><a href="kontakti.html">Контакти</a></div>
   <div class="mobile-menu-actions">
-    <a href="priem-1-klas.html" class="btn-green">Прием I клас</a>
-    <a href="priem-8-klas.html" class="btn-gold">Прием VIII клас</a>
+    <a href="priem-1-klas.html" class="btn-gold"><span class="mobile-cta-label">Прием<br>I клас</span></a>
+    <a href="priem-8-klas.html" class="btn-green"><span class="mobile-cta-label">Прием<br>VIII клас</span></a>
   </div>
 </div>

@@ -1,11 +1,11 @@
 // Stop sticky sidebar right before footer (prevents overlap)
 const layout = document.querySelector('.content-layout');
 const aside = document.querySelector('.priem-side-nav');
-const footer = document.querySelector('footer.page-footer');
+const footer = document.querySelector('footer.page-footer') || document.querySelector('footer');
 
 function syncAside() {
   if (!layout || !aside || !footer) return;
-  if (window.matchMedia('(max-width: 960px)').matches) {
+  if (window.matchMedia('(max-width: 768px)').matches) {
     aside.classList.remove('is-stopped');
     aside.style.top = '';
     aside.style.left = '';

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Униформи | СУ „Йордан Йовков“ – Сливен</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/variables.css">
@@ -11,7 +12,14 @@
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/titleAnim.css">
   <link rel="stylesheet" href="assets/css/pages/uniformi.css">
+
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96"/>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg"/>
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png"/>
+  <link rel="manifest" href="/images/favicon/site.webmanifest"/>
 </head>
 <body>
 
@@ -19,18 +27,28 @@
 
   <!-- HERO -->
   <section class="page-hero">
-    <div class="breadcrumb">
+    <div class="breadcrumb hero-breadcrumb">
       <a href="index.html">Начало</a><span>/</span>
-      <a href="#">За нас</a><span>/</span>
+      <a href="za-nas.html">За нас</a><span>/</span>
       <span style="color:var(--gold)">Униформи</span>
     </div>
-    <div class="page-hero-label">За нас · Облекло</div>
-    <h1>Училищни<br><em>униформи<em></h1>
-    <p class="page-hero-sub">Частична униформа за учениците на СУ „Йордан Йовков“ — суичър и блуза с дълъг или къс ръкав в официалните цветове на училището.</p>
+    <div class="page-hero-label hero-eyebrow">За нас · Облекло</div>
+    <h1 class="hero-title">Училищни<br><em>униформи</em></h1>
+    <p class="page-hero-sub hero-desc">Частична униформа за учениците на СУ „Йордан Йовков“ — суичър и блуза с дълъг или къс ръкав в официалните цветове на училището.</p>
   </section>
 
   <!-- ITEMS -->
   <div class="content-wrap">
+    <div class="categories-nav reveal">
+      <div class="categories-nav-label">Бърз достъп</div>
+      <div class="categories-list">
+        <a href="#items" class="category-pill category-pill--active">Артикули</a>
+        <a href="#gallery" class="category-pill">Галерия</a>
+        <a href="#shop" class="category-pill">Магазин</a>
+      </div>
+    </div>
+
+    <section id="items">
     <div class="section-label reveal">Артикули</div>
     <p style="font-size:.95rem;color:var(--gray);max-width:620px;line-height:1.8;margin-bottom:2.5rem" class="reveal">Училищната ни частична униформа се предлага в два варианта — худи и блуза. И двата модела са в зелено, с емблемата на училището.</p>
 
@@ -99,10 +117,11 @@
         </div>
       </div>
     </div>
+    </section>
   </div>
 
   <!-- GALLERY -->
-  <section class="gallery-section">
+  <section class="gallery-section" id="gallery">
     <div style="max-width:1100px;margin:0 auto">
       <div class="section-label reveal">Галерия</div>
       <h2 class="reveal">Снимки от учениците</h2>
@@ -149,7 +168,7 @@
   </section>
 
   <!-- ═══ SHOP SECTION ═══ -->
-  <section class="shop-section">
+  <section class="shop-section" id="shop">
     <div class="shop-inner">
       <div class="section-label reveal">Магазин</div>
       <h2 class="reveal">Откъде да купя?</h2>
@@ -173,7 +192,7 @@
             <div class="shop-detail-text">
               <span class="label">Адрес</span>
               <!-- ⚠️ ЗАМЕНИ с реалния адрес на магазина -->
-              <span class="value">ул. „…………………" №…<br>гр. Сливен</span>
+              <span class="value">ул. „Генерал Стопилин“ №21<br>гр. Сливен</span>
             </div>
           </div>
 
@@ -184,25 +203,14 @@
             <div class="shop-detail-text">
               <span class="label">Работно време</span>
               <!-- ⚠️ ЗАМЕНИ с реалното работно време -->
-              <span class="value">Пон – Пет: … – …<br>Събота: … – …</span>
-            </div>
-          </div>
-
-          <div class="shop-detail-row">
-            <div class="shop-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
-            </div>
-            <div class="shop-detail-text">
-              <span class="label">Телефон</span>
-              <!-- ⚠️ ЗАМЕНИ с реалния телефон -->
-              <span class="value">0… / … … …</span>
+              <span class="value">Пон – Пет: 11:00 – 18:00<br>Събота - Неделя: Почивен ден</span>
             </div>
           </div>
 
           <div class="shop-divider"></div>
 
           <!-- ⚠️ ЗАМЕНИ href с реална Google Maps връзка -->
-          <a href="https://maps.google.com/?q=Сливен" target="_blank" class="btn-gold">
+          <a href="https://maps.google.com/?q=Сливен Център, ул. „Генерал Столипин“ 21" target="_blank" class="btn-gold">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             Отвори в Google Maps
           </a>
@@ -220,15 +228,11 @@
             Засега е показана обща карта на Сливен:
           -->
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46751.82219217695!2d26.274999999999999!3d42.6818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a6a7274a6abe63%3A0xa1c96d9e65fe2a62!2z0KHQu9C40LLQtdC9!5e0!3m2!1sbg!2sbg!4v1700000000000!5m2!1sbg!2sbg"
+            src="https://www.google.com/maps?q=Сливен,+ул.+Генерал+Столипин+21&output=embed"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
-          <div class="map-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            гр. Сливен — заменете iframe-а с точния адрес на магазина
-          </div>
         </div>
 
       </div>
