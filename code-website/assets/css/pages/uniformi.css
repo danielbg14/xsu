@@ -242,6 +242,49 @@ img {
 .item-card:hover .item-img img {
   transform: scale(1.04);
 }
+.item-img-swap {
+  background: linear-gradient(135deg, #e6f4ee, #f5faf8);
+}
+.item-img-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.35s ease, transform 0.45s ease;
+}
+.item-img-layer--short {
+  opacity: 1;
+}
+.item-img-layer--long {
+  opacity: 0;
+}
+.item-card:hover .item-img-layer--short {
+  opacity: 0;
+  transform: scale(1.03);
+}
+.item-card:hover .item-img-layer--long {
+  opacity: 1;
+  transform: scale(1.03);
+}
+.item-img-swap::after {
+  content: "Hover: Дълъг ръкав";
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.8rem;
+  background: rgba(15, 84, 56, 0.75);
+  color: #fff;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  z-index: 2;
+}
+.item-img-swap .item-img-badge {
+  z-index: 3;
+}
 .item-img-placeholder {
   display: flex;
   flex-direction: column;
@@ -631,5 +674,18 @@ img {
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+  }
+  .item-img-swap::after {
+    content: "Докосни за дълъг ръкав";
+  }
+}
+@media (hover: none) {
+  .item-card:hover .item-img-layer--short {
+    opacity: 1;
+    transform: none;
+  }
+  .item-card:hover .item-img-layer--long {
+    opacity: 0;
+    transform: none;
   }
 }

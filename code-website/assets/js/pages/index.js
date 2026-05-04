@@ -37,3 +37,51 @@ if (firstSlide) {
     firstSlide.classList.remove('first-load');
   }, 3200);
 }
+
+// Priem 8 video modal (fullscreen play)
+const videoTrigger = document.querySelector('.priem8-video-link[data-video-url]');
+const videoModal = document.getElementById('videoModal');
+const videoModalFrame = document.getElementById('videoModalFrame');
+
+function closeVideoModal() {
+  if (!videoModal || !videoModalFrame) return;
+  videoModal.classList.remove('is-open');
+  videoModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('video-modal-open');
+  videoModalFrame.innerHTML = '';
+}
+
+function openVideoModal(embedUrl) {
+  if (!videoModal || !videoModalFrame) return;
+  const src = `${embedUrl}?autoplay=1&rel=0&modestbranding=1`;
+  videoModalFrame.innerHTML = `
+    <iframe
+      src="${src}"
+      title="Видео"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin"
+    ></iframe>
+  `;
+  videoModal.classList.add('is-open');
+  videoModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('video-modal-open');
+}
+
+if (videoTrigger && videoModal && videoModalFrame) {
+  videoTrigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    const url = videoTrigger.getAttribute('data-video-url');
+    if (url) openVideoModal(url);
+  });
+
+  videoModal.querySelectorAll('[data-video-close]').forEach((el) => {
+    el.addEventListener('click', closeVideoModal);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && videoModal.classList.contains('is-open')) {
+      closeVideoModal();
+    }
+  });
+}

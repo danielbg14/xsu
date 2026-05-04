@@ -169,7 +169,29 @@
         </div>
       </div>
     </div>
+    <div class="priem8-video-card reveal" style="transition-delay:.12s">
+      <a class="priem8-video-link" href="https://www.youtube.com/watch?v=GkfC7DvKCpE" data-video-url="https://www.youtube.com/embed/GkfC7DvKCpE"">
+        <div class="priem8-video-thumb" style="background-image:url('https://img.youtube.com/vi/GkfC7DvKCpE/maxresdefault.jpg')">
+          <span class="priem8-play-wrap" aria-hidden="true">
+            <span class="priem8-play-ring"></span>
+            <span class="priem8-play-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 6v12l10-6z"/></svg>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
   </section>
+
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+    <div class="video-modal__backdrop" data-video-close></div>
+    <div class="video-modal__dialog" role="dialog" aria-label="Видео" aria-modal="true">
+      <button type="button" class="video-modal__close" data-video-close aria-label="Затвори видеото">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="video-modal__frame" id="videoModalFrame"></div>
+    </div>
+  </div>
  
   <section class="section news-section" id="news">
     <div class="section-label reveal">Актуално</div>
@@ -212,7 +234,6 @@
     <div class="community-grid">
       <div class="community-img-wrap reveal-left">
         <div class="community-img"></div>
-        <div class="community-img-deco"></div>
       </div>
       <div class="reveal-right">
         <div class="community-badges">
