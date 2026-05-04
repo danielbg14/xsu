@@ -356,7 +356,7 @@ function buildBotMarkup(kb) {
 
       <form class="faq-bot-form" id="faqBotForm">
         <input class="faq-bot-input" id="faqBotInput" type="search" autocomplete="off" placeholder="Напиши въпрос...">
-        <button class="faq-bot-send" type="submit" aria-label="Изпрати">
+        <button class="faq-bot-send" id="faqBotSend" type="submit" aria-label="Изпрати">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
             <line x1="22" y1="2" x2="11" y2="13"/>
             <polygon points="22 2 15 22 11 13 2 9 22 2"/>
@@ -382,8 +382,9 @@ export function initFaqBot() {
   const body     = document.getElementById('faqBotBody');
   const form     = document.getElementById('faqBotForm');
   const input    = document.getElementById('faqBotInput');
+  const sendBtn  = document.getElementById('faqBotSend');
 
-  if (!toggle || !panel || !closeBtn || !body || !form || !input) return;
+  if (!toggle || !panel || !closeBtn || !body || !form || !input || !sendBtn) return;
 
   const scrollBottom = () => { body.scrollTop = body.scrollHeight; };
 
@@ -474,11 +475,21 @@ export function initFaqBot() {
     addBotMsg(`<p>${pick(item.answer)}</p><a class="faq-msg-link" href="${item.href}">Виж повече →</a>`, 700);
   });
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
+  const submitQuery = () => {
     const query = input.value.trim();
-    if (!query) return;
+    if (!query) return false;
     handleQuery(query);
     form.reset();
+    return true;
+  };
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    submitQuery();
+  });
+
+  sendBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    submitQuery();
   });
 }

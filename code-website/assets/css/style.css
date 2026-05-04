@@ -738,6 +738,9 @@ footer {
 }
 
 .faq-bot-send {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid transparent;
   border-radius: 11px;
   background: var(--green);
@@ -748,6 +751,12 @@ footer {
   text-transform: uppercase;
   letter-spacing: .06em;
   cursor: pointer;
+}
+
+.faq-bot-send svg {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
 }
 
 /* ================================================================
