@@ -855,6 +855,21 @@ footer {
     width: 100%;
   }
 
+  /* Mobile breadcrumb wrap is controlled by JS length check */
+  .hero-breadcrumb {
+    display: flex;
+    flex-wrap: nowrap;
+    row-gap: 0.3rem;
+  }
+
+  .hero-breadcrumb.auto-break-last {
+    flex-wrap: wrap;
+  }
+
+  .hero-breadcrumb.auto-break-last > *:last-child {
+    flex-basis: 100%;
+  }
+
   .priem-side-nav,
   .priem-side-nav.is-stopped {
     position: relative !important;

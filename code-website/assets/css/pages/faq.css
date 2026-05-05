@@ -294,3 +294,64 @@ nav {
     display: none;
   }
 }
+
+/* Replace old sticky sidebar with category buttons */
+.content-layout {
+  grid-template-columns: 1fr;
+}
+
+.priem-side-nav,
+.priem-side-nav.is-stopped {
+  position: static !important;
+  order: -1;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  margin: 1rem 0 1.25rem;
+  padding: 1rem 1.1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(29, 122, 80, 0.15);
+  background: var(--light);
+  box-shadow: none;
+}
+
+.priem-side-title {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.8rem;
+}
+
+.priem-side-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.priem-side-list li {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.priem-side-list a {
+  padding: 0.42rem 0.9rem;
+  border-radius: 999px;
+  border: 1.5px solid rgba(29, 122, 80, 0.25);
+  background: var(--white);
+  color: var(--gray);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.priem-side-list a:hover {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.priem-side-list a.is-active {
+  border-left: 1.5px solid var(--green);
+  padding-left: 0.9rem;
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}

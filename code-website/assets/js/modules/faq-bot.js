@@ -1,6 +1,6 @@
 /**
  * faq-bot.js — FAQ асистент на СУ „Йордан Йовков"
- * Работи изцяло client-side, без API, без разходи.
+ * Работи изцяло client-side, без API.
  */
 
 function normalizeText(value) {
@@ -323,15 +323,17 @@ function buildBotMarkup(kb) {
     .join('');
 
   wrapper.innerHTML = `
-    <button class="faq-bot-toggle" id="faqBotToggle" type="button" aria-expanded="false" aria-controls="faqBotPanel">
-      <span class="faq-bot-toggle-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
-          <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
-          <path d="M8 9h8M8 13h5"/>
-        </svg>
-      </span>
-      <span class="faq-bot-toggle-text">Помощ</span>
-    </button>
+    <!--
+<button class="faq-bot-toggle" id="faqBotToggle" type="button" aria-expanded="false" aria-controls="faqBotPanel">
+  <span class="faq-bot-toggle-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+      <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+      <path d="M8 9h8M8 13h5"/>
+    </svg>
+  </span>
+  <span class="faq-bot-toggle-text">Помощ</span>
+</button>
+-->
 
     <section class="faq-bot-panel" id="faqBotPanel" aria-hidden="true">
       <header class="faq-bot-head">

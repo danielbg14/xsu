@@ -383,8 +383,11 @@ img {
   .decree-banner {
     flex-direction: column;
   }
+  footer {
+    padding: 3.5rem 5vw 1.5rem;
+  }
 }
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }

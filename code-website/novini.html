@@ -25,9 +25,24 @@
 
   <div id="navbar-container"></div>
 
+  <section class="novini-mobile-hero">
+    <div class="breadcrumb hero-breadcrumb">
+      <a href="index.html">НАЧАЛО</a>
+      <span>/</span>
+      <span style="color:var(--gold)">НОВИНИ</span>
+    </div>
+    <div class="page-hero-label hero-eyebrow">Актуално · Събития</div>
+    <h1 class="hero-title">Новини и събития</h1>
+    <p class="hero-desc">Последни новини, училищни събития и постижения на учениците.</p>
+  </section>
+
   <div class="layout">
     <aside class="side-nav">
       <h3>Категории</h3>
+      <label for="newsCategorySelect" class="mobile-category-label">Избери категория</label>
+      <select id="newsCategorySelect" class="mobile-category-select" aria-label="Филтър по категория новини">
+        <option value="all">Всички категории</option>
+      </select>
       <ul>
         <li><a href="#" class="active">Новини</a></li>
         <li><a href="#">Олимпиади, състезания и конкурси</a></li>
@@ -59,8 +74,8 @@
     </aside>
     <main>
       <section class="hero"><h1 class="hero-title">Новини и събития</h1></section>
-      <section class="news-grid">
-        <article class="news-card">
+      <section class="news-grid" id="newsGrid">
+        <article class="news-card" data-date="2026-05-05">
           <div class="news-media"><img src="images/concurs.jpg" alt="Новини"></div>
           <div class="news-body">
             <span class="tag">Новини</span>
@@ -69,7 +84,7 @@
             <a href="statiq.html" class="btn-more">Научи повече<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </article>
-        <article class="news-card">
+        <article class="news-card" data-date="2026-05-04">
           <div class="news-media"><img src="images/3-mart.jpg" alt="Олимпиади"></div>
           <div class="news-body">
             <span class="tag">Олимпиади</span>
@@ -78,7 +93,7 @@
             <a href="#" class="btn-more">Научи повече<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </article>
-        <article class="news-card">
+        <article class="news-card" data-date="2026-05-02">
           <div class="news-media"><img src="images/levski.jpg" alt="Постижения"></div>
           <div class="news-body">
             <span class="tag">Постижения</span>
@@ -87,7 +102,7 @@
             <a href="#" class="btn-more">Научи повече<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </article>
-        <article class="news-card">
+        <article class="news-card" data-date="2026-04-28">
           <div class="news-media"><img src="images/concurs.jpg" alt="Събития"></div>
           <div class="news-body">
             <span class="tag">Събития</span>
@@ -112,6 +127,7 @@
   <div id="footer-container"></div>
 
   <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/pages/novini.js"></script>
   <script src="assets/js/components-init.js"></script>
 </body>
 </html>
