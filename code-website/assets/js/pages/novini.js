@@ -10,6 +10,9 @@ const categorySelect = document.getElementById('newsCategorySelect');
 
 if (newsGrid && categorySelect) {
   const cards = Array.from(newsGrid.querySelectorAll('.news-card'));
+  const updateSelectAccent = () => {
+    categorySelect.classList.toggle('is-all-selected', categorySelect.value === 'all');
+  };
 
   const sortedCards = [...cards].sort((a, b) => {
     const aDate = new Date(a.dataset.date || 0).getTime();
@@ -37,6 +40,8 @@ if (newsGrid && categorySelect) {
   });
 
   const applyMobileFilter = () => {
+    updateSelectAccent();
+
     if (!isMobile()) {
       sortedCards.forEach((card) => {
         card.style.display = '';

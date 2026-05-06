@@ -130,6 +130,7 @@ a {
   padding: 0.55rem 0.7rem;
   border-radius: 8px;
   font-size: 0.88rem;
+  transition: background 0.2s, color 0.2s;
 }
 .side-nav a:hover,
 .side-nav a.active {
@@ -518,34 +519,70 @@ a {
 
   .mobile-category-label {
     display: block;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--green);
-    letter-spacing: 0.08em;
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: #156143;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.55rem;
   }
 
   .mobile-category-select {
     display: block;
     width: 100%;
-    border: 1px solid rgba(29, 122, 80, 0.25);
-    border-radius: 10px;
-    background: #fff;
-    color: var(--dark);
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 0.7rem 2.4rem 0.7rem 0.8rem;
+    border: 1px solid rgba(29, 122, 80, 0.2);
+    border-radius: 14px;
+    background:
+      linear-gradient(180deg, #ffffff 0%, #f8fcfa 100%);
+    color: #15392b;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.25;
+    padding: 0.82rem 2.8rem 0.82rem 0.95rem;
     appearance: none;
     -webkit-appearance: none;
+    box-shadow:
+      0 8px 20px rgba(15, 84, 56, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.2s ease;
     background-image:
-      linear-gradient(45deg, transparent 50%, var(--green) 50%),
-      linear-gradient(135deg, var(--green) 50%, transparent 50%);
+      linear-gradient(45deg, transparent 50%, #1d7a50 50%),
+      linear-gradient(135deg, #1d7a50 50%, transparent 50%);
     background-position:
-      calc(100% - 16px) calc(50% - 2px),
-      calc(100% - 11px) calc(50% - 2px);
-    background-size: 5px 5px, 5px 5px;
+      calc(100% - 18px) calc(50% - 3px),
+      calc(100% - 12px) calc(50% - 3px);
+    background-size: 6px 6px, 6px 6px;
     background-repeat: no-repeat;
+  }
+  .mobile-category-select.is-all-selected {
+    color: var(--green);
+    text-shadow: none;
+  }
+  .mobile-category-select:hover {
+    border-color: rgba(29, 122, 80, 0.4);
+  }
+  .mobile-category-select:focus {
+    outline: none;
+    border-color: rgba(29, 122, 80, 0.62);
+    box-shadow:
+      0 0 0 3px rgba(29, 122, 80, 0.16),
+      0 10px 22px rgba(15, 84, 56, 0.12);
+    transform: translateY(-1px);
+  }
+  .mobile-category-select option {
+    background: #ffffff;
+    color: #15392b;
+    font-weight: 600;
+    padding: 10px 12px;
+  }
+  .mobile-category-select option:checked {
+    background: linear-gradient(180deg, #1d7a50 0%, #156143 100%);
+    color: #ffffff;
+    font-weight: 700;
+  }
+  .mobile-category-select option:hover {
+    background: #e7f4ee;
+    color: #156143;
   }
 
   .side-nav ul {

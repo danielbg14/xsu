@@ -1,6 +1,66 @@
-nav {
+.top-bar {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: var(--green-dark);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-inner {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.top-socials {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.ts {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 0.8rem;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+/* hover ефекти */
+.ts:hover {
+  transform: translateY(-2px);
+}
+
+/* бранд цветове */
+.ts.fb:hover {
+  background: #1877f2;
+}
+
+.ts.yt:hover {
+  background: #ff0000;
+}
+
+.ts.tt:hover {
+  background: #000;
+}
+
+nav {
+  position: fixed;
+  top: 40px;
   left: 0;
   right: 0;
   z-index: 999;
