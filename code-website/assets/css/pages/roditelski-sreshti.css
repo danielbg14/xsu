@@ -6,7 +6,7 @@
     var(--green) 60%,
     #2a9d6b 100%
   );
-  padding: calc(var(--nav-h) + 4rem) 8vw 4.5rem;
+  padding: calc(var(--nav-h) + 5rem) 8vw 4.5rem;
   position: relative;
   overflow: hidden;
 }

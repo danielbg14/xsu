@@ -41,7 +41,7 @@ img {
   background: var(--green-dark);
   position: relative;
   overflow: hidden;
-  padding: 5rem 8vw 4rem;
+  padding: 6rem 8vw 4rem;
 }
 .page-hero-deco {
   position: absolute;

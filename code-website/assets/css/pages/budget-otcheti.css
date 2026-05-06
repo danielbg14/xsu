@@ -2,7 +2,7 @@
 .page-hero {
   margin-top: var(--nav-h);
   background: var(--green-dark);
-  padding: 4rem 8vw 3rem;
+  padding: 6rem 8vw 3rem;
   position: relative;
   overflow: hidden;
 }
