@@ -217,6 +217,13 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,.12); }
   font-weight: 600;
 }
 
+.nav-search-suggestion-meta {
+  display: block;
+  margin-top: .12rem;
+  font-size: .72rem;
+  color: rgba(26, 46, 36, .6);
+}
+
 .nav-search-suggestion-arrow {
   font-size: .95rem;
   opacity: .6;
@@ -226,6 +233,21 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,.12); }
   padding: .6rem .65rem;
   color: var(--gray);
   font-size: .86rem;
+}
+
+.nav-search-hit {
+  animation: navSearchPulse 2.4s ease;
+}
+
+@keyframes navSearchPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(29, 122, 80, .32);
+    background-color: rgba(29, 122, 80, .14);
+  }
+  100% {
+    box-shadow: 0 0 0 18px rgba(29, 122, 80, 0);
+    background-color: transparent;
+  }
 }
 
 .nav-search-input {
