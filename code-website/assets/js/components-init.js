@@ -60,6 +60,51 @@ function normalizeSearchValue(value) {
     .trim();
 }
 
+function applyPendingSearchScroll() {
+  let payload = null;
+  try {
+    const raw = sessionStorage.getItem('navSearchPending');
+    payload = raw ? JSON.parse(raw) : null;
+  } catch (error) {
+    payload = null;
+  }
+
+  if (!payload || payload.path !== window.location.pathname) return;
+  sessionStorage.removeItem('navSearchPending');
+
+  const lookup = normalizeSearchValue(payload.target || payload.query || '');
+  if (!lookup) return;
+
+  const candidates = Array.from(document.querySelectorAll('main h1, main h2, main h3, main h4, main p, main li, .member-card, .news-card, section h1, section h2, section h3, section p'));
+  if (!candidates.length) return;
+
+  let bestElement = null;
+  let bestScore = 0;
+
+  candidates.forEach((element) => {
+    const text = normalizeSearchValue((element.textContent || '').replace(/\s+/g, ' ').trim());
+    if (!text || !text.includes(lookup)) return;
+    let score = 10;
+    if (text === lookup) score += 120;
+    else if (text.startsWith(lookup)) score += 80;
+    else score += 40;
+    score += Math.max(0, 40 - Math.min(text.length - lookup.length, 40));
+    if (score > bestScore) {
+      bestScore = score;
+      bestElement = element;
+    }
+  });
+
+  if (!bestElement) return;
+
+  bestElement.classList.add('nav-search-hit');
+  bestElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  window.setTimeout(() => {
+    bestElement.classList.remove('nav-search-hit');
+  }, 2600);
+}
+
 function initGlobalSearch() {
   const searchBtn = document.querySelector('#navbar .nav-search');
   const overlay = document.getElementById('navSearchOverlay');
@@ -68,8 +113,34 @@ function initGlobalSearch() {
   const closeBtn = document.getElementById('navSearchClose');
   const suggestionsBox = document.getElementById('navSearchSuggestions');
   if (!searchBtn || !overlay || !form || !input || !closeBtn || !suggestionsBox) return;
+  const SEARCH_INDEX_CACHE_KEY = 'navSearchIndexCacheV1';
 
-  const buildSearchIndex = () => {
+  const parseHtml = (html) => {
+    const parser = new DOMParser();
+    return parser.parseFromString(html, 'text/html');
+  };
+
+  const resolveSearchHref = (baseHref) => {
+    if (!baseHref) return '';
+    const [pathPart, hashPart] = baseHref.split('#');
+    const fileName = (pathPart || '').split('/').pop() || '';
+    return hashPart ? `${fileName}#${hashPart}` : fileName;
+  };
+
+  const storePendingSearchForPage = (href, rawQuery, targetText = '') => {
+    try {
+      const url = new URL(href, window.location.href);
+      sessionStorage.setItem('navSearchPending', JSON.stringify({
+        path: url.pathname,
+        query: rawQuery || '',
+        target: (targetText || '').slice(0, 280)
+      }));
+    } catch (error) {
+      // ignore storage errors
+    }
+  };
+
+  const buildNavSearchIndex = () => {
     const anchors = Array.from(document.querySelectorAll('#navbar a, #mobileMenu a'));
     const byHref = new Map();
 
@@ -92,7 +163,9 @@ function initGlobalSearch() {
           href,
           title,
           category,
-          keywords: [title, href.replace('.html', '').replace(/[-_]/g, ' ')]
+          type: 'page',
+          keywords: [title, href.replace('.html', '').replace(/[-_]/g, ' ')],
+          subtitle: category
         });
       } else {
         byHref.get(normalizedHref).keywords.push(title);
@@ -104,25 +177,167 @@ function initGlobalSearch() {
         href: 'index.html',
         title: 'Начало',
         category: 'Основни',
-        keywords: ['начало', 'home', 'училище']
+        type: 'page',
+        keywords: ['начало', 'home', 'училище'],
+        subtitle: 'Основни'
       });
     }
 
     return Array.from(byHref.values());
   };
 
-  const pages = buildSearchIndex();
+  const buildNewsSearchIndex = async () => {
+    try {
+      const response = await fetch('novini.html');
+      if (!response.ok) return [];
+      const html = await response.text();
+      const doc = parseHtml(html);
+      const cards = Array.from(doc.querySelectorAll('.news-card'));
+      return cards.map((card) => {
+        const title = (card.querySelector('h3')?.textContent || '').trim();
+        if (!title) return null;
+        const tag = (card.querySelector('.tag')?.textContent || 'Новини').trim();
+        const text = (card.querySelector('p')?.textContent || '').trim();
+        const href = (card.querySelector('.btn-more')?.getAttribute('href') || 'novini.html').trim();
+        const normalizedHref = href && href !== '#' ? href : 'novini.html';
+        return {
+          href: normalizedHref,
+          title,
+          category: 'Новини',
+          type: 'news',
+          subtitle: `${tag} • Новини`,
+          keywords: [title, tag, text, 'новина', 'новини', 'събитие']
+        };
+      }).filter(Boolean);
+    } catch (error) {
+      return [];
+    }
+  };
+
+  const buildTeamSearchIndex = async () => {
+    try {
+      const response = await fetch('ekip.html');
+      if (!response.ok) return [];
+      const html = await response.text();
+      const doc = parseHtml(html);
+      const members = Array.from(doc.querySelectorAll('.member-card'));
+      return members.map((member) => {
+        const name = (member.querySelector('.member-name')?.textContent || '').trim();
+        if (!name) return null;
+        const role = (member.querySelector('.role-badge')?.textContent || '').trim();
+        const subject = (member.querySelector('.member-subject')?.textContent || '').trim();
+        return {
+          href: 'ekip.html',
+          title: name,
+          category: 'Училищен екип',
+          type: 'team',
+          subtitle: role || 'Училищен екип',
+          keywords: [name, role, subject, 'учител', 'екип', 'педагогически екип']
+        };
+      }).filter(Boolean);
+    } catch (error) {
+      return [];
+    }
+  };
+
+  const buildContentSearchIndex = async (hrefs) => {
+    const htmlHrefs = Array.from(new Set(hrefs
+      .filter(Boolean)
+      .map((href) => href.split('#')[0])
+      .filter((href) => href.endsWith('.html'))));
+
+    const pageChunks = await Promise.all(htmlHrefs.map(async (href) => {
+      try {
+        const response = await fetch(href);
+        if (!response.ok) return [];
+        const html = await response.text();
+        const doc = parseHtml(html);
+        const pageTitle = (doc.querySelector('h1')?.textContent || doc.title || href).replace(/\s+/g, ' ').trim();
+        const blocks = Array.from(doc.querySelectorAll('main h1, main h2, main h3, main p, main li, article h1, article h2, article h3, article p'))
+          .map((el) => (el.textContent || '').replace(/\s+/g, ' ').trim())
+          .filter((text) => text.length >= 12)
+          .slice(0, 80);
+
+        return blocks.map((text) => ({
+          href,
+          title: text.slice(0, 96),
+          category: 'Съдържание',
+          type: 'content',
+          subtitle: `В: ${pageTitle.slice(0, 60)}`,
+          targetText: text,
+          keywords: [text, pageTitle, href.replace('.html', '').replace(/[-_]/g, ' ')]
+        }));
+      } catch (error) {
+        return [];
+      }
+    }));
+
+    return pageChunks.flat();
+  };
+
+  const saveExtendedIndexCache = (records) => {
+    try {
+      sessionStorage.setItem(SEARCH_INDEX_CACHE_KEY, JSON.stringify({
+        createdAt: Date.now(),
+        records
+      }));
+    } catch (error) {
+      // ignore storage errors
+    }
+  };
+
+  const loadExtendedIndexCache = () => {
+    try {
+      const raw = sessionStorage.getItem(SEARCH_INDEX_CACHE_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (!parsed || !Array.isArray(parsed.records)) return null;
+      return parsed.records;
+    } catch (error) {
+      return null;
+    }
+  };
+
+  let pages = buildNavSearchIndex();
+  let extendedIndexLoaded = false;
+  let extendedIndexPromise = null;
+
+  const scoreMatch = (item, query) => {
+    const normalizedTitle = normalizeSearchValue(item.title);
+    if (!query) return 1;
+    let score = 0;
+    if (normalizedTitle === query) score += 200;
+    if (normalizedTitle.startsWith(query)) score += 120;
+    if (normalizedTitle.includes(query)) score += 70;
+
+    item.keywords.forEach((keyword) => {
+      const normalizedKey = normalizeSearchValue(keyword || '');
+      if (!normalizedKey) return;
+      if (normalizedKey === query) score += 100;
+      else if (normalizedKey.startsWith(query)) score += 60;
+      else if (normalizedKey.includes(query)) score += 40;
+      else if (query.includes(normalizedKey)) score += 20;
+    });
+
+    if (score > 0) {
+      if (item.type === 'team') score += 5;
+      if (item.type === 'news') score += 10;
+    }
+    return score;
+  };
 
   const getMatches = (raw) => {
     const query = normalizeSearchValue(raw || '');
     if (!query) return pages.slice(0, 10);
-    return pages.filter((page) => {
-      const titleMatch = normalizeSearchValue(page.title).includes(query);
-      const keywordsMatch = page.keywords.some((key) =>
-        normalizeSearchValue(key).includes(query) || query.includes(normalizeSearchValue(key))
-      );
-      return titleMatch || keywordsMatch;
-    }).slice(0, 12);
+    return pages
+      .map((page) => ({
+        ...page,
+        score: scoreMatch(page, query),
+        resolvedHref: resolveSearchHref(page.href)
+      }))
+      .filter((page) => page.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 12);
   };
 
   const renderSuggestions = (raw) => {
@@ -131,7 +346,7 @@ function initGlobalSearch() {
       suggestionsBox.innerHTML = '<div class="nav-search-empty">Няма намерени съвпадения.</div>';
       return;
     }
-    const groupsOrder = ['Основни', 'Прием', 'Подстраници'];
+    const groupsOrder = ['Новини', 'Училищен екип', 'Съдържание', 'Основни', 'Прием', 'Подстраници'];
     const grouped = new Map();
     matches.forEach((item) => {
       const key = item.category || 'Подстраници';
@@ -144,8 +359,11 @@ function initGlobalSearch() {
       .map((groupName) => {
         const items = grouped.get(groupName) || [];
         const itemsHtml = items.map((item) => `
-          <a class="nav-search-suggestion" href="${item.href}">
-            <span class="nav-search-suggestion-title">${item.title}</span>
+          <a class="nav-search-suggestion" href="${item.resolvedHref || item.href}" data-target-text="${(item.targetText || '').replace(/"/g, '&quot;')}">
+            <span>
+              <span class="nav-search-suggestion-title">${item.title}</span>
+              <span class="nav-search-suggestion-meta">${item.subtitle || item.category || ''}</span>
+            </span>
             <span class="nav-search-suggestion-arrow">→</span>
           </a>
         `).join('');
@@ -162,24 +380,20 @@ function initGlobalSearch() {
 
   const runSearch = (raw) => {
     const query = normalizeSearchValue(raw || '');
-    if (!query) return;
-
-    const match = pages.find((page) =>
-      page.keywords.some((key) => normalizeSearchValue(key).includes(query) || query.includes(normalizeSearchValue(key)))
-    );
-
-    if (match) {
-      window.location.href = match.href;
-      return;
-    }
-
-    window.location.href = `novini.html?search=${encodeURIComponent(raw)}`;
+    if (!query) return false;
+    const [match] = getMatches(raw);
+    if (!match) return false;
+    const destination = match.resolvedHref || match.href;
+    storePendingSearchForPage(destination, raw, match.targetText);
+    window.location.href = destination;
+    return true;
   };
 
   const openSearch = () => {
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden', 'false');
     renderSuggestions('');
+    ensureExtendedIndexLoaded();
     window.requestAnimationFrame(() => input.focus());
   };
 
@@ -195,10 +409,14 @@ function initGlobalSearch() {
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    runSearch(input.value);
+    const didNavigate = runSearch(input.value);
+    if (!didNavigate) {
+      renderSuggestions(input.value);
+    }
   });
 
   input.addEventListener('input', () => {
+    ensureExtendedIndexLoaded();
     renderSuggestions(input.value);
   });
 
@@ -210,7 +428,10 @@ function initGlobalSearch() {
     const link = event.target.closest('.nav-search-suggestion');
     if (!link) return;
     event.preventDefault();
-    window.location.href = link.getAttribute('href');
+    const href = link.getAttribute('href') || '';
+    const targetText = link.getAttribute('data-target-text') || '';
+    storePendingSearchForPage(href, input.value, targetText);
+    window.location.href = href;
   });
 
   overlay.addEventListener('click', (event) => {
@@ -222,6 +443,49 @@ function initGlobalSearch() {
       closeSearch();
     }
   });
+
+  const ensureExtendedIndexLoaded = () => {
+    if (extendedIndexLoaded) return Promise.resolve();
+    if (extendedIndexPromise) return extendedIndexPromise;
+
+    const cached = loadExtendedIndexCache();
+    if (cached && cached.length) {
+      const combinedCached = [...pages, ...cached];
+      const uniqueCached = new Map();
+      combinedCached.forEach((item) => {
+        const key = `${item.type || 'page'}::${item.href}::${normalizeSearchValue(item.title)}`;
+        if (!uniqueCached.has(key)) uniqueCached.set(key, item);
+      });
+      pages = Array.from(uniqueCached.values());
+      extendedIndexLoaded = true;
+      renderSuggestions(input.value);
+      return Promise.resolve();
+    }
+
+    extendedIndexPromise = Promise.all([buildNewsSearchIndex(), buildTeamSearchIndex()])
+      .then(([newsIndex, teamIndex]) => {
+        const baseCombined = [...pages, ...newsIndex, ...teamIndex];
+        const pageHrefs = baseCombined.map((item) => item.href);
+        return buildContentSearchIndex(pageHrefs).then((contentIndex) => {
+          const extended = [...newsIndex, ...teamIndex, ...contentIndex];
+          saveExtendedIndexCache(extended);
+          const combined = [...pages, ...extended];
+          const unique = new Map();
+          combined.forEach((item) => {
+            const key = `${item.type || 'page'}::${item.href}::${normalizeSearchValue(item.title)}`;
+            if (!unique.has(key)) unique.set(key, item);
+          });
+          pages = Array.from(unique.values());
+          extendedIndexLoaded = true;
+          renderSuggestions(input.value);
+        });
+      })
+      .finally(() => {
+        extendedIndexPromise = null;
+      });
+
+    return extendedIndexPromise;
+  };
 }
 
 /**
@@ -263,6 +527,8 @@ async function loadComponents() {
     }
   } catch (error) {
     console.error('Error loading components:', error);
+  } finally {
+    window.setTimeout(applyPendingSearchScroll, 180);
   }
 }
 
