@@ -40,8 +40,8 @@ a {
   ═══════════════════════════════════════ */
 .page-hero {
   margin-top: var(--nav-h);
-  padding: 2rem 8vw; /* ← намалено от 5rem */
-  min-height: 40rem;
+  padding: 4rem 8vw; /* ← намалено от 5rem */
+  min-height: 43rem;
   position: relative;
   overflow: hidden;
   color: white;

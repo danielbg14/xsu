@@ -60,43 +60,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.caret {
-  width: 0;
-  height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid currentColor;
-  opacity: 0.5;
-}
-.dropdown {
-  position: absolute;
-  top: calc(var(--nav-h) - 2px);
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  background: #fff;
-  border: 1px solid #e8e8e8;
-  border-top: 2px solid var(--green);
-  min-width: 180px;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.2s;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 12px 12px;
-}
-.nav-item:hover .dropdown {
-  opacity: 1;
-  pointer-events: all;
-  transform: translateX(-50%) translateY(0);
-}
-.dropdown a {
-  display: block;
-  padding: 0.65rem 1.1rem;
-  font-size: 0.88rem;
-  border-bottom: 1px solid #f0f0f0;
-}
-.dropdown a:last-child {
-  border-bottom: none;
-}
 .layout {
   display: grid;
   grid-template-columns: minmax(200px, 240px) 1fr;
@@ -146,7 +109,7 @@ a {
 
 .page-hero {
   background: var(--green-dark);
-  padding: 4.6rem 8vw 4.2rem;
+  padding: 6rem 8vw 4.2rem;
   position: relative;
   overflow: hidden;
 }

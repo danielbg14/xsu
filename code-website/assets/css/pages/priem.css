@@ -39,7 +39,7 @@ img {
 .page-banner {
   margin-top: var(--nav-h);
   background: var(--green-dark);
-  padding: 4rem 8vw 3.5rem;
+  padding: 6rem 8vw 3.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -262,7 +262,7 @@ img {
     display: none;
   }
   .page-banner {
-    padding: 3rem 5vw 2.5rem;
+    padding: 5rem 5vw 2.5rem;
   }
   .cards-section {
     padding: 3rem 5vw 4rem;
