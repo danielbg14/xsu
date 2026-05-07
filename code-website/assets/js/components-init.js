@@ -380,12 +380,27 @@ function initGlobalSearch() {
 
   const runSearch = (raw) => {
     const query = normalizeSearchValue(raw || '');
-    if (!query) return false;
+  
+    if (!query) {
+      input.setCustomValidity('Моля, въведете текст за търсене.');
+      input.reportValidity();
+      return false;
+    }
+  
+    input.setCustomValidity('');
+    input.checkValidity();
+  
     const [match] = getMatches(raw);
+  
     if (!match) return false;
+  
+    input.setCustomValidity('');
+    input.checkValidity();
+  
     const destination = match.resolvedHref || match.href;
     storePendingSearchForPage(destination, raw, match.targetText);
     window.location.href = destination;
+  
     return true;
   };
 

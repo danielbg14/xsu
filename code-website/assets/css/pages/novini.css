@@ -393,7 +393,7 @@ a {
 
   .page-hero {
     background: var(--green-dark);
-    padding: 2.8rem 5vw 2.1rem;
+    padding: 5rem 5vw 2.1rem;
     position: relative;
     overflow: hidden;
   }
