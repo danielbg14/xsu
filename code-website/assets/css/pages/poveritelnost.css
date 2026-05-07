@@ -1,108 +1,110 @@
 /* BANNER */
 .page-banner {
-    margin-top: var(--nav-h);
-    background: var(--green-dark);
-    padding: 4rem 8vw 3.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .page-banner::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--gold), transparent 70%);
-  }
-  .breadcrumb {
-    position: relative;
-    z-index: 1;
-    font-size: 0.74rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.45);
-    margin-bottom: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .breadcrumb a {
-    color: rgba(255, 255, 255, 0.45);
-    transition: color 0.2s;
-  }
-  .breadcrumb a:hover {
-    color: var(--gold);
-  }
-  .breadcrumb span {
-    color: rgba(255, 255, 255, 0.2);
-  }
-  .page-banner h1 {
-    position: relative;
-    z-index: 1;
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.1;
-    margin-bottom: 0.8rem;
-  }
-  .page-banner p {
-    position: relative;
-    z-index: 1;
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.6);
-    max-width: 520px;
-    line-height: 1.7;
-  }
-  
-  .info-page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1rem 4rem;
-  }
+  margin-top: var(--nav-h);
+  background: var(--green-dark);
+  padding: 5rem 8vw 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.page-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), transparent 70%);
+}
+.breadcrumb {
+  position: relative;
+  z-index: 1;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 0.2s;
+}
+.breadcrumb a:hover {
+  color: var(--gold);
+}
+.breadcrumb span {
+  color: rgba(255, 255, 255, 0.2);
+}
+.page-banner h1 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+}
+.page-banner p {
+  position: relative;
+  z-index: 1;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.info-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+.info-page-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+.info-page h1 {
+  margin-bottom: 1rem;
+  color: var(--green-dark);
+}
+.info-page .intro {
+  color: #445266;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+.info-page h2 {
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  color: var(--green);
+}
+.info-page p,
+.info-page li {
+  line-height: 1.75;
+  color: #1f2d3d;
+}
+.info-page ul {
+  margin: 0.4rem 0 1rem 1.1rem;
+}
+.info-note {
+  margin-top: 1.6rem;
+  padding: 1rem;
+  border-left: 4px solid var(--gold);
+  background: #fff9ec;
+  border-radius: 10px;
+}
+.breadcrumb-bar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+@media (max-width: 768px) {
   .info-page-card {
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    padding: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   }
-  .info-page h1 {
-    margin-bottom: 1rem;
-    color: var(--green-dark);
-  }
-  .info-page .intro {
-    color: #445266;
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
-  }
-  .info-page h2 {
-    margin-top: 1.4rem;
-    margin-bottom: 0.6rem;
-    font-size: 1.2rem;
-    color: var(--green);
-  }
-  .info-page p,
-  .info-page li {
-    line-height: 1.75;
-    color: #1f2d3d;
-  }
-  .info-page ul {
-    margin: 0.4rem 0 1rem 1.1rem;
-  }
-  .info-note {
-    margin-top: 1.6rem;
-    padding: 1rem;
-    border-left: 4px solid var(--gold);
-    background: #fff9ec;
-    border-radius: 10px;
-  }
-  .breadcrumb-bar {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  }
-  @media (max-width: 768px) {
-    .info-page-card {
-      padding: 1.2rem;
-    }
-  }
+}

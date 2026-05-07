@@ -427,7 +427,7 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .page-hero {
-    padding: 3rem 5vw 2.5rem;
+    padding: 5rem 5vw 2.5rem;
   }
 
   .page-hero h1 {

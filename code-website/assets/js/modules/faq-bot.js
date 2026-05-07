@@ -404,7 +404,9 @@ export function initFaqBot() {
   const addUserMsg = (text) => {
     const el = document.createElement('article');
     el.className = 'faq-msg faq-msg--user';
-    el.innerHTML = `<p>${text}</p>`;
+    const paragraph = document.createElement('p');
+    paragraph.textContent = text;
+    el.appendChild(paragraph);
     body.appendChild(el);
     scrollBottom();
   };

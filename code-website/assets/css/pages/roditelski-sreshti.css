@@ -708,7 +708,7 @@
     padding: 3rem 5vw 4rem;
   }
   .page-hero {
-    padding: calc(var(--nav-h) + 2.5rem) 5vw 3rem;
+    padding: calc(var(--nav-h) + 5rem) 5vw 3rem;
   }
   .meetings-group-tag {
     display: none;
