@@ -470,8 +470,9 @@ img {
   :root {
     --nav-h: 64px;
   }
+  
   .tour-hero {
-    padding: 3rem 5vw 2.5rem;
+    padding: 5rem 5vw 2.5rem;
   }
   .tour-layout {
     grid-template-columns: 1fr;
