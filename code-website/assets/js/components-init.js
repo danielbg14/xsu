@@ -546,7 +546,6 @@ async function loadComponents() {
       // Initialize mobile menu after navbar is loaded
       initMobileMenu();
       initGlobalSearch();
-      initTopBarScroll();
     }
 
     // Load Footer
