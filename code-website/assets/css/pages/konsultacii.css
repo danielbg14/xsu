@@ -273,7 +273,7 @@ a {
 ═══════════════════════════════════════ */
 @media (max-width: 768px) {
   .page-hero {
-    padding: 3rem 1.5rem 2.5rem;
+    padding: 5rem 1.5rem 2.5rem;
   }
   .consultation-section {
     padding: 2rem 1.5rem 4rem;

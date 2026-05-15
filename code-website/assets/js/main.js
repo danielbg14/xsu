@@ -37,4 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
   syncMobileBreadcrumbWraps();
 });
 
+document.addEventListener('components:navbar-loaded', () => {
+  initNav();
+});
+
 window.addEventListener('resize', syncMobileBreadcrumbWraps);

@@ -51,11 +51,6 @@ a {
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
-  .page-hero::before {
-    content: "";
-  }
-}
 .page-hero-eyebrow {
   font-size: 0.72rem;
   font-weight: 600;
@@ -402,7 +397,10 @@ a {
     height: 44px;
   }
   .page-hero {
-    padding: 3.5rem 5vw 3rem;
+    padding: 5rem 5vw 3rem;
+  }
+  .page-hero::before {
+    content: "";
   }
   .section {
     padding: 3.5rem 5vw;

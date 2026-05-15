@@ -326,6 +326,20 @@ function initGlobalSearch() {
     return score;
   };
 
+  const escapeHtml = (value = '') => String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
+  const sanitizeHref = (value = '') => {
+    const href = String(value).trim();
+    if (!href) return '#';
+    if (/^(javascript|data):/i.test(href)) return '#';
+    return href;
+  };
+
   const getMatches = (raw) => {
     const query = normalizeSearchValue(raw || '');
     if (!query) return pages.slice(0, 10);
@@ -359,10 +373,10 @@ function initGlobalSearch() {
       .map((groupName) => {
         const items = grouped.get(groupName) || [];
         const itemsHtml = items.map((item) => `
-          <a class="nav-search-suggestion" href="${item.resolvedHref || item.href}" data-target-text="${(item.targetText || '').replace(/"/g, '&quot;')}">
+          <a class="nav-search-suggestion" href="${escapeHtml(sanitizeHref(item.resolvedHref || item.href))}" data-target-text="${escapeHtml(item.targetText || '')}">
             <span>
-              <span class="nav-search-suggestion-title">${item.title}</span>
-              <span class="nav-search-suggestion-meta">${item.subtitle || item.category || ''}</span>
+              <span class="nav-search-suggestion-title">${escapeHtml(item.title)}</span>
+              <span class="nav-search-suggestion-meta">${escapeHtml(item.subtitle || item.category || '')}</span>
             </span>
             <span class="nav-search-suggestion-arrow">→</span>
           </a>
@@ -380,12 +394,27 @@ function initGlobalSearch() {
 
   const runSearch = (raw) => {
     const query = normalizeSearchValue(raw || '');
-    if (!query) return false;
+  
+    if (!query) {
+      input.setCustomValidity('Моля, въведете текст за търсене.');
+      input.reportValidity();
+      return false;
+    }
+  
+    input.setCustomValidity('');
+    input.checkValidity();
+  
     const [match] = getMatches(raw);
+  
     if (!match) return false;
+  
+    input.setCustomValidity('');
+    input.checkValidity();
+  
     const destination = match.resolvedHref || match.href;
     storePendingSearchForPage(destination, raw, match.targetText);
     window.location.href = destination;
+  
     return true;
   };
 
@@ -512,10 +541,12 @@ async function loadComponents() {
       const navbarResponse = await fetch('assets/components/navbar.html');
       const navbarHTML = await navbarResponse.text();
       navbarContainer.innerHTML = navbarHTML;
+      document.dispatchEvent(new CustomEvent('components:navbar-loaded'));
       
       // Initialize mobile menu after navbar is loaded
       initMobileMenu();
       initGlobalSearch();
+      initTopBarScroll();
     }
 
     // Load Footer
