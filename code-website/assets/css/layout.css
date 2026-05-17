@@ -1,14 +1,22 @@
+/* Top bar + nav/footer structure (visual details in style.css) */
+
 .top-bar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 46px;
+  height: var(--top-bar-h);
   background-color: #0b5533;
   z-index: 1000;
   display: flex;
   align-items: center;
   box-shadow: 0 8px 26px rgba(0, 0, 0, 0.22);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.top-bar.hidden {
+  transform: translateY(-100%);
 }
 
 .top-bar-inner {
@@ -19,7 +27,7 @@
   align-items: center;
   gap: 1rem;
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .top-brand-badge {
@@ -110,20 +118,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.14);
+  background: rgba(255, 255, 255, 0.14);
   color: #fff;
   font-size: 0.8rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
 }
 
-/* hover ефекти */
 .ts:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 0 14px rgba(255, 255, 255, 0.35);
 }
 
-/* бранд цветове */
 .ts.fb:hover {
   background: #1877f2;
 }
@@ -136,9 +142,11 @@
   background: #000;
 }
 
+/* ── Nav shell ── */
+
 nav {
   position: fixed;
-  top: 46px;
+  top: var(--top-bar-h);
   left: 0;
   right: 0;
   z-index: 999;
@@ -150,8 +158,12 @@ nav {
   justify-content: space-between;
   padding: 0 2rem;
   backdrop-filter: blur(12px);
-  transition: box-shadow 0.35s;
+  transition: box-shadow 0.35s, top 0.3s ease;
   gap: 1rem;
+}
+
+nav.top-bar-hidden {
+  top: 0;
 }
 
 nav.scrolled {
@@ -209,17 +221,12 @@ nav.scrolled {
   min-width: 180px;
   opacity: 0;
   pointer-events: none;
-  transition: 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 var(--radius-md) var(--radius-md);
 }
 
-.nav-item:hover .dropdown {
-  opacity: 1;
-  pointer-events: all;
-  transform: translateX(-50%) translateY(0);
-}
-
+.nav-item:hover .dropdown,
 .nav-item.touch-open .dropdown {
   opacity: 1;
   pointer-events: all;
@@ -242,13 +249,23 @@ nav.scrolled {
 }
 
 .mobile-menu {
+  display: none;
+  position: fixed;
+  top: calc(var(--top-bar-h) + var(--nav-h));
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   max-width: 100%;
+  z-index: 998;
+  overflow-y: auto;
 }
 
-.mobile-menu.open {
-  padding: 3rem 2rem;
+nav.top-bar-hidden ~ .mobile-menu {
+  top: var(--nav-h);
 }
+
+/* ── Footer shell ── */
 
 footer {
   background: var(--footer-bg);
@@ -273,6 +290,8 @@ footer {
   font-size: 0.76rem;
   color: rgba(255, 255, 255, 0.35);
 }
+
+/* ── Responsive layout ── */
 
 @media (max-width: 1100px) {
   .top-contact-points span:last-child,
@@ -307,12 +326,22 @@ footer {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --top-bar-h: 40px;
+    --nav-h: 64px;
+  }
+
   .top-bar {
-    height: 40px;
+    height: var(--top-bar-h);
   }
 
   nav {
-    top: 40px;
+    top: var(--top-bar-h);
+    padding: 0 1.2rem;
+  }
+
+  nav.top-bar-hidden {
+    top: 0;
   }
 
   .top-bar-inner {
@@ -340,20 +369,19 @@ footer {
     display: none;
   }
 
-  :root {
-    --nav-h: 64px;
-  }
-
-  nav {
-    padding: 0 1.2rem;
-  }
-
   .nav-links {
     display: none;
   }
 
   .nav-search {
-    display: none;
+    display: inline-flex !important;
+    margin-left: auto;
+    margin-inline-start: 1rem;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
   }
 
   .hamburger {
@@ -376,6 +404,10 @@ footer {
     display: none;
   }
 
+  footer {
+    padding: 3.5rem 5vw 1.5rem;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -392,6 +424,19 @@ footer {
     position: relative !important;
     top: auto !important;
     left: auto !important;
+    width: 100% !important;
+  }
+
+  .priem-side-nav,
+  .priem-side-nav.is-stopped,
+  .side-nav,
+  .history-sidebar,
+  .filter-section {
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
     width: 100% !important;
   }
 }
