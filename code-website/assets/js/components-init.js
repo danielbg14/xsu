@@ -73,6 +73,7 @@ function applyPendingSearchScroll() {
   sessionStorage.removeItem('navSearchPending');
 
   const lookup = normalizeSearchValue(payload.target || payload.query || '');
+  const targetText = normalizeSearchValue(payload.target || '');
   if (!lookup) return;
 
   const candidates = Array.from(document.querySelectorAll('main h1, main h2, main h3, main h4, main p, main li, .member-card, .news-card, section h1, section h2, section h3, section p'));
@@ -83,12 +84,55 @@ function applyPendingSearchScroll() {
 
   candidates.forEach((element) => {
     const text = normalizeSearchValue((element.textContent || '').replace(/\s+/g, ' ').trim());
-    if (!text || !text.includes(lookup)) return;
-    let score = 10;
-    if (text === lookup) score += 120;
-    else if (text.startsWith(lookup)) score += 80;
-    else score += 40;
-    score += Math.max(0, 40 - Math.min(text.length - lookup.length, 40));
+    if (!text) return;
+    
+    let score = 0;
+    
+    // Exact match on full text - highest priority
+    if (text === targetText) {
+      score = 300;
+    }
+    // Member card with matching name
+    else if (element.classList.contains('member-card')) {
+      const memberName = normalizeSearchValue((element.querySelector('.member-name')?.textContent || '').trim());
+      if (memberName === targetText) {
+        score = 280; // Direct name match in member card
+      } else if (memberName.includes(lookup)) {
+        score = 260;
+      } else if (text.includes(lookup)) {
+        score = 80;
+      }
+    }
+    // News card with matching title
+    else if (element.classList.contains('news-card')) {
+      const cardTitle = normalizeSearchValue((element.querySelector('h3')?.textContent || '').trim());
+      if (cardTitle === targetText) {
+        score = 280;
+      } else if (cardTitle.includes(lookup)) {
+        score = 260;
+      } else if (text.includes(lookup)) {
+        score = 80;
+      }
+    }
+    // Heading matches
+    else if (element.tagName.match(/^H[1-4]$/)) {
+      if (text === targetText) {
+        score = 270;
+      } else if (text.startsWith(lookup)) {
+        score = 180;
+      } else if (text.includes(lookup)) {
+        score = 100;
+      }
+    }
+    // General text search
+    else if (text.includes(lookup)) {
+      if (text.startsWith(lookup)) {
+        score = 120;
+      } else {
+        score = 70;
+      }
+    }
+    
     if (score > bestScore) {
       bestScore = score;
       bestElement = element;
@@ -121,10 +165,9 @@ function initGlobalSearch() {
   };
 
   const resolveSearchHref = (baseHref) => {
+    // Simply return the href as-is, preserving path and hash
     if (!baseHref) return '';
-    const [pathPart, hashPart] = baseHref.split('#');
-    const fileName = (pathPart || '').split('/').pop() || '';
-    return hashPart ? `${fileName}#${hashPart}` : fileName;
+    return baseHref;
   };
 
   const storePendingSearchForPage = (href, rawQuery, targetText = '') => {
@@ -372,15 +415,19 @@ function initGlobalSearch() {
       .filter((groupName) => grouped.has(groupName))
       .map((groupName) => {
         const items = grouped.get(groupName) || [];
-        const itemsHtml = items.map((item) => `
-          <a class="nav-search-suggestion" href="${escapeHtml(sanitizeHref(item.resolvedHref || item.href))}" data-target-text="${escapeHtml(item.targetText || '')}">
+        const itemsHtml = items.map((item) => {
+          const safeHref = sanitizeHref(item.resolvedHref || item.href || '');
+          const itemTitle = escapeHtml(item.title || '');
+          return `
+          <a class="nav-search-suggestion" href="${safeHref}" data-title="${itemTitle}" data-target-text="${escapeHtml(item.targetText || item.title || '')}">
             <span>
-              <span class="nav-search-suggestion-title">${escapeHtml(item.title)}</span>
+              <span class="nav-search-suggestion-title">${itemTitle}</span>
               <span class="nav-search-suggestion-meta">${escapeHtml(item.subtitle || item.category || '')}</span>
             </span>
             <span class="nav-search-suggestion-arrow">→</span>
           </a>
-        `).join('');
+        `;
+        }).join('');
         return `
           <div class="nav-search-group">
             <div class="nav-search-group-title">${groupName}</div>
@@ -412,7 +459,9 @@ function initGlobalSearch() {
     input.checkValidity();
   
     const destination = match.resolvedHref || match.href;
-    storePendingSearchForPage(destination, raw, match.targetText);
+    // Use title as primary target (works for team members, news, etc), fallback to targetText
+    const targetForScroll = match.title || match.targetText || '';
+    storePendingSearchForPage(destination, raw, targetForScroll);
     window.location.href = destination;
   
     return true;
@@ -456,15 +505,34 @@ function initGlobalSearch() {
   suggestionsBox.addEventListener('click', (event) => {
     const link = event.target.closest('.nav-search-suggestion');
     if (!link) return;
+    
     event.preventDefault();
-    const href = link.getAttribute('href') || '';
-    const targetText = link.getAttribute('data-target-text') || '';
+    event.stopPropagation();
+    
+    const href = link.getAttribute('href');
+    if (!href || href === '#') {
+      console.warn('Invalid href in search suggestion:', href);
+      return;
+    }
+    
+    // Use data-title first (the suggestion title), then fallback to data-target-text
+    const targetText = link.getAttribute('data-title') || link.getAttribute('data-target-text') || '';
+    
+    console.log('Search suggestion clicked:', { href, targetText });
+    
     storePendingSearchForPage(href, input.value, targetText);
-    window.location.href = href;
+    
+    // Use a small delay to ensure sessionStorage write completes
+    setTimeout(() => {
+      window.location.href = href;
+    }, 50);
   });
 
   overlay.addEventListener('click', (event) => {
-    if (event.target === overlay) closeSearch();
+    // Only close if clicking directly on overlay background, not on elements inside
+    if (event.target === overlay) {
+      closeSearch();
+    }
   });
 
   document.addEventListener('keydown', (event) => {
@@ -558,7 +626,7 @@ async function loadComponents() {
   } catch (error) {
     console.error('Error loading components:', error);
   } finally {
-    window.setTimeout(applyPendingSearchScroll, 180);
+    applyPendingSearchScroll();
   }
 }
 
