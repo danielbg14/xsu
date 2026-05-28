@@ -1,11 +1,37 @@
 export function initNav() {
   const navbar = document.getElementById("navbar");
+  const topBar = document.querySelector(".top-bar");
   if (!navbar) return;
+
+  let lastScrollY = 0;
+  let isTopBarVisible = true;
 
   window.addEventListener(
     "scroll",
     () => {
-      navbar.classList.toggle("scrolled", window.scrollY > 40);
+      const currentScrollY = window.scrollY;
+      
+      // Toggle navbar scrolled state
+      navbar.classList.toggle("scrolled", currentScrollY > 40);
+
+      // Hide/show top-bar based on scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down - hide top-bar
+        if (isTopBarVisible && topBar) {
+          topBar.classList.add("hidden");
+          navbar.classList.add("top-bar-hidden");
+          isTopBarVisible = false;
+        }
+      } else if (currentScrollY < lastScrollY || currentScrollY === 0) {
+        // Scrolling up or at top - show top-bar
+        if (!isTopBarVisible && topBar) {
+          topBar.classList.remove("hidden");
+          navbar.classList.remove("top-bar-hidden");
+          isTopBarVisible = true;
+        }
+      }
+
+      lastScrollY = currentScrollY;
     },
     { passive: true }
   );
