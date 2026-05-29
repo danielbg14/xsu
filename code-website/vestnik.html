@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Училищен вестник | СУ „Йордан Йовков“ – Сливен</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/titleAnim.css">
+  <link rel="stylesheet" href="assets/css/pages/vestnik.css">
+
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96"/>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg"/>
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png"/>
+  <link rel="manifest" href="/images/favicon/site.webmanifest"/>
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <header class="news-hero">
+    <div class="breadcrumb hero-breadcrumb">
+      <a href="index.html">НАЧАЛО</a>
+      <span>/</span>
+      <a href="dokumenti.html">ДОКУМЕНТИ</a>
+      <span>/</span>
+      <span>УЧИЛИЩЕН ВЕСТНИК</span>
+    </div>
+    <div class="hero-label hero-eyebrow">Електронно издание</div>
+    <h1 class="hero-title">Училищен <em>вестник</em></h1>
+    <p class="hero-desc">Електронни броеве на училищния вестник в PDF формат. Страницата е оптимизирана за телефон, таблет и десктоп.</p>
+  </header>
+
+  <main class="newspaper-page">
+    <section class="issues-panel reveal">
+      <div class="panel-head">
+        <h2>Архив на броевете</h2>
+        <p>Най-новите издания са най-отгоре.</p>
+      </div>
+
+      <div id="issuesGrid" class="issues-grid"></div>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="assets/js/components-init.js" defer></script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/pages/vestnik.js" defer></script>
+</body>
+</html>
