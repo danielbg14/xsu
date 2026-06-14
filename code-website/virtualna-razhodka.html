@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Виртуална разходка | СУ „Йордан Йовков“ - Сливен</title>
+  <title>Виртуална разходка | СУ „Йордан Йовков" - Сливен</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -15,17 +15,26 @@
   <link rel="stylesheet" href="assets/css/titleAnim.css">
   <link rel="stylesheet" href="assets/css/pages/virtualna-razhodka.css">
 
+  <!-- Pannellum 360° viewer -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
   <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96"/>
   <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg"/>
   <link rel="shortcut icon" href="/images/favicon/favicon.ico"/>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png"/>
   <link rel="manifest" href="/images/favicon/site.webmanifest"/>
+
+  <style>
+    /* ── Pannellum override – вписва viewer-а в дизайна ── */
+    
+  </style>
 </head>
 <body>
 
   <div id="navbar-container"></div>
 
-  <!-- HERO — breadcrumb горе, като НВО страницата -->
+  <!-- HERO -->
   <div class="tour-hero">
     <div class="tour-hero-deco"></div>
     <div class="tour-hero-deco2"></div>
@@ -37,9 +46,9 @@
         <span>/</span>
         <span style="color:var(--gold)">ВИРТУАЛНА РАЗХОДКА</span>
       </div>
-      <div class="tour-hero-label hero-eyebrow">Виртуална разходка · СУ „Йордан Йовков“</div>
+      <div class="tour-hero-label hero-eyebrow">Виртуална разходка · СУ „Йордан Йовков"</div>
       <h1 class="hero-title">Виртуална <em>разходка</em></h1>
-      <p class="tour-hero-sub hero-desc">Разгледайте нашето училище от всяко кътче. Кликнете на стая и се потопете в атмосферата на СУ „Йордан Йовков“.</p>
+      <p class="tour-hero-sub hero-desc">Разгледайте нашето училище от всяко кътче. Кликнете на стая и се потопете в атмосферата на СУ „Йордан Йовков".</p>
     </div>
   </div>
 
@@ -103,7 +112,7 @@
           </button>
           <button class="room-btn" onclick="selectRoom(9)" id="btn-9">
             Канцелария
-            <span  class="room-count">1</span>
+            <span class="room-count">1</span>
           </button>
         </div>
 
@@ -130,34 +139,33 @@
         </div>
       </div>
 
-      <!-- IFRAME VIEWER -->
+      <!-- 360° VIEWER -->
       <div class="tour-viewer" id="tourViewer">
-        <!--
-          ИНСТРУКЦИИ ЗА ИНТЕГРАЦИЯ:
-          Заменете съдържанието по-долу с вашия TourMKR iframe:
 
-          <iframe
-            src="https://tourmkr.com/ВАШИЯТ_ТУР_ИД"
-            allowfullscreen
-            allow="fullscreen; gyroscope; accelerometer"
-            loading="lazy"
-          ></iframe>
-        -->
-        <div class="viewer-placeholder" id="viewerPlaceholder">
+        <!-- Loading overlay -->
+        <div id="viewer-loading">
+          <div class="loader-spinner"></div>
+          Зарежда се панорамата…
+        </div>
+
+        <!-- Pannellum се монтира тук когато има tourUrl -->
+        <div class="tour-viewer-wrap">
+          <div id="panorama-viewer"></div>
+        </div>
+
+        <!-- Placeholder – вижда се само когато стаята няма tourUrl -->
+        <div class="viewer-placeholder" id="viewerPlaceholder" style="display:none;">
           <div class="viewer-placeholder-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <circle cx="12" cy="12" r="10"/>
               <path d="M12 8v4l3 3"/>
-              <path d="M3.05 11a9 9 0 1 0 .5-3"/>
             </svg>
           </div>
           <h3 id="placeholderTitle">Фасада и двор</h3>
-          <p id="placeholderDesc">Тук ще се зареди 360° панорамният изглед от TourMKR.</p>
-          <a href="https://tourmkr.com" target="_blank" rel="noopener noreferrer" class="btn-gold-sm">
-            Създайте тур в TourMKR
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a>
+          <p id="placeholderDesc">360° панорамата за тази стая предстои да бъде добавена.</p>
         </div>
+
+        <!-- Контроли (fullscreen + споделяне) -->
         <div class="viewer-controls">
           <button class="ctrl-btn" title="Цял екран" onclick="requestFullscreen()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
@@ -166,25 +174,10 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
           </button>
         </div>
+
       </div>
 
-      <!-- CTA -->
-      <div class="tour-cta reveal">
-        <div>
-          <h3>Хареса ви нашето училище?</h3>
-          <p>Запишете детето си при нас и му дайте най-доброто начало. Приемаме ученици в I и VIII клас.</p>
-        </div>
-        <div class="cta-actions">
-          <a href="priem-1-klas.html" class="btn-green">
-            Прием I клас
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="priem-8-klas.html" class="btn-outline">
-            Прием VIII клас
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
+
 
     </main>
   </div>

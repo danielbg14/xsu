@@ -382,3 +382,40 @@ tr:last-child td {
   color: #fff;
   border-color: var(--green);
 }
+
+/* ═══════════════════════════════════════
+   RESPONSIVE TABLE STYLES
+═══════════════════════════════════════ */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.85rem;
+  }
+
+  th,
+  td {
+    padding: 0.8rem 0.85rem;
+  }
+
+  th {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    min-width: 320px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 0.7rem 0.8rem;
+  }
+
+  th {
+    font-size: 0.75rem;
+  }
+}

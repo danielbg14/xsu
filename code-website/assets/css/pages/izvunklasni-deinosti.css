@@ -179,7 +179,7 @@ img {
 /* === SPORT SECTION === */
 .sport-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.6rem;
   margin-bottom: 4rem;
 }
