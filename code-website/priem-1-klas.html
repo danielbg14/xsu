@@ -46,16 +46,17 @@
     <div class="content-layout">
  
       <!-- MAIN -->
-      <main class="priem-main">
-        <section class="section">
-          <div class="table-section">
-            <div class="brochure reveal" onclick="openBrochure()">
-              <div class="brochure-thumb">
-                <img id="brochureImg1" src="images/1-class-img.png" alt="Брошура 1">
-                <img id="brochureImg2" src="images/1-class-img2.png" alt="Брошура 2" class="hidden">
-              </div>
-            </div>
-          </div>
+      <div class="brochure-banner reveal" onclick="openBrochure()">
+        <div class="brochure-banner-thumb">
+          <img id="brochureImg1" src="images/1-class-img.png" alt="Брошура 1">
+          <img id="brochureImg2" src="images/1-class-img2.png" alt="Брошура 2" class="hidden">
+        </div>
+        <div class="brochure-banner-text">
+          <h3>Брошура за прием в I клас</h3>
+          <p>Занимания по интереси, материална база, контакти.</p>
+          <span>Отвори PDF →</span>
+        </div>
+      </div>
       
           <!-- Modal -->
           <div id="brochureModal" class="brochure-modal" onclick="closeBrochure()">
